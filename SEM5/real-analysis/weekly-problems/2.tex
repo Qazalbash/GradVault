@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{exam}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Week 2 Problems}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\begin{questions}
+    \question \begin{parts}
+        \part Show that \(((A\implies C)\land(B\implies D))\implies((A\lor B)\implies (C\lor D))\).
+        \begin{solution}
+            \begin{equation*}
+                \begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
+                    \hline
+                      &   &   &   & P              & Q              & R        & S       & T       & U               &                \\\hline
+                    A & B & C & D & A\Rightarrow C & B\Rightarrow D & P\land Q & A\lor B & C\lor D & S \Rightarrow T & R\Rightarrow U \\\hline
+                    T & T & T & T & T              & T              & T        & T       & T       & T               & T              \\\hline
+                    T & T & T & F & T              & F              & F        & T       & T       & T               & T              \\\hline
+                    T & T & F & T & F              & T              & F        & T       & T       & T               & T              \\\hline
+                    T & T & F & F & F              & F              & F        & T       & F       & F               & T              \\\hline
+                    T & F & T & T & T              & T              & T        & T       & T       & T               & T              \\\hline
+                    T & F & T & F & T              & T              & T        & T       & T       & T               & T              \\\hline
+                    T & F & F & T & F              & T              & F        & T       & T       & T               & T              \\\hline
+                    T & F & F & F & F              & T              & F        & T       & F       & F               & T              \\\hline
+                    F & T & T & T & T              & T              & T        & T       & T       & T               & T              \\\hline
+                    F & T & T & F & T              & F              & F        & T       & T       & T               & T              \\\hline
+                    F & T & F & T & T              & T              & T        & T       & T       & T               & T              \\\hline
+                    F & T & F & F & T              & F              & F        & T       & F       & F               & T              \\\hline
+                    F & F & T & T & T              & T              & T        & F       & T       & T               & T              \\\hline
+                    F & F & T & F & T              & T              & T        & F       & T       & T               & T              \\\hline
+                    F & F & F & T & T              & T              & T        & F       & T       & T               & T              \\\hline
+                    F & F & F & F & T              & T              & T        & F       & F       & T               & T              \\\hline
+                \end{array}
+            \end{equation*}
+            The last column has the trues for all the possible truthvalues of \(A,B,C,D\), this means the statement is tautology. \(\blacksquare\)
+        \end{solution}
+
+        \part How does (a) reflects on our comments about proof by cases?
+        \begin{solution}
+            Proof by truth table exhaust all the possible cases. This can be seen as an extreme variant of proof by cases. In (a) we considered all the possible cases for \(A,B,C,D\) therefore we can say it is is a proof by cases.
+        \end{solution}
+
+        \newpage
+
+        \part Show that the converse of the implication in (a) does not hold. (You should first consider carefully what the converse is!)
+        \begin{solution}
+            The converse of the implication yeilds implication,
+            \[((A\lor B)\implies (C\lor D))\implies ((A\implies C)\land(B\implies D))\]
+            We have the truth values from both sides of implication from part (a).
+            \begin{equation*}
+                \begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
+                    \hline
+                    P                               & Q                                      &                \\\hline
+                    (A\lor B) \Rightarrow (C\lor D) & (A\Rightarrow C)\land (B\Rightarrow D) & P\Rightarrow Q \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & F                                      & F              \\\hline
+                    T                               & F                                      & F              \\\hline
+                    F                               & F                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & F                                      & F              \\\hline
+                    F                               & F                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & F                                      & F              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    F                               & F                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                    T                               & T                                      & T              \\\hline
+                \end{array}
+            \end{equation*}
+            The last column does not has all trues for all the possible truthvalues of \(A,B,C,D\), this means the statement can not be given a truth value. \(\blacksquare\)
+        \end{solution}
+    \end{parts}
+
+    \question If \(n\) is a natural number with \(n > 3\), show that the expression \(\displaystyle\frac{n!}{3!(n-3)!}\) is alway a natural number. (Hint: \(n\) must be either a multiple of 3, one more than a multiple of three, or two more than a multiple of 3.)
+    \begin{solution}
+        The expression can be simplified into,
+        \[E=\frac{n!}{3!(n-3)!}=\frac{n(n-1)(n-2)}{6}\]
+        We have to prove that \(\forall n\in\mathbb{N}/\{1,2,3\},E\in\mathbb{N}\). We can do that by cases by considering three types of number.
+
+        \begin{enumerate}
+            \item \(n\) is a multiple of 3.
+            \item \(n\) is one more than a multiple of 3.
+            \item \(n\) is two more than a multiple of 3.
+        \end{enumerate}
+
+        If \(n=3k\), where \(k\in\mathbb{N}\), then,
+        \begin{equation}
+            \begin{split}
+                E&=\frac{3k(3k-1)(3k-2)}{6}\\
+                E&=\frac{k(3k-1)(3k-2)}{2}\\
+                E&=\frac{k(9k^2-9k+2)}{2}\\
+                E&=9k\frac{k(k-1)}{2}+k
+            \end{split}
+        \end{equation}
+
+        If \(k\) is even then, \(\displaystyle\frac{k}{2}\in\mathbb{N}\) else \(\displaystyle\frac{k-1}{2}\in\mathbb{N}\). This means that \(E\) is a natural number.
+
+        If \(n=3k+1\), where \(k\in\mathbb{N}\), then,
+        \begin{equation}
+            \begin{split}
+                E&=\frac{(3k+1)(3k+1-1)(3k+1-2)}{6}\\
+                E&=\frac{k(3k+1)(3k-1)}{2}\\
+                E&=\frac{k(9k^2-1)}{2}\\
+                E&=\frac{k(8k^2+k^2-1)}{2}\\
+                E&=4k^3+\frac{k(k^2-1)}{2}\\
+                E&=4k^3+\frac{k(k-1)}{2}(k+1)
+            \end{split}
+        \end{equation}
+
+        If \(k\) is even then, \(\displaystyle\frac{k}{2}\in\mathbb{N}\) else \(\displaystyle\frac{k-1}{2}\in\mathbb{N}\). This means that \(E\) is a natural number.
+
+        If \(n=3k+2\), where \(k\in\mathbb{N}\), then,
+        \begin{equation}
+            \begin{split}
+                E&=\frac{(3k+2)(3k+2-1)(3k+2-2)}{6}\\
+                E&=\frac{k(3k+1)(3k+2)}{2}\\
+                E&=k\frac{9k^2+9k+2}{2}\\
+                E&=9k\frac{k(k+1)}{2}+k\\
+            \end{split}
+        \end{equation}
+
+        If \(k\) is even then, \(\displaystyle\frac{k}{2}\in\mathbb{N}\) else \(\displaystyle\frac{k+1}{2}\in\mathbb{N}\). This means that \(E\) is a natural number.
+
+        In each case we have proved that \(E\) is a natural number.
+        \[\therefore \forall n\in\mathbb{N}/\{1,2,3\},E\in\mathbb{N}\]
+        \center \(\blacksquare\)
+    \end{solution}
+
+    \question What is wrong with the "proof" at the end of the section? Find the first statement in it that is not valid. For which values of which variable (if any) is that particular statement true? Is the proof valid if the statement of the problem is adjusted to include only those particular values of the variable? Decide whether each statement in the "proof" follows from those above it.
+    \begin{solution}
+        The first statement is incorrect.
+        \[\forall x>0, x^2>x\]
+        This is false for \(x=1\) because \(1^2\ngtr 1\). If the statement is adjusted to include only those particular values of the variable. Then the following statement is also true.
+        \[x(x-1)>0\implies x^2-x>0\implies x^2>x, \because x>1\]
+        The second argument is also incorrect. We can counter it with \(x=2\),
+        \[x-2=0 \qquad x-3=-1\]
+        So the conclusion is also false. The entire statement is false.
+    \end{solution}
+\end{questions}
+
+\end{document}

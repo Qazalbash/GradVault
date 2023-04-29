@@ -1,0 +1,174 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[addpoints]{exam}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Week 9 Problems}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printanswers
+
+\begin{document}
+\maketitle
+
+\begin{definition}[\(\varepsilon\)-Neighborhood]
+	If \(\mathbb{F}\) is an ordered field, \(c\in\mathbb{F}\) then \(\varepsilon\)-neighborhood of \(c\); \(\aleph_{\varepsilon}(c)\) is defined as
+	\[\aleph_{\varepsilon}(c):=\{x:x\in\mathbb{F}\land |x-c|<\varepsilon\}\]
+\end{definition}
+
+\begin{definition}[Neighborhood]
+	A neighborhood of \(c\in(\mathbb{F},\mathbb{P})\) is any set \(S\subseteq\mathbb{F}\ni S\) contains some \(\varepsilon\)-neighborhood of \(c\) i.e. \(\exists \varepsilon>0\ni\aleph_{\varepsilon}(c)\subseteq S\).
+\end{definition}
+
+\begin{definition}[Nest]
+	A sequence of sets \(\{S_i\}=S_1,S_2,\cdots\), is called a Nest iff \[S_1\supseteq S_2\supseteq S_3\supseteq\cdots\]
+\end{definition}
+
+\begin{definition}[Nested Interval Property]
+	A sequence of sets \(\{S_i\}=S_1,S_2,\cdots\), is called a Nest iff \[S_1\supseteq S_2\supseteq S_3\supseteq\cdots\]
+\end{definition}
+
+% \begin{center}
+% 	\gradetable[h][questions]
+% \end{center}
+
+\begin{questions}
+	\question[1] Suppose \(U\) is a neighborhood of a point \(x\) and that \(U\subseteq V\). Show that \(V\) is a neighborhood of \(x\).
+	\begin{solution}
+		\(U\) is a neighborhood of \(x\) that means there exists \(\varepsilon>0\) such that \(\aleph_{\varepsilon}(x)\subseteq U\). Now, \(U\subseteq V\) means \(\aleph_{\varepsilon}(x)\subseteq V\). Therefore, \(V\) is a neighborhood of \(x\). \hfill\(\blacksquare\)
+	\end{solution}
+
+	\question[1] \begin{parts}
+		\part Suppose \(U\) and \(V\) are neighborhoods of a point \(x\). Show that \(U\cap V\) is a neighborhood of \(x\).
+		\begin{solution}
+			\(U\) and \(V\) are neighborhoods of \(x\) that means there exists \(\varepsilon_{1}>0\) and \(\varepsilon_{2}>0\) such that \(\aleph_{\varepsilon_{1}}(x)\subseteq U\) and \(\aleph_{\varepsilon_{2}}(x)\subseteq V\). Now, \(x\in U\cap V\) we can define a \(\varepsilon'=\min\{\varepsilon_1,\varepsilon_2\}\ni\aleph_{\varepsilon'}(x)\subseteq U\cap V\) is an \(\varepsilon\)-neighborhood of \(x\). Therefore, \(U\cap V\) is a neighborhood of \(x\). \hfill\(\blacksquare\)
+		\end{solution}
+
+		\newpage
+
+		\part Show that (a) remains true for a finite collection of neighborhoods.
+		\begin{solution}
+			\(\forall i\in\{1,2,\cdots,n\},U_{i}\) be neighborhoods of \(x\) then \(\exists\varepsilon_{i}>0\ni\aleph_{\varepsilon_{i}}(x)\subseteq U_{i}\). Now, \(\displaystyle x\in\bigcap_{i=1}^{n}U_{i}\), we can define a \(\displaystyle\varepsilon'=\min\{\varepsilon_1,\varepsilon_2,\dots,\varepsilon_n\}\ni\aleph_{\varepsilon'}(x)\subseteq\bigcap_{i=1}^{n}U_{i}\) is an \(\varepsilon\)-neighborhood of \(x\). Therefore, \(\displaystyle\bigcap_{i=1}^{n}U_{i}\) is a neighborhood of \(x\). \hfill\(\blacksquare\)
+		\end{solution}
+
+		\part Does (a) remains true for an infinite collection of neighborhoods?
+		\begin{solution}
+			No, it does not remain true for an infinite collection of neighborhoods, because we can not take the minimum of the set \(\{\varepsilon_1,\varepsilon_2,\varepsilon_3,\cdots\}\) because it is infinite. \hfill\(\blacksquare\)
+		\end{solution}
+	\end{parts}
+
+	% \newpage
+
+	\question[1] \begin{parts}
+		\part If \(S\) and \(T\) are bounded sets, show that \(S\cap T\) are bounded.
+		\begin{solution}
+			\[
+				\forall x\in S\cap T,x\in S\land x\in T\implies \left(\inf{S}\leq x\leq\sup{S}\right)\land \left(\inf{T}\leq x\leq\sup{T}\right)
+			\]\hfill\(\blacksquare\)
+		\end{solution}
+
+		\part If \(S\) and \(T\) are as in (a), show that \(\sup \left(S\cup T\right)=\max \{\sup S,\sup T\}\) (be sure to justify use of \(\max\)).
+		\begin{solution}
+			\begin{align*}
+				\forall x\in S\cup T,x\in S\lor x\in T & \implies \left(\inf{S}\leq x\leq\sup{S}\right)\lor \left(\inf{T}\leq x\leq\sup{T}\right) \\
+				                                       & \implies \left(x\leq\sup{S}\leq\sup{T}\right)\land\left(x\leq\sup{T}\leq\sup{S}\right)   \\
+				                                       & \implies x= \max\{\sup S,\sup T\}
+			\end{align*}\hfill\(\blacksquare\)
+		\end{solution}
+
+		\part Is it true that \(\sup\left(S\cap T\right)=\min\{\sup S, \sup T\}\)?
+		\begin{solution}
+			No, it is not true. Consider the set \(S=\{1,2,4\}\) and \(T=\{3,6\}\). Then \(\sup S=4\) and \(\sup T=6\). But \(\sup S\cap T=-\infty\). \hfill\(\blacksquare\)
+		\end{solution}
+
+		\part Give a condition under which the equality in (c) would be true.
+		\begin{solution}
+			The condition would be that \(\sup{S}=\sup{T}\).
+		\end{solution}
+
+		\newpage
+
+		\part Let \(\{S_\alpha:\alpha\in\mathcal{A}\}\) be a collection of bounded sets (where \(\mathcal{A}\) is finite). Show that \(\displaystyle\bigcup_{\alpha\in\mathcal{A}}S_\alpha\) is bounded.
+		\begin{solution}
+			Let \(\displaystyle S=\bigcup_{\alpha\in\mathcal{A}}S_\alpha\) be bounded, then \(\forall\alpha\in\mathcal{A},\exists \sup{S_\alpha}\land \inf{S_\alpha}\). Now, \(\displaystyle\sup{S}=\max\{\sup{S_\alpha}:\alpha\in\mathcal{A}\}\), similarly \(\displaystyle\inf{S}=\min\{\inf{S_\alpha}:\alpha\in\mathcal{A}\}\). Therefore, \(\displaystyle S\) is bounded. \hfill\(\blacksquare\)
+		\end{solution}
+
+		\part Let \(\{S_\alpha:\alpha\in\mathcal{A}\}\) be a collection of bounded sets (where \(\mathcal{A}\) is infinite). Is \(\displaystyle\bigcup_{\alpha\in\mathcal{A}}S_\alpha\) necessarily bounded?
+		\begin{solution}
+			No, it is not necessarily bounded. Consider the set \(\displaystyle S=\bigcup_{\alpha\in\mathbb{N}}\{\alpha\}\). Then \(\displaystyle\sup{S}=\max\{\sup{S_\alpha}:\alpha\in\mathbb{N}\}=\max\{\alpha:\alpha\in\mathbb{N}\}=\infty\). \hfill\(\blacksquare\)
+		\end{solution}
+	\end{parts}
+	% \newpage
+	\question[1] \begin{parts}
+		\part Suppose \(x_k\) is a real number for \(k=1,2,\cdots\), and there is a positive number \(\varepsilon\) so that \(x_k>\varepsilon\) for each \(k\). If \(B\) is any real number, show that there is a natural number \(n\) so that \(x_1+x_2+\cdots+x_n>B\).
+		\begin{solution}
+			\[\forall k\in\mathbb{N},x_k\in\mathbb{R},\exists \varepsilon\in\mathbb{R}^{+}\ni x_k>\varepsilon>0\implies x_k>0\]
+			\[\therefore \sum_{i=1}^{n}x_i>n\varepsilon>0\]
+			\[B\in\mathbb{R}^{-},\sum_{i=1}^{n}x_i>n\varepsilon>0>B\implies \sum_{i=1}^{n}x_i>B\]
+			\[B,\varepsilon\in\mathbb{R}^{+}, B>\varepsilon\implies \exists n\in\mathbb{N}\ni n\varepsilon>B\]
+			\[\therefore\sum_{i=1}^{n}x_i>n\varepsilon \land n\varepsilon>B\implies \sum_{i=1}^{n}x_i>B\]\hfill\(\blacksquare\)
+		\end{solution}
+
+		\part Show that this need not be the case if we assume only that \(x_n>0\) for all \(n\).
+		\begin{solution}
+			Let \(x_n=\left(-2\right)^{-n+1}\), we know that, \(\inf\{x_n\mid n\in\mathbb{N}\}=0\). The sum of the sequence is,
+			\[\sum_{n>0}x_n=\sum_{n>0}\left(-2\right)^{-n+1}=\frac{1}{1-\left(-\frac{1}{2}\right)}=\frac{2}{3}\]
+			Hence,
+			\[\forall B\in\mathbb{R}, B> \frac{2}{3}\implies \forall n\in\mathbb{N}, \sum_{i=1}^{n}x_i<B\]
+			Therefore there is no need for the condition \(x_n>0\) for all \(n\). \hfill\(\blacksquare\)
+		\end{solution}
+	\end{parts}
+\end{questions}
+
+\end{document}

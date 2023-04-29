@@ -1,0 +1,400 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{exam}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Weekly 3 Problems}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+    \question\begin{parts}
+        \part By considering the function \(f(x)=\arctan{(x)}\), show that the set of real numbers has the same cardinality as the interval \((-\pi/2,\pi/2)\).
+
+        \begin{solution}
+            We know that \(f\) is continuous over \(\mathbb{R}\) with codomain in \((-\pi/2,\pi/2)\). \(f^{-1}\) is also continuous over \((-\pi/2,\pi/2)\). We can create a bijection from \((-\pi/2,\pi/2)\) to \(\mathbb{R}\) with \(f\).
+
+            \begin{align*}
+                \forall x,y\in\mathbb{R}, f(x)=f(y) & \implies \arctan{(x)}=\arctan{(y)}         \\
+                                                    & \implies \tan\arctan{(x)}=\tan\arctan{(y)} \\
+                                                    & \implies x=y
+            \end{align*}
+
+            \(f\) is injective.
+
+            \[\forall x\in(-\pi/2,\pi/2),\exists y\in\mathbb{R}\ni (y = \tan(x))\]
+
+            \(f\) in surjective. We have proven that \(f:\mathbb{R}\rightarrow(-\pi/2,\pi/2)\) is a bijection. Therefore, the cardinality of \(\mathbb{R}\) is equal to the cardinality of \((-\pi/2,\pi/2)\).
+
+            \center\(\blacksquare\)
+        \end{solution}
+
+        \part By considering the function \(\displaystyle f(x)=\frac{x}{1+|x|}\), show that the set of real numbers has the same cardinality as the interval \((-1,1)\).
+
+        \begin{solution}
+            We know that \(f\) is continuous over \(\mathbb{R}\) with codomain in \((-1,1)\). \(f^{-1}\) is also continuous over \((-1,1)\). We can create a bijection from \((-1,1)\) to \(\mathbb{R}\) with \(f\).
+
+            \[f(x)=\begin{cases}\frac{x}{1+x} & x\ge 0\\\frac{x}{1-x} & x<0\end{cases}\iff f^{-1}(x)=\begin{cases}\frac{x}{1-x} & x\ge 0\\\frac{x}{1+x} & x<0\end{cases}\]
+
+            \[\therefore f(x)=\frac{x}{1+|x|}\iff f^{-1}(x)=\frac{x}{1-|x|}\]
+
+            \begin{align*}
+                \forall x,y\in\mathbb{R}, f(x)=f(y) & \implies \frac{x}{1+|x|}=\frac{y}{1+|y|}                                                             \\
+                                                    & \implies f^{-1}\left(\frac{x}{1+|x|}\right)=f^{-1}\left(\frac{y}{1+|y|}\right)                       \\
+                                                    & \implies \frac{\frac{x}{1+|x|}}{1-|\frac{x}{1+|x|}|}=\frac{\frac{y}{1+|y|}}{1-|\frac{y}{1+|y|}|}     \\
+                                                    & \implies \frac{\frac{x}{1+|x|}}{1-\frac{|x|}{|1+|x||}}=\frac{\frac{y}{1+|y|}}{1-\frac{|y|}{|1+|y||}} \\
+                                                    & \implies \frac{\frac{x}{1+|x|}}{1-\frac{|x|}{1+|x|}}=\frac{\frac{y}{1+|y|}}{1-\frac{|y|}{1+|y|}}     \\
+                                                    & \implies x=y
+            \end{align*}
+
+            \(f\) is injective.
+
+            \[\forall x\in(-1,1),\exists y\ni \left(y = \frac{x}{1-|x|}\right)\]
+
+            \(f\) is surjective. We have proven that \(f:\mathbb{R}\rightarrow(-1,1)\) is a bijection. Therefore, the cardinality of \(\mathbb{R}\) is equal to the cardinality of \((-1,1)\).
+
+            \center\(\blacksquare\)
+        \end{solution}
+
+        \part Show that two non-empty open intervals have the same cardinality.
+
+        \begin{solution}
+            Suppose two non-empty intervals \((a,b)\) and \((c,d)\). Let \(\displaystyle f(x)=\frac{x-a}{b-a}\) and \(\displaystyle g(x)=\frac{x-c}{d-c}\). Then \(\displaystyle f(x)\) and \(\displaystyle g(x)\) are both continuous functions on \((a,b)\) and \((c,d)\) respectively. Since \(\displaystyle f(x)\) and \(\displaystyle g(x)\) are continuous functions, they have the same inverse functions. Therefore, \(\displaystyle f^{-1}(x)\) and \(\displaystyle g^{-1}(x)\) are both continuous functions on \((0,1)\).
+
+            \[f^{-1}(x)=(b-a)x+a\qquad g^{-1}(x)=(d-c)x+c\]
+
+            We can create a bijection between from \((a,b)\) to \((c,d)\). Lets say we have a element \(\omega\in(a,b)\). \(f(\omega)\in(0,1)\). We can put this value in \(g^{-1}(x)\) to get a value that is in \((c,d)\).
+
+            \[\omega\in(a,b)\implies g^{-1}(f(\omega))\in(c,d)\]
+
+            We can do the same thing in the other direction. Lets say we have a element \(\varpi\in(c,d)\). \(g(\varpi)\in(0,1)\). We can put this value in \(f^{-1}(x)\) to get a value that is in \((a,b)\).
+
+            \[\varpi\in(c,d)\implies f^{-1}(g(\varpi))\in(a,b)\]
+
+            Therefore, we have a bijection between \((a,b)\) and \((c,d)\). Since the two intervals are non-empty, they have the same cardinality.
+
+            \center\(\blacksquare\)
+        \end{solution}
+
+        \part Show that set of real number has the same cardinality as any non-empty open interval.
+
+        \begin{solution}
+            Suppose we have a non-empty open interval \((a,b)\). Let \(\displaystyle f(x)=\frac{x-a}{b-a}\). Then \(\displaystyle f(x)\) is a continuous function on \((a,b)\). Since \(\displaystyle f(x)\) is a continuous function, it has an inverse function. Therefore, \(\displaystyle f^{-1}(x)\) is a continuous function on \((0,1)\).
+
+            \[f^{-1}(x)=(b-a)x+a\]
+
+            Now \(g:(0,1)\rightarrow\mathbb{R}\), defined as,
+
+            \[g(x)=\tan{\left(\frac{2x-1}{2}\pi\right)}\]
+
+            Then \(\displaystyle g(x)\) is a continuous function on \((0,1)\). Since \(\displaystyle g(x)\) is a continuous function, it has an inverse function. Therefore, \(\displaystyle g^{-1}(x)\) is a continuous function on \(\mathbb{R}\).
+
+            Lets say we have a element \(\omega\in(a,b)\). \(f(\omega)\in(0,1)\). We can put this value in \(g(x)\) to get a value that is in \(\mathbb{R}\).
+
+            \[\omega\in(a,b)\implies g(f(\omega))\in\mathbb{R}\]
+
+            We can do the same thing in the other direction. Lets say we have a element \(\varpi\in\mathbb{R}\). \(g(\varpi)\in(0,1)\). We can put this value in \(f^{-1}(x)\) to get a value that is in \((a,b)\).
+
+            \[\varpi\in\mathbb{R}\implies f^{-1}(g^{-1}(\varpi))\in(a,b)\]
+
+            Therefore, we have a bijection between \((a,b)\) and \(\mathbb{R}\). Since the two intervals are non-empty, they have the same cardinality.
+
+            \center\(\blacksquare\)
+        \end{solution}
+    \end{parts}
+
+    \newpage
+
+    \question \begin{parts}
+        \part Let \(I\) be the set of decimal of the form \(0.d_{1}d_{2}\cdots\). Construct a one to one function from \(I\) to \(I\times I\).
+
+        \begin{solution}
+
+            Let \(f\) be a function that takes some a decimal number \(a\) of form \(0.d_{1}d_{2}d_{3}\cdots\) and map it to the ordered pair \((0.d_{1}d_{3}d_{5}\cdots,0.d_{2}d_{4}d_{6}\cdots)\). Then \(f\) is a one to one function from \(I\) to \(I\times I\).
+
+            We will prove \(f\) to be injective with the following steps.
+
+            \begin{align*}
+                \forall a,b\in I, & f(a)=f(b)                                                                                             \\
+                \implies          & \left(0.a_{1}a_{3}\cdots,0.a_{2}a_{4}\cdots\right)=\left(0.b_{1}b_{3}\cdots,0.b_{2}b_{4}\cdots\right) \\
+                \implies          & \forall i>0,a_{i}=b_{i}                                                                               \\
+                \implies          & a=b
+            \end{align*}
+        \end{solution}
+
+        \part Find either an onto function from \(I\) to \(I\times I\) or a one-to-one function for \(I\times I\) to \(I\).
+
+        \begin{solution}
+
+            Let \(f\) be a function that takes some ordered pair \((a,b)\) and map it to the decimal number \(0.a_{1}a_{2}\cdots\). Then \(f\) is a onto function from \(I\) to \(I\times I\).
+
+            We will prove \(f\) to be surjective with the following steps.
+
+            \begin{align*}
+                \forall (a,b)\in I\times I, & \exists c\in I, f(c)=(a,b)                                                         \\
+                \implies                    & f\left(0.c_{1}c_{2}c_{3}c_{4}\cdots\right)=(0.a_{1}a_{2}\cdots,0.b_{1}b_{2}\cdots) \\
+                \implies                    & \forall i>0, c_{2i-1}=a_{i}\land c_{2i}=b_{i}                                      \\
+                \implies                    & c=0.a_{1}b_{1}a_{2}b_{2}\cdots
+            \end{align*}
+        \end{solution}
+
+        \part Do \(I\) and \(I\times I\) have the same cardinality?
+
+        \begin{solution}
+
+            We shown that our choice of function \(f\) is injective as well as surjective, that mean \(f\) is injective. Therefore, \(I\) and \(I\times I\) have the same cardinality.
+        \end{solution}
+    \end{parts}
+
+    \newpage
+
+    \question \begin{parts}
+        \part Let \(f:A\rightarrow B\) be one-to-one and onto. Define \(g:B\rightarrow A\) by saying \(a=g(b)\iff b=f(a)\). Show that \(g\) is a function and that it is one-to-one and onto.
+
+        \begin{solution}
+
+            We will first show \(g\) is injective.
+
+            \begin{align*}
+                \forall b_{1},b_{2}\in B, & g(b_{1})=g(b_{2})       \\
+                \implies                  & f(g(b_{1}))=f(g(b_{2})) \\
+                \implies                  & b_{1}=b_{2}
+            \end{align*}
+
+            We will now show \(g\) is surjective.
+
+            \begin{align*}
+                \forall a\in A, & \exists b\in B\ni g(b)=a \\
+                \implies        & f(a)=f(g(b))             \\
+                \implies        & b=f(a)
+            \end{align*}
+
+            Therefore, \(g\) is a function and that it is one-to-one (injective) and onto (surjective).
+        \end{solution}
+
+        \part Show that, if \(a\in A\), then \(g(f(a))=a\), if \(b\in B\), then \(f(g(b))=b\). Explain why \(g\) is called the \(g\) \textbf{inverse function} of \(f\).
+
+        \begin{solution}
+
+            We will show \(\forall a\in A\), \(g(f(a))=a\).
+            \begin{align*}
+                \forall a\in A, & f(a)=b       \\
+                \iff            & g(f(a))=g(b) \\
+                \iff            & g(f(a))=a
+            \end{align*}
+
+            We will show \(\forall b\in B\), \(f(g(b))=b\).
+            \begin{align*}
+                \forall b\in B, & g(b)=a       \\
+                \iff            & f(g(b))=f(a) \\
+                \iff            & f(g(b))=b
+            \end{align*}
+
+            Above results shows that,
+
+            \[(\forall a\in A,g(f(a))=a)\land(\forall b\in B,f(g(b))=b)\iff (f=g^{-1})\land (g=f^{-1})\]
+
+            That's why \(g\) is called the inverse function of \(f\).
+
+            \center\(\blacksquare\)
+        \end{solution}
+
+        \newpage
+
+        \part Examine your proof of \((a)\) and carefully pick out which properties of \(f\) lead to which properties of \(g\).
+
+        \begin{solution}
+
+            The properties are that,
+
+            \begin{enumerate}
+                \item \(f\) is bijective.
+                \item \(g\) was defined as \(a=g(b)\iff b=f(a)\)
+            \end{enumerate}
+
+        \end{solution}
+
+        \part If \(A\) is finite and \(f:A\rightarrow B\) is one-to-one, show that the number of elements of \(f(A)=\{y\in B:\exists x\in A\ni (y=f(x))\}\) is same as the number of elements of \(A\).
+
+        \begin{solution}
+
+            We can prove the argument with,
+
+            \[\forall y\in B, \exists x\in A\ni y=f(x)\]
+
+            For every element in codomain we have some element in domain. Due to the definition of function the element in domain will be unique. Therefore, the number of elements of \(f(A)\) is same as the number of elements of \(A\).
+
+            \[\therefore |A|=|B|\]
+
+            \center\(\blacksquare\)
+        \end{solution}
+
+        \part Show that it is impossible to have a one-to-one correpondance between a finite set and one of its proper subsets.
+
+        \begin{solution}
+
+            We will prove this contradiction with the following steps. Suppose two sets \(A\) and \(B\) such that \(A\subset B\) and a bijective function \(f:A\rightarrow B\). \(f\) will map elements from domain to themselves in codomain.
+
+            \[\forall a\in A,\exists b\in B\ni b=f(a)=a\]
+            \[A\subset B\implies\exists b'\in B\ni b'\notin A\]
+
+            \(f\) is not mapping any element to \(b'\), therefore \(f\) is not a bijective function. Contradiction. Therefore, it is impossible to have a one-to-one correpondance between a finite set and one of its proper subsets.
+
+            \center\(\blacksquare\)
+        \end{solution}
+    \end{parts}
+
+    \newpage
+
+    \question A relation on a set \(X\) is a set of ordered pairs of elements of \(X\). A relation is often denoted by a symbol like \(\sim\), and we write "\(x\sim y\)" (and say "\(x\) is related to \(y\)") to indicate that \((x, y)\) is an element of the relation. The relation is called an equivalence relation on \(X\) if it has the properties:
+    \begin{enumerate}
+        \item \(x\sim x\) for all \(x\in X\)
+        \item if \(x\sim y\) then \(y\sim x\)
+        \item if \(x\sim y\) and \(y\sim z\) then \(x\sim z\)
+    \end{enumerate}
+
+    \begin{parts}
+        \part Show that \(=\) and \(\le\) are equivalence relations on the real numbers, but that \(<\) is not.
+        \begin{solution}
+            For \(=\),
+            \begin{align*}
+                \forall x\in X,  & x=x            \\
+                x=y              & \implies y=x   \\
+                (x=y)\land (y=z) & \implies (x=z)
+            \end{align*}
+            We can say that every number is equal to itself. If a number is equal to the other number then the other number is equal to the first number. If one number is equal to another number and that another number is equal to some other number, then the one number is equal to some other number. Hence \(=\) is an equivalence relation over set of numbers.
+
+            For \(\le\),
+            \begin{align*}
+                \forall x\in X,        & x\le x            \\
+                x\le y                 & \implies y\le x   \\
+                (x\le y)\land (y\le z) & \implies (x\le z)
+            \end{align*}
+            The reflexivity and transivity is trivial and true. We have to discuss over symmertic property. This can be divided into two cases because \(x\le y\) is equivalent to \((x=y)\lor (x<y)\). If the number \(x\) and \(y\) are equal then we have proved that \(=\) relation is symmertic, otherwise \(x\) can be less than \(y\) and in this case \(y\le x\) is false. and we know that if our premise is true and conclusion is false then the implication is false. \(\therefore\) \(\le\) is not symmertic over set of numbers. Hence \(\le\) is not an equivalence relation over set of numbers.
+
+            For \(<\), we only need to discuss the reflexivity of numbers on \(<\).
+            \[\forall x\in X,x<x\]
+            This can not be true because no number can be less than to itself. \(\therefore <\) is not an equivalence relation over set of numbers.
+            \center \(\blacksquare\)
+        \end{solution}
+
+        \newpage
+
+        \part Is \(\subseteq\) an equivalence relation on sets?
+
+        \begin{solution}
+            Let \(A\), \(B\) and \(C\) be any set. It is for sure that any set is an improper subset of itself, which makes it the subeset of itself.
+            \[\therefore A\subseteq A\]
+            If \(A\subseteq B\), this is equivalent of saying \((A\subset B)\lor (A=B)\). If \(A\subseteqq B\) (improper subeset), which means they are equal then they are subeset of each other means \(A\subseteq B\) and \(B\subseteq A\). If \(A\subset B\), then \(B\not\subset A\), but if the premise is true and conclusion is false then the implication is false.
+            \[A\subseteq B\nRightarrow B\subseteq A\]
+            Hence, \(\subseteq\) is not an equivalent relation over collection of sets.
+            \center \(\blacksquare\)
+        \end{solution}
+
+        \part Is \(\ldots\) is related to \(\ldots\) an equivalence relation on the set of people?
+        \begin{solution}
+            There are different type of relations among humans; like biological relation, social relation and ethnic relations etc. To prove the statement I would assume that we are talking about the biological relations.
+
+            Then If two people let say \(p_{1}\) and \(p_{2}\) are a member of set \(\mathbb{P}\) that contains all people in the world. If \(p_{1}\) is the father of \(p_{2}\), then \(p_{2}\) is related to \(p_{1}\), but only a person can be related to his ancestors, ancestors can not be related to the person. Therefore, \(p_{1}\) is not related to \(p_{2}\). Hence the relation is not symmertic, therefore it is not equivalent relation.
+        \end{solution}
+
+        \part Is \(\cdots\) is acquainted with \(\cdots\) an equivalence relation on the set of people?
+        \begin{solution}
+
+            If two people \(p_{1}\) and \(p_{2}\) are acquainted with each other, then they are related to each other. If \(p_{1}\) is acquainted with \(p_{2}\), then \(p_{2}\) is acquainted with \(p_{1}\). If \(p_{1}\) is acquainted with \(p_{2}\) and \(p_{2}\) is acquainted with \(p_{3}\), then \(p_{1}\) is acquainted with \(p_{3}\). Also, \(p_{1}\) is acquainted with itself. Hence, the relation is equivalent relation.
+        \end{solution}
+
+        \newpage
+
+        \part Let \(X\) be a set and an equivalence relation on \(X\). For any element \(a\) of \(X\), let \(X_{a}=\{x\in X:x\sim a\}\). Show that:
+        \begin{enumerate}
+            \item \(X_{a}\neq \emptyset\) for all \(a\),
+            \item if \(X_{a}\cap X_{b}\neq \emptyset\), then \(X_{a}=X_{b}\),
+            \item \(\displaystyle X=\bigcup_{a}X_{a}\)
+        \end{enumerate}
+
+        \begin{solution}
+            \begin{enumerate}
+                \item \(X_{a}\) can not be empty because for equivalence relation to hold it must be reflexive. Therefore,
+                      \[\{a\}\subseteq X_{a}\implies X_{a}\neq\emptyset\]
+                \item Let \(\omega\) be any element from \(X_{a}\cap X_{b}\),
+                      \begin{align*}
+                                   & \omega\in X_{a}\cap X_{b}                \\
+                          \implies & (\omega\in X_{a})\land (\omega\in X_{b}) \\
+                          \implies & (\omega\sim a) \land (\omega\sim b)      \\
+                          \implies & (a\sim \omega) \land (\omega\sim b)      \\
+                          \implies & a\sim b
+                          \\
+                          \implies & b\in X_{a}                               \\
+                      \end{align*}
+                      \(b\) will also be in \(X_{a}\) and due to transivity all the element that are related to \(b\) would also be in \(X_{a}\). This means all elements of \(X_{b}\) are in \(X_{b}\) and vice versa.
+                      \[X_{a}=X_{b}\]
+                      We can also state this as,
+                      \[X_{a}\cap X_{b}\neq\emptyset\implies a\sim b\]
+                \item The contrapostive of the implication we had while proving (2) is,
+                      \[a\nsim b \implies X_{a}\cap X_{b}=\emptyset\]
+                      This means if \(a\) is not related to \(b\) they do not have any element in common. This shows that the relation \(\sim\) partitions the set. And if take union of all those partitions we would have the orginal set.
+                      \[X=\bigcup_{a\in X}X_{a}\]
+            \end{enumerate}
+            \center \(\blacksquare\)
+        \end{solution}
+    \end{parts}
+\end{questions}
+
+\end{document}

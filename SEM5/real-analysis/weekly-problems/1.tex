@@ -1,0 +1,231 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[answers]{exam}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{framed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Week 1 Problems}
+\author{Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 1.1}
+
+\subsection*{Problem 1}
+\begin{framed}
+    Russell meant that there are some mathematically accepted facts known as axioms. We build our knowledge and the knowledge base of the system for which we have certain beliefs based on those assumptions. If there is a chain of belief that is reliant on the prior belief to which it is attached, and the chain is appropriately built, the belief at the end of the chain is as true as the belief at the beginning of the chain.
+\end{framed}
+
+\section*{Exercise 1.3}
+
+\subsection*{Problem 1}
+\begin{framed}
+    \begin{enumerate}
+        \item Yes
+        \item Yes
+        \item Yes
+        \item No
+    \end{enumerate}
+\end{framed}
+
+\section*{Exercise 1.4}
+
+\subsection*{Problem 3c}
+\begin{framed}
+    We need to prove that,
+    \[(A\implies B) \iff (\lnot B\implies\lnot A)\]
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|}
+            \hline
+            A & B & \lnot A & \lnot B & A\implies B & \lnot B\implies \lnot A \\\hline
+            T & T & F       & F       & T           & T                       \\\hline
+            T & F & F       & T       & F           & F                       \\\hline
+            F & T & T       & F       & T           & T                       \\\hline
+            F & F & T       & T       & T           & T                       \\\hline
+        \end{array}
+    \end{displaymath}
+    The statement is a tautology. \(\blacksquare\)
+\end{framed}
+
+\subsection*{Problem 3d}
+\begin{framed}
+    We need to prove that,
+    \[\left((A\lor B)\implies C\right)\iff \left((A\implies C) \land (B\implies C)\right)\]
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|c|c|}
+            \hline
+            A & B & C & A\lor B & A\lor B\implies C & A\implies C & B\implies C & (A\implies C) \land (B\implies C) \\\hline
+            T & T & T & T       & T                 & T           & T           & T                                 \\\hline
+            T & T & F & T       & F                 & F           & F           & F                                 \\\hline
+            T & F & T & T       & T                 & T           & T           & T                                 \\\hline
+            T & F & F & T       & F                 & F           & T           & F                                 \\\hline
+            F & T & T & T       & T                 & T           & T           & T                                 \\\hline
+            F & T & F & T       & F                 & T           & F           & F                                 \\\hline
+            F & F & T & F       & T                 & T           & T           & T                                 \\\hline
+            F & F & F & F       & T                 & T           & T           & T                                 \\\hline
+        \end{array}
+    \end{displaymath}
+    The statement is a tautology. \(\blacksquare\)
+\end{framed}
+
+\subsection*{Problem 3e}
+\begin{framed}
+    We need to prove that,
+    \[\left(A\implies( B\land C)\right)\iff \left((A\implies B)\land (A\implies C)\right)\]
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|c|c|}
+            \hline
+            A & B & C & B\land C & A\implies (B\land C) & A\implies B & A\implies C & (A\implies B) \land (A\implies C) \\\hline
+            T & T & T & T        & T                    & T           & T           & T                                 \\\hline
+            T & T & F & F        & F                    & T           & F           & F                                 \\\hline
+            T & F & T & F        & F                    & F           & T           & F                                 \\\hline
+            T & F & F & F        & F                    & F           & F           & F                                 \\\hline
+            F & T & T & T        & T                    & T           & T           & T                                 \\\hline
+            F & T & F & F        & T                    & T           & T           & T                                 \\\hline
+            F & F & T & F        & T                    & T           & T           & T                                 \\\hline
+            F & F & F & F        & T                    & T           & T           & T                                 \\\hline
+        \end{array}
+    \end{displaymath}
+    The truth value of \(A\implies(B\land C)\) is same as of \((A\implies B)\land (A\implies C)\). They are equivalent, which means the statement is a tautology. \(\blacksquare\)
+\end{framed}
+\newpage
+\subsection*{Problem 4a}
+\begin{framed}
+    We can prove this with truth table,
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|}
+            \hline
+            A & B & \lnot B & A\implies B & A\implies\lnot B & (A\implies B) \iff(A\implies\lnot B) \\\hline
+            T & T & F       & T           & F                & F                                    \\\hline
+            T & F & T       & F           & T                & F                                    \\\hline
+            F & T & F       & T           & T                & T                                    \\\hline
+            F & F & T       & T           & T                & T                                    \\\hline
+        \end{array}
+    \end{displaymath}
+    The statement is not a tautology. Hence the \(A\implies B\) and \(A\implies\lnot B\) can not be true at the same time.
+\end{framed}
+
+\subsection*{Problem 4b}
+\begin{framed}
+    We can prove this with truth table,
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|}
+            \hline
+            A & B & \lnot A & A\implies B & \lnot A\implies B & (A\implies B) \iff(\lnot A\implies B) \\\hline
+            T & T & F       & T           & T                 & T                                     \\\hline
+            T & F & F       & F           & T                 & F                                     \\\hline
+            F & T & T       & T           & F                 & F                                     \\\hline
+            F & F & T       & T           & F                 & F                                     \\\hline
+        \end{array}
+    \end{displaymath}
+    The statement is not a tautology. Hence the \(A\implies B\) and \(\lnot A\implies B\) can not be true at the same time.
+\end{framed}
+
+\subsection*{Problem 6a}
+\begin{framed}
+    We have to prove that,
+    \[(A\implies(B\implies C))\iff ((A\land B)\implies C)\]
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|c|}
+            \hline
+            A & B & C & B\implies C & A\implies(B\implies C) & A\land B & (A\land B)\implies C \\\hline
+            T & T & T & T           & T                      & T        & T                    \\\hline
+            T & T & F & F           & F                      & T        & F                    \\\hline
+            T & F & T & T           & T                      & F        & T                    \\\hline
+            T & F & F & T           & T                      & F        & T                    \\\hline
+            F & T & T & T           & T                      & F        & T                    \\\hline
+            F & T & F & F           & T                      & F        & T                    \\\hline
+            F & F & T & T           & T                      & F        & T                    \\\hline
+            F & F & F & T           & T                      & F        & T                    \\\hline
+        \end{array}
+    \end{displaymath}
+    The truth value of \(A\implies(B\implies C)\) is always as same as truth value of the \((A\land B)\implies C\). This means they are equivalent.
+\end{framed}
+
+\subsection*{Problem 7a}
+\begin{framed}
+    We have to disprove that,
+    \[(A\implies B)\implies (B\implies A)\]
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|}
+            \hline
+            A & B & A\implies B & B\implies A & (A\implies B)\implies (B\implies A) \\\hline
+            T & T & T           & T           & T                                   \\\hline
+            T & F & F           & T           & T                                   \\\hline
+            F & T & T           & F           & F                                   \\\hline
+            F & F & T           & T           & T                                   \\\hline
+        \end{array}
+    \end{displaymath}
+    The statement is a not tautology. We have disproved it. \(\blacksquare\)
+\end{framed}
+
+\subsection*{Problem 7b}
+\begin{framed}
+    We have to disprove that,
+    \[(A\implies B) \land B\implies A\]
+    \begin{displaymath}
+        \begin{array}{|c|c|c|c|c|c|}
+            \hline
+            A & B & A\implies B & (A\implies B)\land B & (A\implies B) \land B\implies A \\\hline
+            T & T & T           & T                    & T                               \\\hline
+            T & F & F           & F                    & T                               \\\hline
+            F & T & T           & T                    & F                               \\\hline
+            F & F & T           & F                    & T                               \\\hline
+        \end{array}
+    \end{displaymath}
+    The statement is a not tautology. We have disproved it. \(\blacksquare\)
+\end{framed}
+
+\end{document}
