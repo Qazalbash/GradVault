@@ -1,0 +1,147 @@
+Fibre-to-node NBN users often not getting speeds they're paying for, watchdog says
+
+Australia’s competition regulator has said many people on fibre-to-the-node NBN connections are not able to get the speeds they are paying for, with nearly a quarter of people on higher-tier speeds found to have underperforming connections.
+The Australian Competition and Consumer Commission report for broadband speeds, released on Wednesday, showed similar average download-speed results for the month of November 2019 as the previous report, with users able to get at least 90.5% of their promised speed on fibre-to-the-premises, 91.4% on fibre-to-the-curb, 81.9% on fibre-to-the-node and 91.6% on cable.
+But the ACCC took aim at the poor performance of the controversial fibre-to-the-node technology brought in by the Coalition government instead of continuing the full-fibre rollout.
+Fibre-to-the-node is fibre cable right up to a box, usually on the end of a street, that then uses the existing Telstra copper phone lines for the remaining distance to people’s homes. It means the speed of the connection depends on the quality of the copper line and the distance from the node to a person’s home.
+
+
+
+Homes connected to NBN via fibre-to-node only getting 80% of speed they paid for
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+As part of its testing of NBN speeds, the ACCC noticed that close to a quarter of connections on fibre-to-the node were considered underperforming. That is, no more than 5% of the speed tests conducted were able to get above 75% of the promised speed.
+The ACCC found that of the 1,212 NBN connections tested, 11% of those were considered to be underperforming, and 95% of those underperforming were fibre-to-the-node connections. The majority of the FTTN connection underperforming were on plans of over 50 megabits per second (Mbps), and the ACCC said users were encouraged to move to slower plans.
+Under NBN Co’s statement of expectations, issued by the federal government in 2016, every NBN connection must have access to at least 25 Mbps download speeds, and 90% of fixed line premises (excluding wireless and satellite services) must be able to get at least 50Mbps.
+In places where fibre-to-the-node cannot meet these expectations, NBN Co has been remediating the copper, and in a very small number of places, upgrading the homes to full-fibre.
+The NBN Co chief executive, Stephen Rue, told Guardian Australia on Tuesday the number of homes needing upgrades was not significant. “It’s a small number we have been upgrading to fibre-to-the-premises,” he said.
+“But we have always rolled out technologies where it is best to do so to meet the statement of expectations, and in this case it was a small number of premises where we have built with fibre-to-the-premises where we weren’t able to meet the requirements because basically the length of the copper.”
+Labor’s communications spokeswoman, Michelle Rowland, said the report raised questions over why the network was “still not delivering the speeds Australians are paying for”.
+On Tuesday, the government-owned company tasked with building the $51bn network reported a half-year revenue of $1.8bn, up 39% on the same time the previous year.
+A total of 10.5m homes and businesses were able to connect to the NBN as of the end of 2019, and 6.4m were using the service. The largest portion of those were on fibre-to-the-node, at 2.8m connections, and 4.4m able to order a service.
+Rue said the network was on track for the “volume build” of 11.5m homes to be completed by 30 June, but the final six months would be more complicated, and potentially more costly for the company as some of the most complex places to install the network were connected.
+
+
+
+Telstra admits company must accept some of the blame for the NBN
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+This has meant the cost to install the NBN on a per-premises basis rose $63 in the past six months to $2,331 for fibre-to-the-node, and $120 to $3,249 for fibre-to-the-curb.
+The company’s chief financial officer, Philip Knox, said that after 30 June there would also be a number of other sites that would still need to be connected, despite the volume build being “complete”.
+“There will, of course, always be new homes that will need to be added to the network, and there remain a number of culturally significant and heritage sites, and complex builds where construction efforts will continue past that June target,” he said.
+Rue said the company was monitoring the potential for the coronavirus outbreak to stop China-based suppliers sending equipment to the company, but that NBN Co had enough material to complete the build and “multiple months of inventory” for the technology used to connect in people’s homes.
+“[That gives] us plenty of time to seek replenishments on inventory from alternative sources, if need be. At this stage, we’re comfortable around our supplier arrangements.”
+
+
+Topics
+
+
+
+National broadband network (NBN)
+
+
+
+
+
+
+Telecommunications industry
+
+
+
+
+Internet
+
+
+
+
+Telstra
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

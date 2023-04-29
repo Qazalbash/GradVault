@@ -1,0 +1,143 @@
+Phone location data could be used to help UK coronavirus effort
+
+BT, owner of UK mobile operator EE, is in talks with the government about using its phone location and usage data to monitor whether coronavirus limitation measures such as asking the public to stay at home are working.
+The ability to create movement maps of anonymised data, meaning individuals could not be identified, could prove invaluable in evaluating and shaping the state response to the spread of the virus.
+The information provided on geographical movement would be delayed by 12 to 24 hours rather than arrive in real time, but would still be able to show patterns such as whether people were avoiding the high street and heeding government advice to stay away from pubs, bars and restaurants.
+It could also be used to send health alerts to the public in specific locations, such as a city or town under lockdown, and would feed into decisions being made by health services.
+The UK is not the only country considering exploiting such data to tackle the spread of the virus. Israel and Austria are enlisting location data from mobile phone networks and the US is reportedly seeking to follow their lead.
+Donald Trump’s administration is in “active talks” with a number of tech companies on the issue, according to a report by the Washington Post on Thursday, exploring various options for how best to use location data.
+In the UK, mobile companies already know that government guidance to work from home is being heeded, as the commuter-hour spike in data usage of workers heading to and from their jobs is “dead”, according to one senior telecoms executive.
+“We are talking with the government about a number of areas in which we may be able to assist with the national public health effort,” said a spokesman for BT.
+“In relation to the use of mobile data, we are still actively exploring possibilities. As always, we are mindful of the privacy of our customers, while making sure we do everything that might help the medical authorities in the fight against coronavirus.”
+EE is the largest of the UK’s big mobile companies – which include O2, Vodafone and Three UK – with more than 20 million customers.
+Vodafone has already helped the Italian government mapping out the movements of people in Lombardy, the centre of an outbreak that has seen large parts of the country put on lockdown. 
+The UK’s other major mobile operators say they have not yet engaged with the government over using customer data to fight the coronavirus. “We have not been asked,” said a spokesman for Vodafone.
+An O2 spokesperson said the networks were helping model the spread of coronavirus, but were not handing over user data.
+“We are fully engaged in helping in the fight against Covid-19,” said an O2 spokesperson. “Using our mobile technology, we have the potential to build models that help to predict broadly how the virus might move. This would in no way be able to identify or map individuals, and operates within strict privacy guidelines.”
+It is understood that the possibility of UK mobile companies helping the government effort came up at a meeting of tech companies at Downing Street last week and BT and EE executives met Cabinet Office representatives on Thursday to expand on the discussions.
+As well as assessing the effectiveness of social distancing measures, mobile data can be used to track the movements of asymptomatic carriers of the disease, enabling authorities to more precisely focus testing on members of the community who may have been exposed.
+However, privacy campaigners worry that handing over such personally identifying information in large quantities crosses a line that may be hard to step back from when things return to normality.
+The Washington Post reported that the US government spoke to tech companies about using a “track and trace” model of surveillance, which would involve sharing highly individualised and privacy-invading data, as well as the possibility of using the same information in aggregate form.
+That could mean tracking whether people are abiding by social distancing advice, for instance, or mapping larger population flows between cities or neighbourhoods.
+
+
+
+Coronavirus is a chance to reset our relationship with our phones | Nancy Jo Sales
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+Facebook was named as being involved in the talks, but in a press call on Wednesday evening, its chief executive officer, Mark Zuckerberg, said he had heard nothing about the topic until the Post’s report, and that the company would not offer up user location data even if asked.
+“At a high level, the answer is no,” Zuckerberg said, “but I think it’s probably a hypothetical, because no one is asking for this.”
+He theorised that there had been confusion with a Facebook tool that already exists, Disaster Maps, which helps share real-time information on stricken communities with response teams. 
+In the UK, the chief medical officer, Sir Patrick Vallance, told a press conference on Tuesday that the most useful period of time for location tracking had already passed. The concept “would have been a good idea in January”, he said.
+But Prof Jon Crowcroft, Turing Fellow at the Alan Turing Institute, said the data could yet be useful. “There could be significant benefit in having a nationally implemented app tracking not only who is getting Covid-19, but also who has recovered from infection,” he said.
+But, he added: “Inevitably, there are caveats to producing this sort of technology, and limitations. Privacy is a big one. Any app system and accompanying database must be designed with comprehensive, user-centric privacy policies built in.” 
+The Israeli approach, which relies on technology developed for counterterrorism purposes, was approved on Tuesday morning.
+“Israel is a democracy and we must maintain the balance between civil rights and the public’s needs,” said Benjamin Netanyahu, Israel’s prime minister. “These tools will very much assist us in locating the sick and stopping the virus from spreading.” 
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Telecommunications industry
+
+
+
+
+BT
+
+
+
+
+EE
+
+
+
+
+Mobile phones
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

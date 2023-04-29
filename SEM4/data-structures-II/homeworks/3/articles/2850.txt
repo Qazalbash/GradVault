@@ -1,0 +1,101 @@
+How artificial intelligence outmanoeuvred the superbugs
+
+One of the seminal texts for anyone interested in technology and society is Melvin Kranzberg’s Six Laws of Technology, the first of which says that “technology is neither good nor bad; nor is it neutral”. By this, Kranzberg meant that technology’s interaction with society is such “that technical developments frequently have environmental, social and human consequences that go far beyond the immediate purposes of the technical devices and practices themselves, and the same technology can have quite different results when introduced into different contexts or under different circumstances”.
+The saloon-bar version of this is that “technology is both good and bad; it all depends on how it’s used” – a tactic that tech evangelists regularly deploy as a way of stopping the conversation. So a better way of using Kranzberg’s law is to ask a simple Latin question: Cui bono? – who benefits from any proposed or hyped technology? And, by implication, who loses?
+With any general-purpose technology – which is what the internet has become – the answer is going to be complicated: various groups, societies, sectors, maybe even continents – win and lose, so in the end the question comes down to: who benefits most? For the internet as a whole, it’s too early to say. But when we focus on a particular digital technology, then things become a bit clearer.
+A case in point is the technology known as “machine learning”, a manifestation of artificial intelligence that is the tech obsession de nos jours. It’s really a combination of algorithms that are “trained” on “big data”, ie huge datasets. In principle, anyone with the computational skills to use freely available software tools such as TensorFlow could do machine learning. But in practice they can’t because they don’t have access to the massive data needed to train their algorithms.
+This means the outfits where most of the leading machine-learning research is being done are a small number of tech giants – especially Google, Facebook and Amazon – which have accumulated colossal silos of behavioural data over the last two decades. Since they have come to dominate the technology, the Kranzberg question – who benefits? – is easy to answer: they do. Machine learning now drives everything in those businesses – “personalisation” of services, recommendations, precisely targeted advertising, behavioural prediction… For them, AI (by which they mostly mean machine learning) is “everywhere”. And it is making them the most profitable enterprises in the history of capitalism.
+As a consequence, a powerful technology with great potential for good is at the moment deployed mainly for privatised gain. In the process, it has been characterised by unregulated premature deployment, algorithmic bias, reinforcing inequality, undermining democratic processes and boosting covert surveillance to toxic levels. That it doesn’t have to be like this was vividly demonstrated last week with a report in the leading biological journal Cell of an extraordinary project, which harnessed machine learning in the public (as compared to the private) interest. The researchers used the technology to tackle the problem of bacterial resistance to conventional antibiotics – a problem that is rising dramatically worldwide, with predictions that, without a solution, resistant infections could kill 10 million people a year by 2050.
+The team of MIT and Harvard researchers built a neural network (an algorithm inspired by the brain’s architecture) and trained it to spot molecules that inhibit the growth of the Escherichia coli bacterium using a dataset of 2,335 molecules for which the antibacterial activity was known – including a library of 300 existing approved antibiotics and 800 natural products from plant, animal and microbial sources. They then asked the network to predict which would be effective against E coli but looked different from conventional antibiotics. This produced a hundred candidates for physical testing and led to one (which they named “halicin” after the HAL 9000 computer from 2001: A Space Odyssey) that was active against a wide spectrum of pathogens – notably including two that are totally resistant to current antibiotics and are therefore a looming nightmare for hospitals worldwide.
+There are a number of other examples of machine learning for public good rather than private gain. One thinks, for example, of the collaboration between Google DeepMind and Moorfields eye hospital. But this new example is the most spectacular to date because it goes beyond augmenting human screening capabilities to aiding the process of discovery. So while the main beneficiaries of machine learning for, say, a toxic technology like facial recognition are mostly authoritarian political regimes and a range of untrustworthy or unsavoury private companies, the beneficiaries of the technology as an aid to scientific discovery could be humanity as a species. The technology, in other words, is both good and bad. Kranzberg’s first law rules OK. 
+What I’m reading 
+Every cloud… Zeynep Tufekci has written a perceptive essay for the Atlantic about “how the coronavirus revealed authoritarianism’s fatal flaw”.
+EU ideas explained Politico writers Laura Kayali, Melissa Heikkilä and Janosch Delcker have delivered a shrewd analysis of the underlying strategy behind recent policy documents from the EU dealing with the digital future.
+On the nature of loss Jill Lepore has written a knockout piece for the New Yorker under the heading “The lingering of loss”, on friendship, grief and remembrance. One of the best things I’ve read in years.
+
+
+Topics
+
+
+
+Artificial intelligence (AI)
+
+
+
+
+The networker
+
+
+
+
+
+
+Medical research
+
+
+
+
+comment
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

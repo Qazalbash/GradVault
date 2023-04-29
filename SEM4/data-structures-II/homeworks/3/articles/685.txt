@@ -1,0 +1,124 @@
+Facebook says spam filter mayhem not related to coronavirus
+
+A Facebook spam filter that went haywire on Tuesday evening and began removing many perfectly acceptable posts was unrelated to coronavirus, the company has said.
+All the removed posts have been restored, a Facebook executive said, attributing the removals to an automated system. Despite the fact that many of the removed posts were related to the coronavirus, the company says that was simply a coincidence owing to the fact that so many posts on the site are related to the pandemic.
+Guy Rosen, the social network’s head of platform integrity, said: “We’ve restored all the posts that were incorrectly removed, which included posts on all topics – not just those related to Covid-19. This was an issue with an automated system that removes links to abusive websites, but incorrectly removed a lot of other posts too.”
+Facebook said this week it would be sending all of its contracted human moderators home. The company cannot offer remote working for its moderation staff owing to privacy considerations over the material they handle, and so its moderation work will be done exclusively by permanent employees for the foreseeable future.
+Facebook says the absence of human moderators was not related to the spam filter error and it believes it is well prepared for moderating the site with a vastly reduced human workforce. 
+Kang-Xing Jin, Facebook’s head of health, said: “We believe the investments we’ve made over the past three years have prepared us for this situation. With fewer people available for human review, we’ll continue to prioritise imminent harm and increase our reliance on proactive detection in other areas to remove violating content. We don’t expect this to impact people using our platform in any noticeable way.”
+Facebook is not the only technology firm to have sent home its moderators. YouTube announced on Monday that it would be relying more on AI to moderate videos in the future. Unlike Facebook, the video site did not commit to the change being invisible to users. Instead, it said more videos would be taken down as a result of the lack of human oversight.
+Normally, YouTube videos are flagged by an AI and then sent to a human reviewer to confirm they should be taken down. But now videos will far more frequently be removed on the say of an AI alone. The company says it will not be giving creators a permanent black mark, or “strike”, if their videos are taken down without human review, since it accepts that it will inevitably end up taking down “some videos that may not violate policies”.
+Coronavirus-related videos are booming on YouTube, including many that spread conspiracy theories. The company has limited the amount of coronavirus-related content that any individual moderator has to work on each day, one moderator said, in order to protect workers’ mental health. YouTube has been contacted for comment.
+While platforms such as YouTube and Facebook have cut moderation capacity, they still maintain the ability to remove misinformation from their sites. Other platforms, from encrypted chat services such as WhatsApp and Telegram to legacy systems including email and SMS messages, are virtually unmoderated and appear to have become the primary vector through which misinformation is spread.
+One video that went viral on WhatsApp, for instance, purported to show violence and panic at an Aldi in the Netherlands. In fact, according to researchers at the open-source intelligence group Bellingcat, it was a video of an unrelated crush in Germany in 2011 that had been miscaptioned on TikTok and then spread further on the messaging service.
+
+
+
+Coronavirus latest: at a glance
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+On Wednesday, WhatsApp announced its own attempts to fight misinformation, including an information hub that aims to provide “simple, actionable guidance for health workers, educators, community leaders, nonprofits, local governments and local businesses that rely on WhatsApp to communicate”. It also announced a $1m donation to the Poynter Institute’s International Fact-Checking Network (IFCN), which funds fact-checking efforts around the world.
+“We know that our users are reaching out on WhatsApp more than ever at this time of crisis, whether it’s to friends and loved ones, doctors to patients, or teachers to students. We wanted to provide a simple resource that can help connect people at this time,” said Will Cathcart, the head of WhatsApp.
+
+
+Topics
+
+
+
+Facebook
+
+
+
+
+
+
+Coronavirus outbreak
+
+
+
+
+Social networking
+
+
+
+
+Social media
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

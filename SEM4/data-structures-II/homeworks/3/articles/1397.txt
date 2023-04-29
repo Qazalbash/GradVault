@@ -1,0 +1,147 @@
+Closed borders and ‘black weddings’: what the 1918 flu teaches us about coronavirus
+
+Plagues – or, to use a more modern term, epidemics of infectious disease – pluck at our most primal fears. We have lived with them for at least 10,000 years, ever since our ancestors took up farming and built the first semi-permanent settlements. And they have always had the upper hand. They know us intimately, preying on our strengths – our sociability, our love of gossip – and turning them into weaknesses. They are always a step ahead, and once they are out, like the genie, we can’t get them back in. All we can do is limit the damage. So here we are again.
+Because epidemics are frightening, it is hardly surprising that people reach for the worst possible historic comparison. The 1918 influenza pandemic, which has been distilled in the public imagination to a single black-and-white image of bedridden US soldiers, has been hauled out of mothballs to do duty as a template of what we might expect from Covid-19. But is that global human catastrophe, which killed between 50 million and 100 million people – the vast majority in the developing world – and which was largely forgotten for most of the last century, the right comparison to make?
+It is important to note that the Covid-19 outbreak is not yet officially a pandemic – a global epidemic. Some have accused the World Health Organization (WHO) of doing semantic cartwheels to avoid naming it as one, given the rate at which the disease is spreading, but at the time of writing roughly half of the world’s countries remain Covid-19-free.
+The virus that causes the disease, Sars-CoV-2, is a new pathogen in humans, meaning we are all immunologically naive to it. It is very contagious, but we don’t yet know how lethal it is. One way of measuring this is by the case-fatality rate (CFR) – the proportion of people who fall sick who go on to die. Last week, the WHO provisionally quoted a CFR of 3.4%, which would be alarming if it were correct. The CFR of the 1918 flu is still being debated, mainly because there was then no reliable diagnostic test for flu, but the number usually quoted is 2.5%. Regarding Covid-19, data is sketchy for the moment, and everyone agrees it will be a while before we know the real CFR, but there’s already good evidence that many cases are going unreported – in part because those affected have very mild symptoms. That would mean the CFR is lower than 3.4% – perhaps as low as that of severe seasonal flu, which is about 0.1%.
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ At sign in the Philadelphia navy yard in 1918. Photograph: Everett/REX/Shutterstock
+So we could ask why we are comparing this outbreak to the 1918 pandemic, which was such an outlier, and not the two other flu pandemics that struck in the 20th century – the 1957 “Asian” flu, and the 1968 “Hong Kong” flu. Both had CFRs much closer to 0.1%, and neither killed more than 3 million people at the most. To bring the picture right up to date, we could include the 2009 H1N1 flu pandemic, which killed in the region of 600,000 people. These are still big numbers, and they dwarf those attributed to Covid-19 to date. But the 1918 flu was in a different ballpark.
+Another major difference between the 1918 flu and Covid-19 is that the flu mainly affected those aged between 20 and 40, while Covid-19 mainly affects those over 60. The British virologist and flu historian John Oxford, of Queen Mary University of London, calls Covid-19 “a pale reflection of 1918 where 200,000 [Britons] died quietly at home and most of them were young”. Indeed, one of the reasons the 1918 flu was so devastating was because it purged communities of their breadwinners – at a time when there wasn’t much of a social welfare safety net to catch those left behind.
+Should we be comparing Covid-19 to flu at all? The viruses that cause the two diseases belong to different families. Sars-CoV-2 belongs to the coronavirus family, other members of which caused the outbreak of severe acute respiratory syndrome (Sars) in China between 2002 and 2004, and of Middle East respiratory syndrome (Mers), which began in Saudi Arabia in 2012.
+Sars and Mers were far more lethal than Covid-19 – boasting CFRs of 10% and 36% respectively – but the viruses that cause all three seem to spread in a similar way. Unlike flu, which spreads rapidly and relatively evenly through a population, coronaviruses tend to infect in clusters. In theory, that makes coronavirus outbreaks easier to contain, and indeed both Sars and Mers outbreaks were brought under control before they went global. Annelies Wilder-Smith, a professor of emerging infectious diseases at the London School of Hygiene and Tropical Medicine, thinks that the unwarranted comparisons with flu may have prevented many western governments from taking the rigorous action that is needed to contain Covid-19 now, while it’s still possible. “The short-term costs of containment look high,” she says, “But they’re much lower than the long-term costs of non-containment.”
+Wilder-Smith is not alone in having shifted her opinion in recent weeks towards the idea that this may be the “big one” that infectious disease experts have been fearing. When such experts say “big one”, they mean a pandemic, but it’s not clear how big they mean, because they don’t want to put numbers on it. That’s understandable, if they think that much depends on what we do – or don’t do – next. Mathematical modellers – whose job it is to put numbers on things – have estimated that up to 80% of Britons could be infected, and 500,000 could die (out of a far bigger UK population than in 1918), before this outbreak recedes. But that is very much a worst-case scenario and one that assumes that containment doesn’t work.
+The bottom line, then, is that Covid-19 will almost certainly not turn out to be as bad as the 1918 flu pandemic, but it could still be bad – perhaps on a par with the pandemics of 1957 or 1968. Until a vaccine becomes available – which isn’t likely for at least 18 months – containment is our only hope for slowing its spread.
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ The world may have changed but containment strategies have not. Photograph: Vintage_Space/Alamy Stock Photo
+Where containment is concerned, historical comparisons can help, because the techniques don’t change. Quarantine, isolation, masks and handwashing are all time-honoured methods of keeping the sick and the healthy apart, and minimising disease transmission.
+One lesson governments took from 1918 is that mandatory public health measures tend to be counterproductive. Containment is much more effective if people choose to comply. But for that to happen, they need to be properly informed about the threat they face, and to trust the authorities to act in their collective interest. If either – or both – of these things is missing, containment works less than well. In 1918, most governments were caught unawares by the pandemic – because they had no disease surveillance system in place – and public information campaigns were risible.
+One of the reasons the 1918 flu came to be known as the “Spanish” flu was because Spain was neutral in the war and didn’t censor its press. Whereas the US, Britain and France – all of which had the flu before Spain – kept it out of the newspapers at first to avoid damaging morale. When they finally acknowledged it, the newspapers issued conflicting public health messages and repeated unfounded rumours – including one that German U-boats beaching in the US had deliberately sown the flu.
+Germ theory – according to which infectious diseases are caused by microscopic organisms – was also relatively new. Inevitably, people found it easy to revert to more mystical, and more fatalistic, explanations of what was happening. In the deeply pious Spanish city of Zamora, for example, the local bishop defied the health authorities by ordering a novena – evening prayers on nine consecutive days – in honour of Saint Rocco, the patron saint of plague and pestilence. This involved churchgoers lining up to kiss the saint’s relics, around the time that the outbreak peaked. Zamora went on to record the highest flu-related death rate of any city in Spain, and one of the highest in Europe.
+New York City, on the other hand, experienced one of the lowest death rates. The city’s inhabitants were used to public health interventions by 1918, since local authorities had orchestrated a 20-year campaign against tuberculosis. But some New Yorkers had other ideas: local papers reported on a “black wedding” in Mount Hebron cemetery, where two Jewish strangers were married in an ancient ritual to ward off plague. Meanwhile, in the business community, there was resistance to the health commissioner’s attempts to restrict attendance at places of entertainment. When Charlie Chaplin’s film Shoulder Arms was released in the autumn of 1918, Harold Edel, the manager of the Strand theatre – a cinema on Times Square – praised his customers for their impressive turnout. He died of flu a few weeks later.
+The world of 2020 is vastly different from 1918. Howard Phillips, a historian of the 1918 flu at the University of Cape Town in South Africa, observes “the relative silence of organised religion” during this outbreak, compared with the 1918 pandemic. Laura Jambrina, a teacher and resident of Zamora, notes that today the church authorities have been more vocal in their public health guidance than the secular, provincial ones – advising worshippers to wash their hands and not to sprinkle holy water. Religion has, nevertheless, played a part. The South Korean cluster of Covid-19 seems to have spread via churches, while pilgrims in Iran have posted videos of themselves defiantly licking the Fatima Masumeh shrine in the city of Qom.
+Many other things haven’t changed. There was a lot of fake news in 1918 and there’s a lot of fake news now – and in 2020, its volume and speed of transmission is unprecedented. Donald Trump’s grandfather died of the 1918 flu, yet Trump has been accused of misleading Americans over the Covid-19 outbreak through his tweets. Meanwhile, hashtags circulating on Italian social media – such as #FlorenceDoesntStop, #CultureAgainstFear – could partly explain the difficulty the Italian authorities are having in containing the outbreak. A prominent Italian politician, Nicola Zingaretti, announced last weekend that he had come down with Covid-19 after organising a party on the theme of #MilanDoesntStop. The Harold Edel of our day will hopefully make a speedy recovery.
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ A US army camp hospital at Aix-les-Bain, France in 1918. Photograph: Alamy Stock Photo
+There have been horrifying reports of people drinking industrial alcohol or taking cocaine to ward off Covid-19. In 1918, too, people thought alcohol would protect them, and quacks cashed in on people’s desperation by packaging up ineffective and sometimes even toxic concoctions into “elixirs” for which they charged exorbitant prices. Some of the more vivid images of this epidemic also echo those of a century ago. The Brazilian medic and writer Pedro Nava described in 1918 how, in Rio de Janeiro, footballers played to empty stadiums. The same is happening today, only now people watch the matches on TV.
+Old habits also die hard; many people are still kissing each other by way of greeting. “I have to bite my tongue every time I meet someone on the street with my baby girl,” says Jambrina. “Most people will immediately touch her cheeks or kiss her.” And we seem to have forgotten that closing borders against infectious disease doesn’t work. Many countries have done so, despite the WHO’s advice, but they are now discovering that the bug is already on the inside – and they have still got to deal with it.
+It’s a lesson we seem to have to learn again every time a new pandemic appears, and the kneejerk tendency to pull up the drawbridge shares xenophobic roots with another – that of blaming “the other”. In 1918, before the name “Spanish flu” caught on, Brazilians called it the German flu, while the Senegalese called it the Brazilian flu. The Poles called it the Bolshevik disease and the Danes thought it “came from the south”. Now they are blaming Chinese people.
+If there is one feature of the current epidemic for which we should applaud ourselves – besides the reports that skies are blue again over Chinese cities, since traffic has come to a standstill – it is that we have managed to avoid giving this outbreak a stigmatising name. The WHO guidelines of 2015 on how to name diseases can take a lot of credit for this. So this new plague is not the Chinese flu or the pangolin flu, it’s the rather more mundane Covid-19 – just one more epidemic in a long line of epidemics that have struck fear into our hearts, and that we can still rein in if we would just listen to our brains instead.
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Infectious diseases
+
+
+
+
+features
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

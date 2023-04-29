@@ -1,0 +1,149 @@
+Covid-19 could cause permanent shift towards home working
+
+Covid-19 could permanently shift working patterns as companies forced to embrace remote working by the pandemic find that their employees do not want to return to the office once the closures are lifted.
+The sudden increase in working from home is presenting problems as well as opportunities: on the one hand, startups such as Slack and Zoom and established giants including Google and Microsoft are offering their tools for free, in the hope that people who start using them in a crisis may carry on once normality returns.
+On the other hand, some systems are already creaking at the edges. Corporate networks, unused to having a majority of their connections coming in over virtual private networks (VPNs), are experiencing unusual quirks, while internet service providers have come under pressure to lift bandwidth caps so that remote workers do not get cut off from their employers halfway through the month.
+But it looks increasingly as if the situation will not ever go back to how it was: many employees for companies who have sent all staff home are already starting to question why they had to go in to the office in the first place.
+Large technology firms were some of the first to make the switch to remote working for all their staff, building on pre-existing infrastructure such as office chat groups, remote access to critical tools, and the fact that much knowledge work can be carried out remotely.
+In Seattle, the hub of many of America’s early Covid-19 cases, companies including Amazon, LinkedIn, Microsoft and Google advised workers to stop coming in to the office in late February. In early March, Twitter “strongly advised” all its employees worldwide to do the same, and on Wednesday, made it compulsory.
+“We understand this is an unprecedented step, but these are unprecedented times,” Twitter’s head of HR, Jennifer Christie, said in a message to staff. Christie promised to reimburse employees, including hourly workers, for the expenses required to set up home offices, covering the costs of buying things such as computer hardware, desks and ergonomic chairs. “Overall, working from home doesn’t change your day-to-day work, it just means you’ll be doing it from a different environment,” Christie added.
+Those sorts of investments have prompted many to wonder if companies that embrace remote working in a crisis may find it sticks around as normality returns. It is harder to say no to employee requests for working from home if HR has already bought them a new desk – and it is easier to view the investment as a sensible one if it pays off for years, rather than months, to come.
+“This is not how I envisioned the distributed work revolution taking hold,” said Matt Mullenweg, chief executive of WordPress and Tumblr owner Automattic. Mullenweg’s company is already “distributed”, and he predicts the changes “might also offer an opportunity for many companies to finally build a culture that allows long-overdue work flexibility.
+“Millions of people will get the chance to experience days without long commutes, or the harsh inflexibility of not being able to stay close to home when a family member is sick… This might be a chance for a great reset in terms of how we work,” he said.
+That’s certainly what the industry behind remote work is hoping. “We are fully prepared for this situation,” said a spokesperson for Slack, which makes popular business chat software. “First and foremost, our concern is for the families and individuals affected by the coronavirus.
+“For now, we are focused on helping people around the world adapt to remote work with free resources. For example, we have been hosting free consultations for companies adapting to remote work for the first time. We’ve been speaking to companies of all sizes and from all industries – from large enterprises with hundreds of thousands of employees, to small businesses with a team of five.”
+Slack isn’t alone. Microsoft has made its cloud “productivity suite” free to small businesses for the next six months, including its Slack competitor, Teams. Google followed suit with its own business subscription, while videoconferencing service Zoom has lifted limitations on its own free tier, allowing conversations to exceed 40 minutes.
+
+
+
+The art of Skype set-dressing: how to video-call the office when in quarantine | Imogen West-Knights
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+But for every company smoothly moving to the future of remote working, others have hit problems. Some have been comparatively minor: Facebook employees found their corporate network was banned from the takeaway service DoorDash for suspicious behaviour, as the company’s entire workforce began placing orders for delivery all over the Bay Area in California while logged in to a VPN connecting from the same IP address.
+Others have been more serious. An early fear that home broadband networks would collapse under the weight of usage was quelled by UK service providers, whose trade body, ISPA, pointed out that evening peak activity, when the nation sits down to stream Netflix and play online video games, is often 10 times the typical daytime demand.
+More pressing is the fact that internet usage in general is increasing across the board. Cloudflare, which provides online infrastructure that underpins a huge swathe of the internet, says it has been tracking the increase. Its chief executive, Matthew Prince, says that “as more people work from home, peak traffic in impacted regions has increased, on average, approximately 10%. In Italy, which has imposed a nationwide quarantine, peak internet traffic is up 30%. Traffic patterns have also shifted so peak traffic is occurring earlier in the day in impacted regions.”
+The real problems start when schools get suspended. Usage of Italy’s national network has surged by more than two-thirds, not due to working from home, but due to housebound schoolchildren logging on to games such as Fortnite, according to a report from Bloomberg News.
+Spikes in usage are most likely to affect people who pay for their internet with bandwidth caps, particularly common in the US and among those who rely on mobile broadband. Some American ISPs, including AT&T, have started suspending the practice in order to avoid being blamed for preventing work, but not everyone has done so.
+Still, technology can only go so far, and working from home is not for everyone. “I’ve worked 100% remote before,” said one tech industry worker who has been sent home, “and there comes a point where even an introvert would like to see another human.”
+Tools for remote working
+Slack
+Slack, the über workplace management tool, is loved and loathed in equal measure, but one thing it has going for it is its free-to-play business model: rather than needing to sign up the entire organisation at once, it is easy for individual teams, desks and offices to get started with the free tier, and expand as they see fit. That means it is best placed to help home workers quickly recreate the sort of in-person chat they had in the office.
+Trello
+Where Slack recreates the feeling of turning to a colleague for a quick chat that’s as much personal as professional, Trello is more like your boss walking over to “just check on how you’re doing”. The project management software lets teams arrange and assign tasks, track wider project progress, and build workflows for repeated jobs – perfect for day four or five of working from home, when you might start to wonder if your boss has forgotten you exist.
+Zoom
+Videoconferencing tools are 10 a penny, but Zoom has impressed many by ironing out the kinks in an often-frustrating process. The app lifted its limit on free accounts as a response to the crisis, and theoretically supports up to 1,000 participants in a single meeting, though it’s unclear whether that’s actually a positive. The company has had some controversies, however, from an insecure plugin for Mac clients that was fixed in June to a questionable “attention tracking” feature that allows horrible bosses to use AI to check whether their employees are actually looking at the screen.
+Tomates
+Just as important as making sure you work well at home is making sure you take breaks from work at home. The Pomodoro method, a well-known approach to focus management that lets you break the day into 20-minute chunks with five-minute rests, is one such approach. Tomates, a simple and cheap Mac app, helps you to automate those timers – although any similar app will work too, or a simple physical timer like the tomato alarms the method is named after.
+
+
+Topics
+
+
+
+Technology
+
+
+
+
+
+
+Coronavirus outbreak
+
+
+
+
+Internet
+
+
+
+
+Google
+
+
+
+
+Microsoft
+
+
+
+
+Twitter
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

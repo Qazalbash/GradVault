@@ -1,0 +1,153 @@
+From ancestral strain to zoonosis: a coronavirus glossary
+
+As the coronavirus spreads around the world and scientific understanding of the virus and the disease it causes grows, technical terms are increasingly bandied about. Here is a glossary of words that are cropping up in the context of the outbreak.
+Coronavirus
+Coronaviruses are a family of viruses that can cause sickness – and can jump from animals to humans. The current crisis concerns a new coronavirus called severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). However it is not the only coronavirus that infects humans – as the World Health Organization (WHO) notes, Middle East Respiratory Syndrome (Mers) and Severe Acute Respiratory Syndrome (Sars ) are also coronaviruses, as are some of the viruses that cause the common cold.
+Covid-19
+Technically, Covid-19 is the name of the disease caused by infection with the new coronavirus, Sars-CoV-2. The Guardian and other organisations use both Covid-19 and Sars-CoV-2 to refer to the new coronavirus.
+Wet market
+Wet markets are collections of stalls that sell fresh produce, from fruit to meat and fish as opposed to dry or tinned goods or packaged, chilled meat. Animals sold in these markets are often freshly slaughtered. According to the South China Morning Post, the word “wet” is a reference to the ubiquitous use of water in these markets, including the hosing down of stalls, and tubs of live fish.
+Containment
+In March, the British government released an action plan for managing the coronavirus outbreak. So far the country has been in the “contain” phase. Containment means that cases of Covid-19 are identified and isolated as they emerge, with a raft of measures in place – including quarantining individuals who are suspected of having the virus. The aim is to prevent the virus from freely circulating in the population.
+Delay
+The UK is currently poised to move from a “containment” to a “delay” phase in managing the coronavirus outbreak. Delay reflects approaches to slow the spread of the disease if it is no longer possible to contain it – it is about buying time, both to ease pressure on health services, and to test possible drugs. Measures to delay the spread of a disease may include cancelling public gatherings, restricting travel and other measures – as has been seen in Italy and other EU states.
+Self-isolation
+Self-isolation is one measure individuals who may have the coronavirus can take to prevent spreading Covid-19 to others. The principle is to stay at home for 14 days, avoid contact with other people and keep a distance from family members. Hands and surfaces need to be cleaned frequently, separate towels used and food deliveries should be ordered – trips to the shops are forbidden. In short, do as you would if you had a nasty bout of flu. For medical advice in the UK, individuals should call the NHS 111 number.
+R0
+R0, or basic reproduction number, indicates how many new cases an infected person generates on average. Research based on the early situation on board the Diamond Princess cruise ship suggested an R0 is 2.28. While other estimates vary, most suggest that in the absence of strong containment measures, infected individuals typically pass the virus on to about two others.
+Super-spreader
+Super-spreaders are those who are able to infect an unusually high number of other people under normal conditions. However the term is controversial, with some pointing out that, depending on circumstances – such as how crowded an environment is, how good the ventilation is, or how much someone has to travel at a given time – anyone could end up infecting a greater number of others than usual.
+Outbreak
+An outbreak is a sudden uptick in cases of a disease within an area, or as the WHO puts it, “the occurrence of disease cases in excess of normal expectancy”.
+Epidemic
+As the US Centers for Disease Control and Prevention points out, an epidemic is, essentially, an outbreak over a larger geographical area. According to the WHO, an epidemic is “the occurrence in a community or region of cases of an illness, specific health-related behaviour, or other health-related events clearly in excess of normal expectancy”, adding that the timing and area affected can be pinpointed. The number of cases needed to meet this definition can differ by a range of factors including the disease itself and whether a population has previously been exposed to it.
+Pandemic
+A pandemic is often described as a global epidemic: in other words a sudden increase in cases of a disease, above what may be expected, in multiple countries or regions affecting, as the CDC notes, a large number of people.
+ Importantly, the term “pandemic” does not describe how deadly a disease is.
+The WHO declared the coronavirus a pandemic on 11 March.
+Ancestral strain
+Scientists have found there appear to be two very slightly different strains of the coronavirus, one dubbed “L” and the other dubbed “S”. The “S” strain has been described as ancestral – this means it is the older of the two – with the “L” strain emerging from this through genetic changes. The “L” strain appears to be more prevalent – something that may suggest it is better able to pass from person to person – although it is not yet clear if this is the case, or whether the two strains cause different severity of disease.
+Flattened curve
+
+
+
+Covid-19 outbreak: what do health experts mean by 'flattening the curve'?
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+When diseases spread rapidly, cases spike: this can lead to healthcare resources such as hospitals being overwhelmed by patients. and cause a number of problems, including patients unable to get the care they need. If the spread of a disease can be reduced – for example through increased hand washing and other public health measures – it means cases will be more spread out over time and fewer people will be seeking healthcare at the peak of the outbreak, giving rise to a “flattened curve” when cases are plotted on a graph against time. The delayed spread reduces pressure on resources and could lead to better outcomes for patients. 
+containment graph
+Zoonosis
+A zoonosis, or zoonotic disease, is a disease that can be passed between animals and humans. This is not unusual – rabies and malaria are among existing zoonotic diseases, as is Mers which jumped from camels to humans. The new coronavirus is also a zoonotic disease. While it is not clear from which animal Covid-19 jumped to humans, the event has been linked to a wet market in Wuhan. Experts say that although bats carry the new coronavirus, it is thought it was passed to another animal before being transmitted to humans.
+Mortality rate
+As the CDC notes, “mortality rate is a measure of the frequency of occurrence of death in a defined population during a specified interval”. In the case of coronavirus, the rate that is often discussed is the crude mortality ratio, or as the WHO puts it, “the number of reported deaths divided by the reported cases” – this is currently estimated at 3.4%. However, the WHO says this will be higher than the infection mortality rate, which looks at deaths relative to the number of infections. Since many infected individuals may have very mild symptoms, the latter is more difficult to calculate with experts saying differences in detecting these mild or symptom-free cases may be behind the different mortality rates seen in different countries. Using modelling, epidemiologists say the true mortality rate of Covid-19 is probably nearer 1%.
+However this number also masks nuances. Mortality rate can differ by age, sex and other factors: at present men appear to have a higher rate than women, and older people have a far higher risk than younger people.
+Cocooning
+Cocooning is a term that refers to hunkering down in a protective environment – such as lying low at home. 
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Infectious diseases
+
+
+
+
+Medical research
+
+
+
+
+Health
+
+
+
+
+World Health Organization
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

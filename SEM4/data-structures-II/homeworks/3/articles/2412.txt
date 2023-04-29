@@ -1,0 +1,138 @@
+What can Britain learn about containing Covid-19 from countries that got it right? | Philip Ball
+
+Are we doing Covid-19 right? With the number of new reported cases of infection declining rapidly in China, but soaring in what is now a semi-locked-down Italy, it’s worth looking at the experiences and strategies of countries to see what can be learned. Governments are faced with stark choices, says Roy Anderson of Imperial College in London, one of the UK’s most eminent epidemiologists. There are essentially four options. You could try to minimise the number of fatalities or the economic impact. You could attempt to flatten the peaked curve in the incidence so that the cases are not all concentrated in a narrow time span, which could overwhelm healthcare resources (already severely stretched in the UK). Or you could try to delay the spread in order to buy time for development of a vaccine – although most experts don’t expect one to be available for at least a year.
+
+
+
+WHO declares coronavirus pandemic
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+The politicians and policymakers want a strategy to achieve all four, says Anderson – but that’s not possible. In particular, the first two crucial goals – reducing the mortality rate and economic impact – are incompatible. There are “difficult decisions ahead for governments”, Anderson and colleagues wrote in the Lancet last week.
+China’s draconian approach – essentially bringing normal life to a standstill in affected cities and regions – paid off, says Anderson. But whether that would be possible in western democracies is another matter. Italy’s strategy – which is now to close all schools and universities, impose travel restrictions and prohibit large public gatherings – could work, but it doesn’t seem to have the rigour of the Chinese model: flights are still coming and going in Milan, and the trains are running.
+The truth, Anderson adds, is that we just don’t know what the best strategy is. There are too many unknowns for mathematical models and predictions to be reliable. “It’s more suck it and see,” he says.
+In part, this is because we don’t have enough information about the biology of the virus. One crucial factor is the degree of infectiousness: how many people, on average, will catch the virus from an infected individual. The coronavirus Covid-19 is more contagious than influenza: every person who gets coronavirus will typically pass it on to 2.5 people (at least in the early stages of an epidemic), compared to an infection rate of around 1.3 for ordinary flu.
+A big unknown is how readily children – who seem to contract only mild symptoms – can pass on the infection. No child seems yet to have been at the start of a chain of transmission, although that doesn’t negate the possible benefits of closing schools. “You don’t take chances with children,” Bruce Aylward, an epidemiologist and assistant director general of the World Health Organization, who observed the Chinese response in Wuhan in February, told the New York Times.
+The problem is worsened by the fact that people who have the virus may start to feel ill only after they have already been infectious for a day or two, whereas people with Sars were hardly infectious at all before they felt ill. And people with coronavirus remain infectious for a relatively long time, perhaps around seven days, whereas this period was just a few days for the H1N1 swine flu that led to a pandemic in 2009. What’s more, we don’t know how many infected people are virtually free of symptoms.
+The only way to know that, says Anderson, is with intensive testing of a large random sample of the population, looking not for evidence of a live virus but for antibodies in the bloodstream that signify they have at some point been infected. Such studies are now being done in China, but there are no results yet.
+The key objective is clear enough: to reduce the period from the first appearance of symptoms to the isolation of the individual.
+“China got it down to two days,” says Anderson. “That’s what you need to aim for.” The Chinese were also good at tracing people contacted by infected individuals, and testing them. That’s a labour-intensive task, and Anderson thinks such efforts are probably understaffed here. “The critical thing is to have very strong surveillance systems that will give you early warning of infection,” says Anne Johnson, professor of infectious disease epidemiology at University College London. And then to “achieve rapid contact tracing and testing, and rapid isolation”.
+Anderson thinks the trajectory of the outbreak may depend not so much on how governments respond but on how we all do as individuals. For example, most clusters of infection occur in families, so quick self-isolation from relatives can be crucial. So you should know the most common symptoms – fever and dry cough – and observe basic hygiene: hand-washing, wearing masks, not shaking hands (still my instinctive gesture when I met Anderson, which he politely reminded me to avoid). It’s about maintaining “high levels of respiratory hygiene”, says Johnson, and “really cutting down the numbers of contacts you have.” “We are all in this together,” Johnson says, a point that couldn’t be more apparent from the news that the health minister Nadine Dorries has tested positive for the virus.
+But some of these measures come at a cost. “All along the line we’re going to have to balance the biomedical impact against the social impact,” says Johnson. It may mostly affect those who are the most needy, she says, such as older people.
+Anderson thinks the places to learn from are not so much China or Italy but Hong Kong and Singapore. Both are, of course, very crowded places, yet they have kept case numbers in the hundreds. How? “The population reacted very differently to Europeans,” says Anderson. “They had seen Sars” in 2003, and so knew what was needed. They stopped going to restaurants and public events; they wore face masks.
+To bring about such changes in behaviour here, Anderson says, requires clear and responsible public information. We can assume this excludes floating the “theory” that it could be best just to “take it on the chin” and let the infection move through the population, as Boris Johnson suggested on breakfast television.
+Information should be targeted in particular at the most vulnerable groups – the over-50s – and should make use of social media, and it’s important to get the tabloid press on board to communicate accurate information. So: an information campaign that leverages the power of Facebook and other social media, as well as the tabloids, to deliver information tailored to the individual. Aren’t these the kind of skills the government has boasted of? Let’s hope they can put them to good use.
+• Philip Ball is a science writer
+• This article was amended on 13 March 2020. The Sars outbreak in Singapore was in 2003, not in 2007 as an earlier version had said.
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+Opinion
+
+
+
+
+
+
+Infectious diseases
+
+
+
+
+China
+
+
+
+
+Italy
+
+
+
+
+Boris Johnson
+
+
+
+
+comment
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

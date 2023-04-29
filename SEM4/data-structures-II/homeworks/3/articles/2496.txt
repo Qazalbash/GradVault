@@ -1,0 +1,150 @@
+The RBA is upbeat about the economy, but we need a more effective measure than GDP | Greg Jericho
+
+In the face of the bushfire and the coronavirus, the Reserve Bank has taken a fairly upbeat view of the economy. When announcing that the cash rate would remain at 0.75%, the RBA suggested that the bushfires and the coronavirus would “temporarily weigh on domestic growth” but that overall things were doing OK. With luck this will be the case, but given the speed of events we should make sure we do not wait for GDP growth to determine whether or not we are likely to have a recession.
+To be fair to the RBA, the central bank can hardly come out and say things are stuffed and a recession is on the way – that would be a self-fulfilling prophecy.
+But the RBA was perhaps somewhat more optimistic than it needed to be arguing that the current low level of interest rates, the tax refunds of last year and infrastructure spending were helping keep the economy afloat. It also noted “a brighter outlook for the resources sector and, later this year, an expected recovery in residential construction”, something I noted on Tuesday with regards to the latest building approvals figures.
+
+
+
+Bushfires and the coronavirus will hit Australia's economy – but they won't knock it out | Greg Jericho
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+In November the bank estimated annual GDP growth in June this year of 2.8% – up from the latest growth of 1.7%. Speaking before the national press club on Wednesday, the RBA governor, Philip Lowe, suggested: “The bushfires will reduce GDP growth by around 0.2 percentage points across the two quarters.”
+But, he argued, because of the rebuilding efforts, and insurance payments, “GDP growth for 2020 as a whole will be largely unaffected”.
+The market reacted to the RBA’s outlook by pricing in a rate cut to occur by May and a better than two-thirds chance of a further cut to 0.25% by the end of this year.
+
+On Tuesday I took a somewhat similar view to the RBA. I was not exactly positive (I am more of an economic glass-half-empty kind of guy), but I believe we should just be a bit cautious before declaring a recession is on the way.
+But this talk of a recession also brought with it a bit of a debate over just how we should calculate it.
+As I noted on Tuesday, the standard (and misnamed) “technical” recession is two consecutive quarters of negative GDP growth.
+That measure is not only rather simplistic, it is also a pretty high bar to reach. Such a measure for example allows us to boast that we have not had a recession since the early 1990s despite pretty good evidence that we did have a small recession during the GFC.
+We could perhaps use per capita GDP growth, as that would remove the impact of population growth. But such a measure would have had us in a recession in 2006, when we were decidedly not, and even during the GFC we did not have two consecutive periods of negative GDP per capita growth, and yet we did last year.
+We could measure the growth of the private sector. This would remove government spending that might artificially keep GDP growing.
+Again, such a measure is useful, but does not produce two quarters of consecutive negative growth during the GFC (although there were three out of five such quarters), while last year there were two such consecutive quarters.
+That is a good way of showing that last year the economy was performing poorly; however, any measure that suggests last year was a recession, but the GFC was not, is a failure.
+We could also look at the private domestic economy – in effect GDP minus government spending and exports – to give us private sector “gross national expenditure”.
+This measure suggests we had a recession in 2001, 2009, 2014 and have also been in one since the end of 2018.
+That again highlights just how poorly the economy is currently performing, but perhaps suffers from the bar of a “recession” being set too low. It also means we are discounting exports which is not particularly useful when wishing to examine the entire economy.
+
+All these measures also suffer from a time lag. We will only find out the GDP growth of the March quarter on 3 June, and for the following quarter on 2 September.
+Thus we might be in a recession now, but will only have it confirmed in seven months time.
+The Grattan Institute’s Matt Cowgill and a number of other commenters on Twitter suggested using a measure devised by an economist from the US Federal Reserve, Claudia Sahm.
+Her measure focuses purely on unemployment. This has the benefit of looking at the measure we most care about (do we give a damn if GDP shrinks, but unemployment doesn’t rise?), and because unemployment figures come out each month, it is faster than GDP.
+She suggests comparing a rolling three month average of the unemployment rate with the lowest rate in the past 12 months. She argues when this goes above 0.5% pts, we are in a recession.
+Therefore, if the current three month average of the unemployment rate is 5.6%, and at some point in the past 12 months the rate was 5%, that would mean a gap of 0.6% pts and indicate a recession.
+This measure is similar to my ready guide of looking at the 12 months change in the unemployment rate.
+Indeed both measures have very similar “peaks”, and both would indicate that we had recessions in 2001, during the GFC, and also went close to one from 2013-2015.
+
+You could quibble and argue a 0.5% pt change is too small for a recession, but the reality is most times when the gap goes above 0.5% pt, it then rises to 1% pt.
+We could also measure instead underutilisation and suggest a 1% pt increase is a recession. In that case we also did have a recession in 2014 and 2015.
+
+And what the Sahm measure also highlights is that when a recession occurs, it occurs quickly.
+On average the unemployment rate does not move at all each month – a 0.1% pt move one month will be cancelled out soon after by a 0.1% pt move in the opposite direction.
+But in the months before we hit a recession, the move is up, and up fast.
+
+This is again why relying on GDP to decide if we are in a recession is silly – not only does it miss out on the important aspects of the economy, it comes too late for policy maker to do anything about it.
+The good news is the current “Sahm rule” measure of recession is just 0.22% pts, and it has improved recently.
+The bad news is things can change very quickly. This is why rather than waiting for the GDP to tell us if the bushfires and coronavirus have put us into a recession we, the government and the RBA should be watching the unemployment rate.
+• Greg Jericho writes on economics for Guardian Australia
+
+
+Topics
+
+
+
+Australian economy
+
+
+
+
+Grogonomics
+
+
+
+
+
+
+Reserve Bank of Australia
+
+
+
+
+Economics
+
+
+
+
+comment
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

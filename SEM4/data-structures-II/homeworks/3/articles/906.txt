@@ -1,0 +1,159 @@
+Researchers make strides in race to create coronavirus vaccine
+
+Researchers racing to produce a vaccine for the Wuhan coronavirus believe they may have taken significant steps towards finding an effective method of immunisation.
+At least three pharmaceutical companies, as well as teams of researchers around the world, have been working on different approaches to producing an effective vaccine. These efforts accelerated after Chinese academics publicly posted the genetic sequence for the virus.
+A research team at the National Institutes of Health (NIH) in Maryland said they had prepared a modified version of a key section of the virus to encourage the body to produce antibodies against the disease.
+
+As well as the NIH, the Coalition for Epidemic Preparedness Innovations (Cepi) has announced it would commit $11m (£8.4m) to three programmes led by the companies Inovio Pharmaceuticals and Moderna, and the University of Queensland, with the hope of having a viable vaccine in production within 16 weeks, although testing for safety and efficacy will take much longer.
+With different teams competing to produce a trial vaccine, it remains unclear who is leading the race.
+Kizzmekia Corbett, lead researcher on the NIH coronavirus vaccine team, said her group had been concentrating on the spike proteins – the spear point of the virus. This built on work done during the severe acute respiratory syndrome (Sars) outbreak that first emerged in China in 2001, another coronavirus thought to be similar to the Wuhan virus.
+The virus looks like a knobbly ball covered in protrusions that widen at the tip. These are spike proteins, which are able to dock to a receptor found in the lung membrane known as ACE-2, which allows the virus to enter the body.
+How the Wuhan coronavirus attacks lung cells
+Corbett said that since the release of the Chinese sequence on 10 January, her team had been working around the clock to produce a stable version of the key protein that would prompt a strong antibody defence to prevent the virus entering the body.
+She said: “Coronaviruses are generally just a large family of pathogens of which six – well, now seven – are infectious to humans.
+“Sars and the Wuhan coronavirus are similar across 82% of the entire genome. But from a vaccine point of view we were interested only in the spike, which is 70% identical.
+“We had already published research on Sars and Mers (Middle East respiratory syndrome) and shown we could drop some stabilising mutations into the backbone of the spike after a colleague did this with the S protein of the respiratory syncytial virus,” she added.
+“Since 2017 we have been looking at how you give the body the right kind of messenger RNA that will attract the right type of cells to produce the right type of antibodies to produce a potent vaccine. We’ve been doing these sequences for the last three years now so we can basically plug and play, and are now able to look at any coronavirus spike sequence.”
+One of the problems, said Corbett, is that the corona spike protein is the largest of its kind to infect humans. “One of the reasons it’s so hard to look at is because is is so big and floppy,” she said.
+Corbett believed the previous work done at her institute and others may have reduced the timeframe for producing an effective vaccine. “We don’t want to ignite public hope but the goal is do it as fast as we can and we are working day and night. I lost 7lb in recent weeks!”
+The NIH team is among several that have been working on solutions to the wider problem of coronaviruses since the first emergence of Sars. Many of the teams noted that vaccine work would be further advanced if not for the loss of interest in research after the Sars outbreak was brought under control.
+Q&A How can I protect myself and others from the coronavirus outbreak?  
+ Show 
+ Hide  
+The World Health Organization is recommending that people take simple precautions to reduce exposure to and transmission of the coronavirus, for which there is no specific cure or vaccine.
+The UN agency advises people to:
+Frequently wash their hands with an alcohol-based hand rub or warm water and soap
+Cover their mouth and nose with a flexed elbow or tissue when sneezing or coughing
+Avoid close contact with anyone who has a fever or cough
+Seek early medical help if they have a fever, cough and difficulty breathing, and share their travel history with healthcare providers
+Many countries are now enforcing or recommending curfews or lockdowns. 
+In the UK, NHS advice is that anyone with symptoms should stay at home for at least 7 days.
+If you live with other people, they should stay at home for at least 14 days, to avoid spreading the infection outside the home.
+
+
+
+Was this helpful?
+
+
+
+
+
+
+
+Thank you for your feedback.
+
+Peter Hotez, a professor at Baylor University in Texas who was involved in the search for a Sars vaccine, said the problem was not making a vaccine but safety-testing and licensing the product.
+He said: “It should not be that difficult to make a vaccine against coronavirus. We know a lot about the pathogenesis [the biological mechanism] and the receptors that are the path for the virus.
+“The receptor for the virus is in the cells of the lungs and allows the virus to get deep into lung tissue. People who are sick get severe viral pneumonia and for reasons we don’t entirely understand, those who are more vulnerable are older individuals including those with diabetes and hypertension.
+“Right now, you can look at four to five different techniques being examined by researchers to produce a vaccine. The problem is that is even after manufacturing a vaccine, you still have to go through the safety testing on humans – clinical trials as well as formal toxicology testing in animals. It’s hard to rush and that’s where you tend to get a bottleneck.
+“The big issue is encouraging an immune response that stops the virus binding to the host receptor.
+There’s no magic bullet, however, he warned. “Each of the different approaches has an advantage and disadvantage. Sars was a wake-up call nearly 20 years ago. We’ve got better at implementing global health regulations and detection monitoring, no question. But even then it’s hard to anticipate a new pathogen.”
+“But the one thing the world missed was that we should have been more aware of the risks of coronaviruses. This is the third outbreak to emerge in the 21stcentury.
+“There’s a message here. We need to pay the same attention to coronaviruses as we do to flu. What’s so tragic is that once Sars was gone, the investor enthusiasm for a Sars vaccine was zero. If the global health community had followed through and produced and stockpiled a vaccine, something might have been ready to go now.”
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Vaccines and immunisation
+
+
+
+
+Infectious diseases
+
+
+
+
+Medical research
+
+
+
+
+Microbiology
+
+
+
+
+Biology
+
+
+
+
+Health
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

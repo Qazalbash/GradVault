@@ -1,0 +1,168 @@
+Fake coronavirus tweets spread as other sites take harder stance
+
+Tech platforms have adopted sharply different policies on coronavirus misinformation, with evidence that Twitter has become a hotbed of inaccurate and dangerous advice, while others – such as Pinterest and WeChat – restrict users’ ability to communicate about the outbreak at all.
+On Twitter, one tweet wrongly claimed that antibacterial hand sanitiser is useless against the virus, arguing that such products only work against bacteria. It racked up a quarter of a million likes and almost 100,000 retweets, suggesting a reach of millions of users, before it was deleted on Wednesday afternoon. In fact, any alcohol-based sanitiser, or simple soap, can help.
+The platform has also enabled a rapid spread in videos and images purporting to show the effects of the virus – such as collapsed victims or even violence from the authorities – in locked-down communities including Iran and Wuhan. Much is older imagery, repurposed and miscaptioned, according to the fact-checking service Snopes.
+Twitter’s misinformation policies only apply to “platform manipulation” – co-ordinated efforts to spread misinformation, typically backed by state actors. In the absence of any widespread organised campaign, Twitter has defaulted to a hands-off position, taking no specific action unless tweets break another site rule.
+However, it has introduced a site popup, visible on searches for “coronavirus” and related terms, which directs users to the NHS website for more information. On Wednesday evening, the company announced further policies, banning adverts that “opportunistically use the Covid-19 outbreak to target inappropriate ads”.
+Q&A How can I protect myself and others from the coronavirus outbreak?  
+ Show 
+ Hide  
+The World Health Organization is recommending that people take simple precautions to reduce exposure to and transmission of the coronavirus, for which there is no specific cure or vaccine.
+The UN agency advises people to:
+Frequently wash their hands with an alcohol-based hand rub or warm water and soap
+Cover their mouth and nose with a flexed elbow or tissue when sneezing or coughing
+Avoid close contact with anyone who has a fever or cough
+Seek early medical help if they have a fever, cough and difficulty breathing, and share their travel history with healthcare providers
+Many countries are now enforcing or recommending curfews or lockdowns. 
+In the UK, NHS advice is that anyone with symptoms should stay at home for at least 7 days.
+If you live with other people, they should stay at home for at least 14 days, to avoid spreading the infection outside the home.
+
+
+
+Was this helpful?
+
+
+
+
+
+
+
+Thank you for your feedback.
+
+Sitting in the middle of the spectrum is Facebook, whose chief executive, Mark Zuckerberg, announced a new range of policies to stop the spread of dangerous misinformation across the company’s apps on Wednesday morning. Like its competitors, Facebook has implemented a banner directing users searching for coronavirus to the NHS website.
+Instagram, owned by Facebook, has a mandatory popover that interrupts any search on the coronavirus hashtag with a message saying: “See the most up-to-date information from the National Health Service”. Outside the UK, users are directed to the World Health Organization (WHO) or other national health authorities.
+Facebook has also been wielding its advertising platform against coronavirus misinformation. Last week, the company banned ads for products that claimed to cure or prevent Covid-19 or created a “sense of urgency” about the outbreak. On Wednesday, Zuckerberg also committed to give the WHO “as many free ads as they need”, as well as “millions more in ad credits to other organisations”.
+Those new features are in addition to the company’s existing policies against “harmful misinformation”, which Facebook has long applied in its more leisurely battle against vaccine misinformation on the site. The company takes a stronger stance against health-related misinformation than it does against other untruths. It hides misinformation from recommendations and search predictions, and rejects ads that contain misinformation about vaccines, if it finds them.
+That caveat suggests the downside of Facebook’s approach: it takes a lot of human effort to make a call on whether or not a given post, group or advert is misinformation, which can slow responses and allow content to slip through the cracks. Already, for instance, advertisers are rewriting their language to promote their products, such as face masks and hand sanitiser, as effective against “flu” – even if the rest of the advert is identical to one that was removed over coronavirus panic.
+
+
+
+Hand sanitizer or hand washing: which is better against coronavirus?
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+Pinterest, a much smaller social network, but still with hundreds of millions of users, has taken a scorched-earth policy. Searches for coronavirus on the virtual image board exclusively give results from the verified WHO account. 
+It follows a similar, though less heavy-handed, approach that the company took with vaccine misinformation, Pinterest said in a statement. “We’ve been working with the WHO over the last year to connect Pinners to facts about critical health topics, from the new coronavirus to vaccines. We want to do our part to make sure people can find authoritative information when it really counts.”
+Like social networks, chat apps have had a spread of responses. WhatsApp is representative of most: for a mixture of technical and policy reasons, the Facebook-owned messaging service has no real policy around coronavirus misinformation. Since WhatsApp, like competitors such as Signal, iMessage and Telegram, is end-to-end encrypted, it is technically infeasible for the company to scan messages or prevent misinformation from being passed on in other ways, leading to the service being named as a risk for spreading dangerous advice.
+But even platforms that aren’t encrypted, such as Facebook Messenger, censor less in one-to-one chats than public social networking, with moderation of “private” messages being seen as a dangerous threshold to cross.
+The exception is messaging services based in China, where such moderation is common. A report on Tuesday from Canada’s CitizenLab showed that WeChat, the largest Chinese messaging service, has been heavily censoring communications about coronavirus for much longer than was previously thought – all the way back to 31 December, the day after a group of doctors tried to warn about the then unidentified outbreak.
+CitizenLab said censored content “included criticism of government, rumours and speculative information on the epidemic,” as well as references to Dr Li Wenliang, one of those doctors who issued an early warning, and who later died from the disease, “and neutral references to Chinese government efforts on handling the outbreak that had been reported on state media”.
+
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Infectious diseases
+
+
+
+
+Social media
+
+
+
+
+Advertising
+
+
+
+
+Twitter
+
+
+
+
+Pinterest
+
+
+
+
+Internet
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

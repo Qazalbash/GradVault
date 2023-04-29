@@ -1,0 +1,173 @@
+What do I need to work from home due to coronavirus?
+
+
+
+
+
+What do I need to work at home during the coronavirus outbreak? At this rate, we might all be working from home for a year! How will the broadband providers cope? Do we need a plan B? FranklySwiss
+
+
+Everyone will need their own customised solution, but there are two things to think about. First, will you be working at home for two weeks or four months or possibly forever? I share the view that Covid-19 could cause a permanent shift towards home working.
+Second, who is paying for homeworking equipment and services: you or your employer?
+If you’ll only be working at home for a short time, you can probably get away with not buying much new equipment or signing up to remote working services. If you’re in for the long haul, try to match or preferably beat the equipment you would normally use in the office. If you can’t afford a ThinkPad T490s (£1,213.71), for example, get as close to the specification as possible.
+If you are paying for your own kit, you may want to take an economical approach. But if the company is insisting that you work from home, ask for ergonomic equipment. This often costs more, but is worth it in the long run.
+If your company has an IT department, then it should either supply or advise you on which equipment and software to use. This may well include a VPN and a two-factor authentication system, such as YubiKey.
+One of the IT department’s jobs is to make choices for tens or even tens of thousands of employees. You may not like their choices – I usually don’t – but letting everybody pick their own collaborative software, messaging app or video conferencing system doesn’t work. Of course, this doesn’t prevent people from setting up unofficial groups on WhatsApp or Facebook.
+The good news is that you may end up being more productive when you don’t spend hours commuting or in meetings, taking long lunches or catching up with the latest gossip.
+The bad news is that you have to set and stick to office routines without the external pressure to turn up on time, take regular meal breaks, and keep to a reasonable sleep schedule. Every company has early birds and night owls, so their work times are likely to diverge. However, you must overlap during some agreed office hours when everyone is always available.
+Self-discipline is why much of the advice about working from home includes things such as getting dressed for work, even though you might work just as well in your dressing gown. But if you talk to colleagues or customers over video links, you must keep up appearances. You will be judged.
+Temporary office
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ Nice though it may be, your original iMac may not be up to the task of working from home. Photograph: Graham Turner/The Guardian
+If you will only be working at home for a short time, you won’t need much in the way of extra equipment. If you have your own laptop, you will only need an external USB keyboard and mouse, and you may already have those. After that, you can think about a separate monitor, an external hard drive for backup purposes, and either a powered four-port USB hub or a docking station to connect them all together.
+Laptops have bad ergonomics so you should not use them for sustained periods of work. You can solve this problem by making your laptop work like a desktop, by putting it on a commercial riser or a pile of books and plugging in an external keyboard and mouse. Your eyebrows should be roughly level with the top of the screen, so you can work without slouching.
+Buy a docking station if you can. If you plug your laptop and all the peripherals into a docking station, you only need to unplug a single cable from the laptop to be able to take it somewhere else. That makes it easy to get a change of scene by working in another room or in the garden.
+One major problem with working on a laptop is that most domestic tables and many desks are too high. Your arms should be angled slightly downwards when you are typing, not upwards. You can solve this problem by buying an accessory keyboard tray, where the keyboard sits under the table top, or an adjustable chair, where seat height is the key dimension. However, both of those are getting into home office territory.
+Otherwise, the supreme law for working from home is thou shalt not lose thy work. Make hitting Ctrl-S (for save) a reflex action. Save files to your local hard drive and to an online drive (OneDrive is built into Windows 10), and back them up to an external hard drive or USB thumb drive. Even if you are saving your work on a company server or in an online office suite – such as Microsoft, Google or Zoho – you may need a local copy if your comms link goes down.
+Permanent office
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ If you can set up a home office in a disused room then it’s a lot easier to get a set up that suits your work, whether it’s an ergonomically organised laptop on a riser or a multi-screen command and control centre. Photograph: Alamy Stock Photo
+Much the best way to work at home is to set up a proper office in a spare bedroom, junk room, attic, conservatory, garden shed or David Cameron-style shepherd’s hut. If you have a family, your home office should have a door with a “keep out” or perhaps an “on air” sign. So many people are now making podcasts, video conferencing or appearing on live TV from home offices that studio-style “on air” signs – even neon ones – are becoming a thing. It helps avoid the spouse/partner and/or kids wandering in, to humorous effect.
+Having dedicated office space means you can have a proper desk, an adjustable office chair, one or more large monitors and a desktop PC that will deliver more power than a laptop for less cost. You might even be tempted to buy a standing desk or a “desk riser” such as the Yo Yo Desk 90 (British) or the Varidesk Pro Plus 36. Sit-Stand.com has these and many other models.
+For more advice, see my recent answer: How do I set up an ergonomic home office?
+That answer didn’t cover video conferencing, which will be important for many people pushed out of their corporate nests. Even if it’s not essential for meetings, it’s useful for quick video chats with colleagues. This fosters camaraderie, especially if you start to feel lonely working on your own. It’s also easy to do, thanks to software such as Zoom, Slack, Microsoft Teams, GoToMeeting, Google Hangouts, TeamViewer and more.
+You will look and sound a lot better if you buy a decent webcam with 1080p (Full HD) resolution. In previous answers, I’ve recommended the Logitech C920 HD Pro webcam with microphone. It’s still a good buy at £63.99, though there’s a newer C920S model at £84.99.
+If you won’t shell out for a webcam, at least get a headset with a microphone. Gamers love them so there are all kinds of models available at reasonable prices. You can also use them to listen to music, thus eliminating background household and traffic noises.
+Broadband matters
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ The UK’s broadband should be able to cope with everyone working from home, but it’s always wise to have a plan B in the shape of a portable hotspot or similar, which may be 5G if it has reached your area by now. Photograph: Toby Melville/Reuters
+Broadband shouldn’t be a problem because peak usage is in the evenings when many people are streaming movies or TV or playing games such as Fortnite. Even if everyone starts video chatting, there is easily enough capacity for home workers during the day. However, you should either have an unlimited business broadband service, like me, or a cellular backup based on a mobile router like a Mifi or tethering a smartphone or whatever.
+Either way, your plan B should include an alternative device – a smartphone or tablet with a Bluetooth keyboard, or a spare laptop – and an alternative way of connecting to the office, even if it means using a hotspot while parked outside a local coffee shop. Sort out all the log-in and connection details and test it before you actually need it. You probably won’t be able to do much work without an internet connection.
+Top tip
+Almost every operating system supports multiple users, so set up a separate account for work. Make this account look as much like your office PC as possible, with the same wallpaper and the same icons in much the same places. That way, you won’t be distracted by whatever games, social media or entertainment services you use when not working.
+Using a separate account eliminates all your personal websites from your browsers and browser tabs. Having PornHub loaded is never a good look, even if you don’t accidentally switch to it.
+Have you got a question? Email it to Ask.Jack@theguardian.com
+ This article contains affiliate links, which means we may earn a small commission if a reader clicks through and makes a purchase. All our journalism is independent and is in no way influenced by any advertiser or commercial initiative. By clicking on an affiliate link, you accept that third-party cookies will be set. More information. 
+
+
+Topics
+
+
+
+Computing
+
+
+
+
+Ask Jack
+
+
+
+
+
+
+Laptops
+
+
+
+
+Coronavirus outbreak
+
+
+
+
+features
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

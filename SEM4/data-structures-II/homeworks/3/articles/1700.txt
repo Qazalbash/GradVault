@@ -1,0 +1,160 @@
+Our face mask future: Do they really help beat flu, coronavirus and pollution?
+
+As the death toll from coronavirus steadily rises, east Asian countries such as Taiwan have stepped up production of surgical face masks to meet demand. In the Chinese city of Wuhan, at the centre of the outbreak, it is mandatory to wear one in public places, and there have been reports of stores in Japan and South Korea selling out.
+The hope is that wearing masks in high-risk areas will at least slow the spread of the disease, but just how helpful they are is moot. Raina MacIntyre, a professor of global biosecurity at the University of New South Wales, has been reviewing the literature on protocol for dealing with infectious diseases and finds it wanting.
+“There are two ways that a virus can be spread through the respiratory route of coughing or sneezing,” says MacIntyre. “One is through large droplets that you can see or feel when somebody sneezes or coughs in your face. They land very quickly and, if you are in their path, you can get contaminated.”
+In hospital infection control, she says, “we are told that we can stand one to two metres from the patient, and we’ll be fine”. But this is based on data from the 1940s. “It’s a bit like believing the Earth is flat.” More recent studies, she adds, “suggest that the distance the large droplets can travel is further than two metres. One study showed up to six metres.”
+The second way that viruses spread through the respiratory route is via tiny airborne particles, also referred to as aerosols. “They come from deep in the lungs, not from the throat and the nose,” says MacIntyre, “and those particles for some viruses can even come out with normal breathing.”
+They tend to stay hovering in the air for longer, you can’t see or feel them and they travel further than the large droplets. “There have been studies of influenza in emergency departments,” says MacIntyre, “and three hours after a patient with flu has left, the virus is still in the air.”
+“A lot of viruses are shed in the faecal material,” she adds, recalling a case in a Hong Kong apartment building during the severe acute respiratory syndrome (Sars) outbreak in 2003. “Because of malfunctions in the plumbing when the toilet was flushed, the virus aerosolised through the air-conditioning and an open window, and into other floors in the building as well as the building next door.”
+Even a larger droplet, she says, “in its trajectory from the mouth starts decreasing in size because of evaporation, and it could end up an airborne particle”. Surgical masks are only expected to help protect against larger droplets, and are designed not to protect the wearers themselves from germs but the open wounds of patients on operating tables. But even studies looking at whether they sufficiently protect patients in this way have not been able to prove their efficacy.
+Furthermore, says MacIntyre, “surgical masks are not regulated. Anyone can sell anything and call it a surgical mask. The filtration level of the material is not regulated.”
+There is some speculation over whether wearing basic fabric masks over a warm, wet mouth may breed infection rather than deter it, but Catherine Makison Booth, a microbiologist at the UK’s Health and Safety Laboratory, says she wouldn’t have thought so. The main issue, she says, is that “they’re not tightly fitting, and they’re not necessarily filtering out aerosol [airborne particles]”.
+Makison Booth is best known for creating a dummy called “Vomiting Larry” during the norovirus outbreak of 2013. Larry could projectile-vomit liquid as impressively as a real human, and therefore provide data on the myriad contamination risks involved in attempting to clean up the mess.
+In 2008, Makison Booth set out to discover to what extent surgical masks could protect wearers. She hooked up one of her dummies to a resuscitation machine, “so it breathed”, she says. She then sealed it in a cabinet and sprayed tiny airborne droplets – a simulated sneeze – containing influenza at it while it wore a series of protective masks.
+Different designs of surgical mask were tested, including the standard strip of fabric, a duck-bill-shaped one and a 3D moulded one. “They conferred a low level of protection to the wearer,” she says, diplomatically. The virus was found inside all the masks, but they had provided something like a six-fold decrease in the amount of virus exposure.
+Wearing a substandard mask may at least deter wearers from self-contaminating by putting their hands to their noses or mouths, but we can self-contaminate by touching our eyes, too. “We know that in the markets in Wuhan,” says MacIntyre, “they found coronavirus all over the surfaces, so someone walking through could touch it and contaminate themselves.”
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ Westerners are particularly resistant to wearing masks. Photograph: urbazon/Getty Images
+Makison Booth also tested disposable filtering facepiece (FFP) respirators. They are designed to filter tiny particulates, and are recommended in the UK for professionals working under possible exposure to airborne diseases. These provided 100 times more protection than going barefaced.
+However, truly protecting yourself isn’t as simple as buying any old FFP. There is a dizzying array on offer, with confusingly similar names, and in the west they are more likely to be marketed for pollution than disease. “N95” types are heavily promoted online. Makison Booth says this is the US equivalent of the UK’s second-most-effective model, imaginatively called the FFP2. However, she says, “we recommend the use of an FFP3 [the highest protection available] because it will filter out more particles”. The US versions are tested only for dry particulates, she says, but the UK FFPs are tested against liquid in aerosols, too. Before you buy any mask, make sure it has a CE certification mark, which indicates conformity with EU health, safety and environmental protection standards.
+There is little point in wearing one without testing that it fits properly, and most manufacturers sell fit-testing kits. “Areas such as the bridge of your nose to your cheek and under the chin are often places where air will leak through, rather than going through the filter material,” says Makison Booth. A standard test involves wearing the respirator, placing a plastic hood around your head and spraying saccharin solution inside it. “If you’ve got a leak, then you will be able to taste the sweetness,” she says.
+Basic surgical-style masks are more popular than ever, and what was once a symbol of pandemic panic has become an everyday accessory. In December, before this latest global health emergency was declared, members of the K-pop group BTS were papped arriving in New York in their trademark off-duty look of expensive coats, immaculate hair and surgical masks.
+For young people in east Asia, where wearing protective masks in public for a variety of reasons has been acceptable for a century, they have become cool. They accentuate the eyes, and add mystique to Instagram-filtered selfies – and the moulded versions, as opposed to the classic strip tied across the lower face, look pleasingly futuristic. They come in different colours and patterns, from camouflage to Hello Kitty. BTS merch stores sell branded masks.
+Mitsutoshi Horii, a professor at Shumei University in Japan, now based at Chaucer College in Canterbury, wrote a sociology research paper in 2014 looking at the history of face-mask-wearing in Japan. He has never worn one, but his mother has taken to the custom in recent winters. This is not primarily for fear of infection, but because, he says, “during the winter, her throat gets dry, and it keeps her face warm”.
+Their popularity is still growing in Japan, not least because there is a greater emphasis than ever before, from governments and medics, on taking responsibility for your own health.
+
+
+ 
+ 
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+
+ People looking for protection against pollution have been early adopters. Photograph: LeoPatrizi/Getty Images
+Although the title of his paper is Why Do the Japanese Wear Masks?, Horii says an equally interesting question is why don’t westerners? He discovered that masks were promoted by authorities across the world during the 1918 Spanish flu crisis that killed 50 million people. But in the west, particularly the US, “there was a huge public rejection. It went against their ideology of liberalism, the belief in freedom of individuals.”
+In Japan, says Horii, people didn’t mind wearing masks, and at the time, the Japanese government was encouraging more western behaviour, suppressing local flu prevention rituals involving things such as lucky charms, and pushing a more rational approach. Over time, the masks acquired other uses. From the 1960s, Japanese people started using them for hay fever, rather than deal with the unpleasant side-effects of antihistamines. Then, more recently, Sars, swine flu and urban pollution further increased demand.
+
+
+
+Flu is a force of nature. You get it when you get it
+
+In China, too, says MacIntyre, “you see families going for their Sunday stroll wearing masks even without any pandemic being present, sometimes because of pollution. In western cultures, even in healthcare settings, there’s very low compliance when it comes to mask-wearing.”
+It is pollution that has encouraged the slow trickle of mainstream mask-wearing in the west. In London the other day, Horii spotted a white man sporting one on the underground, although the look still has mildly apocalyptic associations in western countries.
+Urban cyclists have been the biggest adopters, and companies such as Freka facewear offer ergonomic masks with replaceable particulate filters in jazzy designs. There’s no evidence yet as to how much they help. It’s unlikely that consumers are fit testing them before using them, and, even if the masks are catching some particulates, they can’t stop noxious gases such as nitrogen dioxide, whereas there is good evidence for the benefits of sticking to quieter, less polluted side roads.
+Horii says that a major motivating factor for mask use in Japan is being courteous towards other people. “If you have a cold, you have to take care not to infect others, therefore you cover your mouth,” he says.
+Masks have also become what he calls a “risk ritual”, providing a sense of control over an uncontrollable situation. Just as we can’t avoid being exposed to pollution in cities, he says, “flu is a force of nature. You get it when you get it, but by doing something at least you feel you are taking control.”
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Health
+
+
+
+
+Health & wellbeing
+
+
+
+
+Infectious diseases
+
+
+
+
+Medical research
+
+
+
+
+features
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

@@ -1,0 +1,161 @@
+'It reduces surgical error': can VR train better doctors?
+
+George is seriously ill. Sat on the hospital bed facing his doctor, he begins to grow pale and clammy. His breathing becomes laboured and his heart rate slows. Time is running out. The doctor must diagnose George or his condition could deteriorate fast. In the worst case scenario he could die.
+Luckily, if that happens, the student doctors treating him will reboot the software they’re using and try again.
+George is the creation of virtual reality (VR) software provider Oxford Medical Simulation (OMS). He was designed by a team of artificial intelligence specialists to look and sound like a real patient. Students can enter his hospital room by pulling on a VR headset, and scan his heart monitor or reach for stethoscopes and syringes by turning their heads.
+
+
+
+Too few counsellors on campus: why students are turning to mental health apps
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+The students can mimic anything a practicing doctor would do: they can take George’s medical history or check his temperature, listen to his chest by sliding the stethoscope’s metal diaphragm along his back as he leans forward in bed, or shine a flashlight down his anatomically accurate throat.
+Since it launched in 2017, OMS has built up a vast library of scenarios that let student doctors test their abilities on everything from sepsis to bladder infections, strokes, heart failure, or diabetic emergencies. 
+It might sound like a tech gimmick but this software has the potential to improve medical training. “What we learn in medical school doesn’t necessarily prepare you for the real world,” says OMS co-founder Jack Pottle, who is a former NHS doctor himself. “People are making mistakes the world over that impact patient’s lives when potentially they could have been taught in a better, more practical way. Virtual reality gives you clinical experience on demand.”
+According to Sally Shiels, a medical education fellow at at the University of Oxford, trainee doctors currently must wait for the right patient to seek treatment at a teaching hospital and then consent to students learning from their case. “Virtual reality gives students access to a whole number of virtual patients in a way that doesn’t exist at the moment.”
+The concept of learning via simulations isn’t new in medicine. But until VR, student doctors had to work with highly sophisticated mannequins or donated cadavers. They’re expensive to set up, complex and limited in how many students they can reach. With VR, huge groups of students can repeat scenarios again and again. 
+VR can compensate for stretched resources in the NHS, says Omar Sabri, a consultant surgeon in trauma and orthopaedics at St George’s Healthcare NHS Trust, who has also been trialling VR with trainees. Trainees are able to prepare for procedures without the assistance of busy consultants giving them substantially longer to practise before they move on to a real patient. As a result, “it reduces surgical error and shortens the learning curve for trainees”.
+VR is also helping medical students practise skills without risking exposure to the coronavirus pandemic. As medical schools pause clinical training, OMS has reported an increase in demand for its technology. 
+According to Justin Barad, an orthopaedic surgeon and the founder of Osso VR, the technology can also benefit qualified surgeons, who are increasingly expected to master an ever-lengthening list of procedures. In the past Barad says he’s scrubbed out of the operating room and quickly Googled a procedure or watched instructions on YouTube to keep up.
+With the Osso VR software surgeons can pull on an Oculus Quest headsetand enter a virtual operating room that has been painstakingly rendered by a team of seven medical illustrators (including an art director who previously worked on Star Wars films).
+“You have the sound of anaesthesia machines behind you, you have the pulse of the patient beeping in the background – it’s familiar down to every last detail,” says Michael Seem, a resident surgeon at Wake Forest Baptist Health, a teaching hospital in North Carolina.
+As well as being cheaper and more accessible, there’s evidence that VR scenarios are effective teaching tools. A 2019 study by Oxford University’s Simulation, Teaching and Research Centre, where the OMS software is used, found that they were equal to or outperformed classic teaching methods. Asked to treat Emma, a virtual patient with an oozing abscess on her leg, fourth-year medical students described VR as “much more engrossing” than typical teaching methods. Its simulation of “real world urgency” meant they felt “a genuine sense of duty to this patient”, says Sally Shiels, an anaesthetist and teacher at the university.
+Mark Taubert, a physician and senior lecturer in palliative medicine at Cardiff University, was so intrigued by the idea that he created his own VR content. In 2017 he bought six VR headsets and a 360-degree VR camera. He recalls initial teething troubles, including poor image quality and a misplaced resuscitation doll making it into the shot. “We soon had students asking about the dead body in the corner,” he says. 
+
+
+
+'The Netflixisation of academia': is this the end for university lectures?
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+Nevertheless, student feedback has been overwhelmingly positive. “You always hear about the betterment of healthcare due to improvements in technology, but you never really think about it being implemented in medical education,” says Ahsan Abdulla, a fourth year medical student at the university. Pulling on the headset, Abdulla was transported to a small, dimly lit room where Taubert was delivering a PowerPoint presentation on nausea in palliative care. “It was actually quite a surreal experience,” he says. “I could look all around the room, including at the other medical students who had attended.”
+Taubert has ambitious plans for the technology. “Medical students are often underexposed to the realities of a frightened or even angry family, who feel the system has let them down,” he says. “How do you safely test your limits, without causing harm through exposure via bedside teaching?”
+Pottle thinks it’s only a matter of time before VR is rolled out widely across medical education. “There is always a fear of doing new things in medicine, and in particular medical education because we’re inherently risk averse. But when people try it in practice that begins to go away; they very quickly see how this does fit in with what they do. This is teaching people about how to improve care and how to save lives.”
+
+
+Topics
+
+
+
+Universities
+
+
+
+
+The smart campus
+
+
+
+
+
+
+Higher education
+
+
+
+
+Health
+
+
+
+
+Medicine
+
+
+
+
+Doctors
+
+
+
+
+Hospitals
+
+
+
+
+features
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

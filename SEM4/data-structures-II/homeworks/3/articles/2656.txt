@@ -1,0 +1,134 @@
+5G confirmed safe by radiation watchdog
+
+5G is safe, according to the international body in charge of setting limits on exposure to radiation, which has updated its advisory guidelines for the first time in more than 20 years.
+The International Commission on Non-Ionizing Radiation Protection (ICNIRP), the Germany-based scientific body that assesses the health risks of radio broadcasts, called for new guidelines for millimetre-wave 5G, the most high-frequency version of the telecommunications standard.
+
+
+
+How baseless fears over 5G rollout created a health scare
+
+
+
+
+
+
+
+Read more
+
+
+
+
+
+But in practice, that form of 5G, which is in use in the US and will be coming to Europe, still has output levels significantly below the new maximum.
+Dr Eric van Rongen, the ICNIRP chair, said: “We know parts of the community are concerned about the safety of 5G and we hope the updated guidelines will help put people at ease.
+“The guidelines have been developed after a thorough review of all relevant scientific literature, scientific workshops and an extensive public consultation process. They provide protection against all scientifically substantiated adverse health effects due to [electromagnetic field] exposure in the 100 kHz to 300 GHz range.”
+The radio frequencies 5G uses in the UK are similar to those that have been used for mobile telephones since 1998, when ICNIRP published its first set of guidelines for EMF exposure.
+But millimetre-wave 5G, and other broadcast connections above the 6GHz band, “were not anticipated in 1998”, according to Dr Jack Rowley, the senior director for research and sustainability at GSMA, the industry body for mobile network operators.
+Higher frequencies interact with organic tissue differently, dissipating more energy at the surface and penetrating less, which means the new standards take measurements across a smaller cross section, and specifically pay attention to the power absorbed by, rather than simply exposed to, a body.
+“The most important thing is that the fundamental health risk assessment is unchanged,” Rowley said. “The limits that we had in 1998 are still protective now.”
+In practice, both the old and new limits are unlikely to be breached in the conventional operation of a mobile phone network.
+Exposures from base stations hit about 1% of the maximum, Rowley said, while the testing regime for mobile phone handsets ensured that, when running at the maximum possible power, they hit about 50% of the upper limit.
+“In our day-to-day usage, however, it’s very similar to the base stations – about 1% of the maximum.”
+Despite the overwhelming evidence that 5G, like earlier mobile standards, is safe for the public, a large community of sceptics fear it will cause – or already is causing – health problems, including, supposedly, coronavirus. There is no evidence to support a link between the two.
+
+
+Topics
+
+
+
+5G
+
+
+
+
+
+
+Mobile phones (Technology)
+
+
+
+
+Telecoms
+
+
+
+
+Mobile phones (Money)
+
+
+
+
+Health
+
+
+
+
+Consumer affairs
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

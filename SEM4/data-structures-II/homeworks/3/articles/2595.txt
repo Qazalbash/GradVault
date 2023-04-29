@@ -1,0 +1,120 @@
+Can you solve it? Are you smart enough for MIT?
+
+Today’s problems come from what might be the longest-running puzzle column in the history of the printed word.
+In 1966, MIT student Allan Gottlieb published his first Puzzle Corner in the MIT Technology Review.
+More than half a century later, Gottlieb – who has been a computer science professor at New York University since 1980 – continues to publish Puzzle Corner in every issue.
+The column has legendary status among maths puzzle nerds. Most of the problems are too technical for a non-specialist audience but the column always includes a quickie, which he calls the Speed Department. Here are four word-based conundrums I’ve selected from the last decade.
+1. What is the numerically largest Roman numeral that is a normal English word?
+2. How do you prove literally that 11 + 2 = 12 + 1?
+3. The 9-letter word SPLATTERS has an intriguing property. You can remove a single letter to make an 8-letter word, without rearranging the other letters. You can remove another letter to make a 7-letter word, and then a 6-letter word, and so on down to a single-letter word. At no stage is the order of the letters rearranged.
+splatters
+splatter
+platter
+latter
+later
+late
+ate
+at
+a
+Find two other 9-letter words that share the same property. As a (kosher) hint, the words pig and sin appear as the 3-letter words. (Remember: at no stage do you ever change the order of the letters.)
+4. What is special about 8,549,176,320?
+I’ll be back at 5pm with the answers. Meanwhile, NO SPOILERS! Instead, discuss other curious patterns in English words.
+UPDATE: The solutions can be read by clicking here.
+In other news, I’ve just read The Rules of Contagion by the mathematician and epidemiologist Adam Kucharski, which is out this week. The book is a brilliant and accessible guide to the maths of outbreaks, from diseases to internet memes. The subject could not be more topical. Indeed, Adam, who is based at the London School of Hygiene & Tropical medicine, is currently working on analysis to support the global response to coronavirus. A recommended read.
+Thanks to Allan Gottlieb for permission to use today’s puzzles. Here’s a video of him talking about Puzzle Corner.
+
+
+
+
+
+
+ 
+ Facebook 
+ 
+ Twitter 
+ 
+ Pinterest 
+
+I set a puzzle here every two weeks on a Monday. I’m always on the look-out for great puzzles. If you would like to suggest one, email me.
+
+
+Topics
+
+
+
+Mathematics
+
+
+
+
+Alex Bellos's Monday puzzle
+
+
+
+
+
+
+MIT - Massachusetts Institute of Technology
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 

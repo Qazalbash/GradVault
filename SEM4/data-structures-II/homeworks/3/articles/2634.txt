@@ -1,0 +1,92 @@
+'Don't touch your face!': website watches you to help you avoid Covid-19
+
+“Don’t touch your face” is an easy command to interpret but, for some of us, a surprisingly hard one to follow even though we have been told it is among the best ways to avoid infection by the coronavirus. A new website hopes to help, by shouting at you if you touch your face.
+Donottouchyourface.com uses a simple machine-learning algorithm to recognise images of each individual user touching their face, and not touching their face.
+Once it’s been trained, it can be left in an open tab or a minimised window, and uses web notifications to ping you if you touch your face – or, if you leave the window visible, to put a large red NO on screen.
+As well as a useful aide memoire, the site is a hallmark of how far machine learning frameworks have come. The whole thing is trained and run locally on each computer, meaning that neither the webcam data, nor the trained AI, needs to be sent back to the developers. “All the calculations from your webcam and alerts are done on your computer and are never sent over the internet.”
+The creators do warn, however, that while “the CDC [Centers for Disease Control and Prevention] recommends not touching your face as one action you can take to prevent getting Covid-19”, the site will not necessarily stop users from getting the disease, “but it might help”.
+It is one of a slew of single-service websites that have popped up in response to the disease, as technologists, creatives and developers have found themselves focusing on the pandemic (and, perhaps, working from home with less oversight than normal).
+IsItCancelledYet.com, made by TC Sottek, executive editor of tech site The Verge, tracks which major events have been cancelled due to the virus, from Google I/O (“yes”) through to the Ted conference (“uh oh”) to holdouts such as Seattle Comic Con (“shockingly, no”).
+Others take a more serious tack: the Johns Hopkins CSSE has a one-page dashboard that allows visitors to track every single confirmed case in the world, as well as deaths and recovery figures, in near real-time.
+
+
+Topics
+
+
+
+Coronavirus outbreak
+
+
+
+
+
+
+Internet
+
+
+
+
+news
+
+
+
+
+
+
+Share on Facebook
+
+
+
+
+
+
+Share on Twitter
+
+
+
+
+
+
+Share via Email
+
+
+
+
+
+
+Share on LinkedIn
+
+
+
+
+
+
+Share on Pinterest
+
+
+
+
+
+
+Share on WhatsApp
+
+
+
+
+
+
+Share on Messenger
+
+
+
+
+
+
+
+
+Reuse this content
+
+
+
+
+ 
