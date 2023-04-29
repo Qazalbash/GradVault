@@ -1,0 +1,20 @@
+Open this folder in vscode by choosing File->Open Folder
+Run this command in the terminal
+
+g++ *.cpp -IC:\mingw_dev_lib\include\SDL2 -LC:\mingw_dev_lib\lib -w -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
+
+If there is no error, your program is compiled successfully, and a.exe is generated as output. Now run the program by this command:
+
+a.exe
+
+There will be error to execute it, as some files are missing. You have to copy all the files from c:\mingw_dev_lib\bin and paste them to your current folder.
+
+Now execute the a.exe again.
+
+
+If you are executing from command prompt rather than VSCode's terminal, then you have to execute this command:
+
+g++ *.cpp -IC:\mingw_dev_lib\include\SDL2 -LC:\mingw_dev_lib\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
+
+
+

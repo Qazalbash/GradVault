@@ -1,0 +1,69 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{forest}
+\newcommand*\primary{\textsuperscript{0}}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2022}{WC 05: Ambiguity in Context-Free Grammars}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\printanswers
+
+\title{Weekly Challenge 05: Ambiguity in Context-Free Grammars}
+\author{mq06861} % <=== replace with your student ID, e.g. xy012345
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+	\titledquestion{Ambiguous or not?}
+
+	Prove whether the following CFG is ambiguous or not.
+	\begin{align*}
+		S & \to AS \mid \epsilon \\
+		A & \to BA \mid a        \\
+		B & \to SB \mid b
+	\end{align*}
+	\begin{solution}
+		There exists two left most derivation of the string \(baa\).
+		\begin{equation*}
+			\begin{forest}
+				for tree={
+				where n children=0{tier=terminal}{},
+				parent anchor=south,
+				child anchor=north,
+				}
+				[S [A [B [b]] [A [a]]] [S [A [a]] [S [\(\varepsilon\)]]]]
+			\end{forest}\qquad\qquad\qquad
+			\begin{forest}
+				for tree={
+				where n children=0{tier=terminal}{},
+				parent anchor=south,
+				child anchor=north,
+				}
+				[S [A [B [S [\(\varepsilon\)]] [B [b]]] [A [a]]] [S [A [a]] [S [\(\varepsilon\)]]]]
+			\end{forest}
+		\end{equation*}
+		Hence the CFG is ambiguous.
+	\end{solution}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,109 @@
+9
+id : 0
+name : Enchanted Forests
+id : 1
+name : Marsh of the Undead
+id : 2
+name : Sands of Quick
+id : 3
+name : Swamps of Despair
+id : 4
+name : Vampire Cove
+id : 5
+name : Elven Waterfall
+id : 6
+name : Werewolf Hill
+id : 7
+name : Bridge of Death
+id : 8
+name : Wizard's Castle
+id : 0
+north : 1
+days : 1
+south : 4
+days : 3
+east : 3
+days : 2
+west : 7
+days : 1
+special : start
+id : 1
+north :
+days :
+south : 0
+days : 1
+east : 2
+days : 1
+west :
+days :
+special : crystal
+id : 2
+north :
+days :
+south :
+days :
+east :
+days :
+west :
+days :
+special : death
+id : 3
+north : 2
+days : 2
+south : 5
+days : 1
+east :
+days :
+west : 0
+days : 2
+special :
+id : 4
+north : 0
+days : 3
+south : 6
+days : 3
+east :
+days :
+west :
+days :
+special :
+id : 5
+north : 3
+days : 1
+south :
+days :
+east :
+days :
+west :
+days :
+special : crystal
+id : 6
+north : 4
+days : 3
+south :
+days :
+east :
+days :
+west :
+days :
+special : crystal
+id : 7
+north :
+days :
+south :
+days :
+east : 0
+days : 1
+west : 8
+days : 5
+special :
+id : 8
+north :
+days :
+south :
+days :
+east :
+days :
+west :
+days :
+special : prince

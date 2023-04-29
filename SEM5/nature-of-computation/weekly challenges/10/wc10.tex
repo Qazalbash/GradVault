@@ -1,0 +1,65 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titling}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2022}{WC 10: Complexity Classes}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\printanswers
+
+\title{Weekly Challenge 10: Complexity Classes}
+\author{mq06861} % <=== replace with your student ID, e.g. xy012345
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+  
+\titledquestion{Checking Primality}
+
+Explain succinctly why the language recognized by the following Turing Machine, M, does not belong to $\mathbf{P}$ (assume the input is represented in binary)
+
+$M = $ On input $n$:
+\begin{enumerate}
+\item Check if 2 divides $n$, if so \textit{Reject}.
+\item Otherwise, repeat step 1 for all numbers less than $n$. That is, check if 3 divides $n$. If so \textit{Reject}, otherwise check if 4 divides $n$, if so Reject, and so on.
+\item If all numbers less than $n$ have been checked, \textit{Accept}.  
+\end{enumerate}
+	\begin{solution}
+		We know that,
+		\[
+			\displaystyle\mathbf{P} := \bigcup_{k} \operatorname{TIME}(n^k)
+		\]
+		where \(n\) is the size of the input. Let \(p = L(M)\),
+		\(p\) is the set of all prime numbers represented in binary.
+		On \(M\) input \(n\) would be the binary representation of
+		some number \(p'\). Where the size of input \(n\) would be the
+		size of the binary representation of \(p'\), which would be some
+		\[q = \lfloor\log_2(p')\rfloor+1\]
+		Assuming the time for step 1 of algorithm is \(O(1)\), then on
+		input \(n\) of size \(q\), \(M\) takes \(p'\) steps where \(p'\)
+		is th number that \(n\) is binary represntation of. So for
+		input \(n\) of size \(q\) the \(\operatorname{TIME}(M)\) = \(O(2^{q-1})\).
+		Which make the the time of \(M\) be exponential.
+		\[L(M)\notin\mathbf{P}\]
+  	\end{solution}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

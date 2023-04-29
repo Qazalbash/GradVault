@@ -1,0 +1,120 @@
+Elton John
+34
+174
+9
+7
+Length: 21, Width: 22, Height: 14, Volume: 6468
+Length: 5, Width: 24, Height: 29, Volume: 3480
+Length: 8, Width: 13, Height: 17, Volume: 1768
+Length: 19, Width: 10, Height: 25, Volume: 4750
+Length: 11, Width: 7, Height: 16, Volume: 1232
+Length: 21, Width: 25, Height: 22, Volume: 11550
+Length: 7, Width: 16, Height: 21, Volume: 2352
+Length: 9, Width: 7, Height: 8, Volume: 504
+Length: 22, Width: 12, Height: 26, Volume: 6864
+Length: 21, Width: 23, Height: 25, Volume: 12075
+John Cena
+34
+258
+11
+6
+Length: 27, Width: 6, Height: 26, Volume: 4212
+Length: 18, Width: 24, Height: 17, Volume: 7344
+Length: 22, Width: 29, Height: 15, Volume: 9570
+Length: 24, Width: 8, Height: 16, Volume: 3072
+Length: 27, Width: 13, Height: 28, Volume: 9828
+Length: 19, Width: 21, Height: 16, Volume: 6384
+Length: 8, Width: 23, Height: 27, Volume: 4968
+Length: 24, Width: 17, Height: 12, Volume: 4896
+Length: 17, Width: 14, Height: 28, Volume: 6664
+Length: 21, Width: 9, Height: 8, Volume: 1512
+Barrack Obama
+37
+854
+10
+9
+Length: 21, Width: 15, Height: 20, Volume: 6300
+Length: 22, Width: 18, Height: 11, Volume: 4356
+Length: 20, Width: 22, Height: 19, Volume: 8360
+Length: 28, Width: 26, Height: 10, Volume: 7280
+Length: 20, Width: 9, Height: 25, Volume: 4500
+Length: 5, Width: 11, Height: 6, Volume: 330
+Length: 23, Width: 28, Height: 9, Volume: 5796
+Length: 28, Width: 14, Height: 9, Volume: 3528
+Length: 11, Width: 20, Height: 21, Volume: 4620
+Length: 6, Width: 11, Height: 13, Volume: 858
+John Rambo
+28
+389
+6
+5
+Length: 24, Width: 19, Height: 6, Volume: 2736
+Length: 28, Width: 17, Height: 18, Volume: 8568
+Length: 23, Width: 12, Height: 9, Volume: 2484
+Length: 21, Width: 13, Height: 20, Volume: 5460
+Length: 19, Width: 13, Height: 9, Volume: 2223
+Length: 10, Width: 7, Height: 11, Volume: 770
+Length: 28, Width: 16, Height: 26, Volume: 11648
+Length: 25, Width: 29, Height: 27, Volume: 19575
+Length: 25, Width: 9, Height: 7, Volume: 1575
+Length: 28, Width: 27, Height: 17, Volume: 12852
+Justin Beiber
+33
+-31
+8
+7
+Length: 16, Width: 20, Height: 16, Volume: 5120
+Length: 16, Width: 10, Height: 22, Volume: 3520
+Length: 10, Width: 29, Height: 11, Volume: 3190
+Length: 7, Width: 5, Height: 5, Volume: 175
+Length: 21, Width: 29, Height: 21, Volume: 12789
+Length: 10, Width: 12, Height: 21, Volume: 2520
+Length: 12, Width: 17, Height: 12, Volume: 2448
+Length: 17, Width: 8, Height: 13, Volume: 1768
+Length: 25, Width: 14, Height: 14, Volume: 4900
+Length: 13, Width: 26, Height: 18, Volume: 6084
+Hillary Clinton
+35
+1959
+11
+7
+Length: 27, Width: 26, Height: 11, Volume: 7722
+Length: 10, Width: 18, Height: 23, Volume: 4140
+Length: 5, Width: 21, Height: 17, Volume: 1785
+Length: 10, Width: 15, Height: 14, Volume: 2100
+Length: 29, Width: 17, Height: 28, Volume: 13804
+Length: 13, Width: 25, Height: 21, Volume: 6825
+Length: 7, Width: 5, Height: 21, Volume: 735
+Length: 16, Width: 29, Height: 25, Volume: 11600
+Length: 26, Width: 26, Height: 28, Volume: 18928
+Length: 29, Width: 23, Height: 14, Volume: 9338
+Donald Trump
+39
+869
+12
+11
+Length: 11, Width: 14, Height: 8, Volume: 1232
+Length: 29, Width: 23, Height: 18, Volume: 12006
+Length: 5, Width: 18, Height: 7, Volume: 630
+Length: 22, Width: 8, Height: 23, Volume: 4048
+Length: 28, Width: 13, Height: 12, Volume: 4368
+Length: 26, Width: 15, Height: 22, Volume: 8580
+Length: 18, Width: 19, Height: 14, Volume: 4788
+Length: 21, Width: 15, Height: 6, Volume: 1890
+Length: 5, Width: 29, Height: 24, Volume: 3480
+Length: 11, Width: 28, Height: 8, Volume: 2464
+Donald Trump
+39
+869
+12
+11
+Length: 29, Width: 13, Height: 24, Volume: 9048
+Length: 14, Width: 19, Height: 7, Volume: 1862
+Length: 25, Width: 15, Height: 23, Volume: 8625
+Length: 23, Width: 28, Height: 17, Volume: 10948
+Length: 19, Width: 8, Height: 28, Volume: 4256
+Length: 5, Width: 13, Height: 23, Volume: 1495
+Length: 10, Width: 26, Height: 28, Volume: 7280
+Length: 11, Width: 19, Height: 28, Volume: 5852
+Length: 14, Width: 12, Height: 27, Volume: 4536
+Length: 27, Width: 18, Height: 22, Volume: 10692

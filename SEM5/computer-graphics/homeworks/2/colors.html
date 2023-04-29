@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Triangle with Boundary and Interior</title>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            in vec4 vPosition;
+            out vec4 vPos; 
+            uniform vec4 bnd_col;
+            uniform vec4 int_col;
+            void main(){
+            	gl_Position = vPosition;
+            	vPos = vPosition;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            precision highp float;
+            
+            in vec4 vPos;
+            uniform vec4 bnd_col;
+            uniform vec4 int_col;
+            out vec4 fragColor;
+
+            void main()
+            {
+                if ((vPos.y <= 2.0*vPos.x + 1.0 && vPos.y >= 2.0*vPos.x + 0.95) || (-1.0 <= vPos.y && vPos.y <= -0.98) || (vPos.y <= -2.0*vPos.x + 1.00 && vPos.y >= -2.0*vPos.x + 0.95)){
+                    fragColor = bnd_col;
+                }
+                /*if (vPos.x <= 0.0){
+                    fragColor = bnd_col;
+                }*/
+                else{
+                    fragColor = int_col;
+                }
+            	
+            }
+        </script>
+        <script type="text/javascript" src="initShadersES6.js"></script>
+        <script type="text/javascript" src="MVES6.js"></script>
+        <script type="text/javascript" src="map.js"></script>
+        <script type="text/javascript" src="colors.js"></script>
+    </head>
+    <style>
+        div{
+            align-content: center;
+            text-align: center;
+            color: rgb(18, 223, 18);
+            font-family: consolas;
+        }
+        body{
+            background-color: black;
+        }
+        #spacing {
+            padding-bottom: 10px;
+        }
+    </style>
+    <body>
+        <div>
+            <label for="colorpicker">Select Boundary Color</label>
+            <input type="color" id="boundary-color" value="#ff0000" onchange="bc_set()" />
+            <label for="colorpicker">Select Interior Color</label>
+            <input type="color" id="interior-color" value="#0000ff" onchange="ic_set()" />
+        </div>
+        <div id="spacing"></div>
+        <div>
+            <button type="button" id="rnd_b" name="rnd_b" onclick="rnd_b()">Random Color for Boundary</button>
+            <button type="button" id="rnd_i" name="rnd_i" onclick="rnd_i()">Random Color for Interior</button>
+        </div>
+        <div id="spacing"></div>
+        <div>
+            <button type="button" id="tg_b" name="tg_b" onclick="tg_b()">Toggle Color for Boundary</button>
+            <button type="button" id="tg_i" name="tg_i" onclick="tg_i()">Toggle Color for Interior</button>
+        </div>
+        <div id="spacing"></div>
+        <div>
+        <canvas id="gl-canvas" width="512" height="512">
+            Your browser does not support the WebGL.
+        </canvas>
+        </div>
+    
+    </body>
+</html>
