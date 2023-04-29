@@ -7,19 +7,15 @@ GradVault is a digital repository for all my graduation courses, keeping my acad
 ```
 GradVault
 ├── SEM1
-│   ├── programming-fundamentals
-│   └── README.md
+│   └── programming-fundamentals
 ├── SEM2
-│   ├── data-structure-and-algorithms
-│   └── README.md
+│   └── data-structure-and-algorithms
 ├── SEM3
-│   ├── object-oriented-programming
-│   └── README.md
+│   └── object-oriented-programming
 ├── SEM4
 │   ├── computer-architecture
 │   ├── data-structures-II
-│   ├── probability-and-statistics
-│   └── README.md
+│   └── probability-and-statistics
 ├── SEM5
 │   ├── computer-graphics
 │   ├── nature-of-computation
