@@ -1,6 +1,7 @@
 #include <iostream>
 
-int crazySale(int nItems) {
+int crazySale(int nItems)
+{
     int discount;
 
     if (nItems == 1)
@@ -12,12 +13,14 @@ int crazySale(int nItems) {
     else if (nItems > 5)
         discount = 5 * (nItems - 1);
 
-    if (discount > 70) discount = 70;
+    if (discount > 70)
+        discount = 70;
 
     return discount;
 }
 
-int main() {
+int main()
+{
     int nItems;
     std::cin >> nItems;
     std::cout << crazySale(nItems);

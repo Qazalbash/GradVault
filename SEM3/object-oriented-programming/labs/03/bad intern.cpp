@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 
-void intern(std::string input, std::string output) {
-    for (int i = 0; i < input.length(); i++) {
+void intern(std::string input, std::string output)
+{
+    for (int i = 0; i < input.length(); i++)
+    {
         if (input[i] == 'a')
             output += "A";
         else if (input[i] == 'c')
@@ -18,7 +20,8 @@ void intern(std::string input, std::string output) {
     std::cout << output;
 }
 
-int main() {
+int main()
+{
     std::string input, output = "";
     getline(std::cin, input);
     intern(input, output);

@@ -19,7 +19,8 @@ are same.
 Every static variable is assigned a 0 value when it is not initialized.
 */
 
-int main() {
+int main()
+{
         {
                 int y = 9;
                 /*
@@ -30,7 +31,8 @@ int main() {
                 */
         }
 
-        for (int x = 0; x < 10; x++) {
+        for (int x = 0; x < 10; x++)
+        {
                 static int sum = 0;
                 /*
                 the sum variable is created once when the loop runs for first time,

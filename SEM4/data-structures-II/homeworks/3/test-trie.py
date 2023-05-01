@@ -14,6 +14,7 @@ casefilename = "trie-cases.txt"
 
 
 class Case:
+
     def __init__(self, prefix: str, terms: int, instances: int):
         self.prefix, self.terms, self.instances = prefix, terms, instances
 
@@ -47,20 +48,17 @@ corpus = get_corpus(corpus_zipfilename)
 @pytest.mark.parametrize("case", fetch_testcases(path + casefilename))
 def test_trie(case):
     completions = corpus.prefix_complete(case.prefix)
-    assert (
-        len(completions) == case.terms
-    ), f"bad number of completions for {case.prefix=}"
+    assert (len(completions) == case.terms
+           ), f"bad number of completions for {case.prefix=}"
     instances = sum(map(len, completions.values()))
-    assert (
-        instances == case.instances
-    ), f"bad number of completion {instances=} for {case.prefix=}"
+    assert (instances == case.instances
+           ), f"bad number of completion {instances=} for {case.prefix=}"
     corpuspath = Path("./corpus/")
     for completion, locations in completions.items():
         for location in locations:
             doc_id, start, end = location
-            content = open(
-                corpuspath / doc_id, encoding="ascii", errors="ignore"
-            ).read()
-            assert (
-                content[start:end] == completion
-            ), f"bad {location=} for {completion=} of {case.prefix=}"
+            content = open(corpuspath / doc_id,
+                           encoding="ascii",
+                           errors="ignore").read()
+            assert (content[start:end] == completion
+                   ), f"bad {location=} for {completion=} of {case.prefix=}"

@@ -1,24 +1,23 @@
 #include <iostream>
 
 // Base class
-class Vehicle {
-        /*
-        protected attributes are accessible inside class as well as in child of the class too.
-        */
+class Vehicle
+{
+    /*
+    protected attributes are accessible inside class as well as in child of the class too.
+    */
 
-    protected:
+protected:
+    std::string brand;
 
-        std::string brand;
+public:
+    void honk() const { std::cout << "Tuut, tuut!\n"; }
 
-    public:
+    void info() const { std::cout << "This is a " << brand; }
 
-        void honk() const { std::cout << "Tuut, tuut!\n"; }
+    std::string getBrand() const { return brand; }
 
-        void info() const { std::cout << "This is a " << brand; }
-
-        std::string getBrand() const { return brand; }
-
-        Vehicle(std::string b) : brand(b) { std::cout << "I'm in Base class constructor\n"; }
+    Vehicle(std::string b) : brand(b) { std::cout << "I'm in Base class constructor\n"; }
 };
 
 /*
@@ -30,44 +29,45 @@ Dog is an Animal.
 */
 
 // Derived class
-class Car : public Vehicle {
-        /*
-        private attributes defined in parent class will not be accessible in child class as well.
-        */
+class Car : public Vehicle
+{
+    /*
+    private attributes defined in parent class will not be accessible in child class as well.
+    */
 
-    protected:
+protected:
+    std::string model;
 
-        std::string model;
+public:
+    /*
+    defining function with same name in same class with different attributes is function overloading.
 
-    public:
+    defining function of base/parent class again in the derived/child class with same attributes and return type is
+    called function overridding.
 
-        /*
-        defining function with same name in same class with different attributes is function overloading.
+    info() was defined in both parent and child class. It is overridded in child class.
 
-        defining function of base/parent class again in the derived/child class with same attributes and return type is
-        called function overridding.
+    It's always a good idea to over-ride the functions, so that they may be used in child classes with same name as
+    of parent.
+    */
+    void info() const
+    {
+        Vehicle::info();
+        std::cout << " " << model << std::endl;
+    }
 
-        info() was defined in both parent and child class. It is overridded in child class.
+    std::string getModel() { return model; }
 
-        It's always a good idea to over-ride the functions, so that they may be used in child classes with same name as
-        of parent.
-        */
-        void info() const {
-                Vehicle::info();
-                std::cout << " " << model << std::endl;
-        }
-
-        std::string getModel() { return model; }
-
-        /*
-        A parent class constructor can be delegated in child class constructor only in initializer list.
-        */
-        Car(std::string b, std::string m) : Vehicle(b), model(m) { std::cout << "I'm in Child class constructor\n"; }
+    /*
+    A parent class constructor can be delegated in child class constructor only in initializer list.
+    */
+    Car(std::string b, std::string m) : Vehicle(b), model(m) { std::cout << "I'm in Child class constructor\n"; }
 };
 
-int main() {
-        Car myCar("Ford", "Mustang");
-        myCar.honk();  // calling function of base class from child class
-        std::cout << myCar.getBrand() + " " + myCar.getModel();
-        return 0;
+int main()
+{
+    Car myCar("Ford", "Mustang");
+    myCar.honk(); // calling function of base class from child class
+    std::cout << myCar.getBrand() + " " + myCar.getModel();
+    return 0;
 }

@@ -4,7 +4,8 @@
 // shared memory size
 #define SHMEM_SIZE 250
 
-__global__ void sumReduction(int *v, int *v_r) {
+__global__ void sumReduction(int *v, int *v_r)
+{
         // Allocate shared memory
         __shared__ int partial_sum[SHARED_MEMORY_SIZE];
 
@@ -18,12 +19,14 @@ __global__ void sumReduction(int *v, int *v_r) {
         __syncthreads();
 
         // Increase the stride of the access until we exceed the CTA dimensions
-        for (int s = 1; s < blockDim.x; s *= 2) {
+        for (int s = 1; s < blockDim.x; s *= 2)
+        {
                 // Change the indexing to be sequential threads
                 int index = 2 * s * threadIdx.x;
 
                 // Each thread does work unless the index goes off the block
-                if (index < blockDim.x) {
+                if (index < blockDim.x)
+                {
                         partial_sum[index] += partial_sum[index + s];
                 }
 
@@ -32,26 +35,30 @@ __global__ void sumReduction(int *v, int *v_r) {
 
         // Let the thread 0 for this block write its result to main memory
         // Result is indexed by this block
-        if (threadIdx.x == 0) {
+        if (threadIdx.x == 0)
+        {
                 v_r[blockIdx.x] = partial_sum[0];
         }
 }
 
-int main() {
+int main()
+{
         // Vector size
-        int  N                 = 10000;
+        int N = 10000;
         int *initial_host_data = 0;
-        int *final_host_data   = 0;
+        int *final_host_data = 0;
 
-        int size          = N * sizeof(int);
+        int size = N * sizeof(int);
         initial_host_data = (int *)malloc(N * sizeof(int));
-        final_host_data   = (int *)malloc(N * sizeof(int));
-        for (int i = 0; i < N; i++) {
+        final_host_data = (int *)malloc(N * sizeof(int));
+        for (int i = 0; i < N; i++)
+        {
                 initial_host_data[i] = i + 1;
-                final_host_data[i]   = 0;
+                final_host_data[i] = 0;
         }
         int sum = 0;
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++)
+        {
                 sum += initial_host_data[i];
         }
         printf("sum on host %d\n", sum);

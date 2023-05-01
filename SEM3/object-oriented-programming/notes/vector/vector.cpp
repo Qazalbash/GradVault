@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 
-int main() {
+int main()
+{
         /*
         vector is a dynamic object
         std::vector<data type> name;
@@ -14,7 +15,8 @@ int main() {
         // to add element at the last position push_back() is used
         intVector.push_back(10);
 
-        for (int val : intVector) std::cout << val << " ";
+        for (int val : intVector)
+                std::cout << val << " ";
 
         // size() returns size of the vector
         std::cout << "\nsize of vector is " << intVector.size() << std::endl;
@@ -29,7 +31,7 @@ int main() {
         // be accesed by [] acces specifier
         std::cout << "value at 5th position is " << intVector.at(5) << std::endl;
 
-        intVector.pop_back();  // pops value at the back
+        intVector.pop_back(); // pops value at the back
 
         return 0;
 }

@@ -21,7 +21,8 @@ class LinearDict(MyDict):
 
     def __hash__(self, key: object) -> int:
 
-        return (hash(key) * self._scale + self._shift) % self._prime % len(self._table)
+        return (hash(key) * self._scale + self._shift) % self._prime % len(
+            self._table)
 
     def __getitem__(self, key: object, default: object = None) -> object:
 
@@ -63,9 +64,8 @@ class LinearDict(MyDict):
 
     def _is_available(self, hash_key: int) -> bool:
 
-        return (
-            self._table[hash_key] == None or self._table[hash_key] == LinearDict._AVAIL
-        )
+        return (self._table[hash_key] == None or
+                self._table[hash_key] == LinearDict._AVAIL)
 
     def _find_slot(self, hash_key: int, key: int) -> (bool, object):
 

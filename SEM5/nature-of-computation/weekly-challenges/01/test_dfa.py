@@ -8,17 +8,20 @@ from dfa import *
 
 casefile = 'https://waqarsaleem.github.io/cs212/2022_Fall/wc01/testcases.txt'
 
+
 @dataclass
 class Case:
     dfa: [str]
     strings: [str]
     accepts: [bool]
 
+
 def fetch_testcases(path: str) -> [Case]:
     testcases = []
     if path.startswith('http'):
-        input_lines = [line.decode('utf-8').strip()
-                       for line in urlopen(path).readlines()]
+        input_lines = [
+            line.decode('utf-8').strip() for line in urlopen(path).readlines()
+        ]
     else:
         input_lines = open(path).readlines()
     line = iter(input_lines)
@@ -31,6 +34,7 @@ def fetch_testcases(path: str) -> [Case]:
         accepts = [bool(int(l.strip())) for l in list(islice(line, num_cases))]
         testcases.append(Case(dfa, strings, accepts))
     return testcases
+
 
 @pytest.mark.parametrize('case', fetch_testcases(casefile))
 def test_index(case):

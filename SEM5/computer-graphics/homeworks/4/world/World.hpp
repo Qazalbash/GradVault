@@ -25,22 +25,21 @@ class Sampler;
 class ShadeInfo;
 class Normal;
 
-class World {
+class World
+{
 public:
-
-    ViewPlane               vplane;
-    RGBColor                bg_color;
+    ViewPlane vplane;
+    RGBColor bg_color;
     std::vector<Geometry *> geometry;
-    Camera                 *camera_ptr;
-    Sampler                *sampler_ptr;
+    Camera *camera_ptr;
+    Sampler *sampler_ptr;
 
 public:
-
     // Constructors.
-    World();  // initialize members.
+    World(); // initialize members.
 
     // Destructor.
-    ~World();  // free memory.
+    ~World(); // free memory.
 
     // Add to the scene.
     void add_geometry(Geometry *geom_ptr);
@@ -55,4 +54,4 @@ public:
     ShadeInfo hit_objects(const Ray &ray);
 };
 
-#endif  // WORLD_HPP
+#endif // WORLD_HPP

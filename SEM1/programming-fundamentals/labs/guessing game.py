@@ -6,21 +6,25 @@ def guessing_game(secret_number, falto):
         print(f"Attempt number {count}")
         if num < secret_number:
             if check(count):
-                print("Sorry, you lose! Too many wrong guesses.") 
+                print("Sorry, you lose! Too many wrong guesses.")
             else:
-                print("Try again! Your guess is too low.")    
+                print("Try again! Your guess is too low.")
         elif num > secret_number:
             if check(count):
-                print("Sorry, you lose! Too many wrong guesses.")     
+                print("Sorry, you lose! Too many wrong guesses.")
             else:
-                print("Try again! Your guess is too high.")   
+                print("Try again! Your guess is too high.")
         else:
-            print(f"Congratulations, you won! You guessed the secret number {secret_number} in {count} guesses.")
+            print(
+                f"Congratulations, you won! You guessed the secret number {secret_number} in {count} guesses."
+            )
             break
-        
+
+
 def check(count):
     if count == 5:
-        return("Sorry, you lose! Too many wrong guesses.")
-      
+        return ("Sorry, you lose! Too many wrong guesses.")
+
+
 secret_number = int(input())
 guessing_game(secret_number, 1)

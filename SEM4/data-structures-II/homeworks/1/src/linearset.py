@@ -24,9 +24,8 @@ class LinearSet(MySet):
 
     def __hash__(self, element: object) -> int:
 
-        return (
-            (hash(element) * self._scale + self._shift) % self._prime % len(self._set)
-        )
+        return ((hash(element) * self._scale + self._shift) % self._prime %
+                len(self._set))
 
     def __getitem__(self, key: object, default: object = None) -> object:
 
@@ -73,10 +72,8 @@ class LinearSet(MySet):
 
     def _is_available(self, hash_element: int) -> bool:
 
-        return (
-            self._set[hash_element] == None
-            or self._set[hash_element] == LinearSet._AVAIL
-        )
+        return (self._set[hash_element] == None or
+                self._set[hash_element] == LinearSet._AVAIL)
 
     def _find_slot(self, hash_element: int, element: int) -> (bool, object):
 

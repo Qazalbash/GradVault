@@ -4,7 +4,11 @@ from trie import *
 
 
 class Corpus:
-    def __init__(self, path: str, index: bool = True, trie: bool = True) -> None:
+
+    def __init__(self,
+                 path: str,
+                 index: bool = True,
+                 trie: bool = True) -> None:
 
         self._index: InvertedIndex = InvertedIndex() if index else None
 

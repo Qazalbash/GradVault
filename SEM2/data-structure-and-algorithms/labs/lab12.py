@@ -1,12 +1,15 @@
 import pandas as pd
 
+
 def addNodes(G, nodes):
     G.update({node: [] for node in nodes})
+
 
 def addEdges(G, edges):
     for edge in edges:
         G[edge[0]] = G.get(edge[0], []) + [(edge[1], edge[2])]
         G[edge[1]] = G.get(edge[1], []) + [(edge[0], edge[2])]
+
 
 def totalWeight(G):
     count = 0
@@ -14,13 +17,20 @@ def totalWeight(G):
         count += sum([int(j[1]) for j in i])
     return count
 
-print("************************************************exercise 1a************************************************\n\n")
+
+print(
+    "************************************************exercise 1a************************************************\n\n"
+)
 G = {}
 addNodes(G, ["A", "B", "C", "D", "E", "F", "G"])
-addEdges(G, [("A", "B", 5), ("A", "E", 6), ("A", "D", 3), ("B", "C", 6), ("C", "D", 10), ("C", "G", 2), ("D", "F", 8), ("E", "F", 9), ("F", "G", 10)])
+addEdges(G, [("A", "B", 5), ("A", "E", 6), ("A", "D", 3), ("B", "C", 6),
+             ("C", "D", 10), ("C", "G", 2), ("D", "F", 8), ("E", "F", 9),
+             ("F", "G", 10)])
+
 
 def getShortestPath(graph, source, sink):
-    track, unvisitedNodes, inf, route = {}, graph.copy(), totalWeight(graph) + 1, []
+    track, unvisitedNodes, inf, route = {}, graph.copy(
+    ), totalWeight(graph) + 1, []
     shortestDist = {node: inf for node in graph}
     shortestDist[source] = 0
 
@@ -32,26 +42,28 @@ def getShortestPath(graph, source, sink):
                 minDistNode = node
             elif shortestDist[node] < shortestDist[minDistNode]:
                 minDistNode = node
-        
+
         neighbours = graph[minDistNode]
         for i in neighbours:
             if i[1] + shortestDist[minDistNode] < shortestDist[i[0]]:
                 shortestDist[i[0]] = i[1] + shortestDist[minDistNode]
                 track[i[0]] = minDistNode
         unvisitedNodes.pop(minDistNode)
-    
+
     currentNode = sink
 
     while currentNode != source:
         route.insert(0, currentNode)
         currentNode = track[currentNode]
     route.insert(0, source)
-    return [(route[i], route[i+1])for i in range(len(route)-1)]
+    return [(route[i], route[i + 1]) for i in range(len(route) - 1)]
+
 
 print(getShortestPath(G, "A", "G"))
 
-
-print("\n\n************************************************exercise 1b************************************************\n\n")
+print(
+    "\n\n************************************************exercise 1b************************************************\n\n"
+)
 city = {}
 
 # import csv
@@ -76,14 +88,16 @@ for node in cities:
 
 print(getShortestPath(city, "Islamabad", "Kaghan"))
 
-print("\n\n************************************************exercise 2************************************************\n\n")
+print(
+    "\n\n************************************************exercise 2************************************************\n\n"
+)
 
 G2 = {}
 
 addNodes(G2, ["A", "B", "C", "D", "E", "F", "G"])
-addEdges(G2, [
-    ("A", "B", 7), ("A", "E", 6), ("A", "D", 2), ("B", "C", 3), ("C", "D", 2), ("C", "G", 2), ("D", "F", 8), ("E", "F", 9), ("F", "G", 4)
-])
+addEdges(G2, [("A", "B", 7), ("A", "E", 6), ("A", "D", 2), ("B", "C", 3),
+              ("C", "D", 2), ("C", "G", 2), ("D", "F", 8), ("E", "F", 9),
+              ("F", "G", 4)])
 
 print(getShortestPath(G2, "A", "F"))
 print(getShortestPath(G2, "A", "B"))

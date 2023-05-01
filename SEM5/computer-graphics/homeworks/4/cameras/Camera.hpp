@@ -11,14 +11,14 @@
 class Point3D;
 class Vector3D;
 
-class Camera {
+class Camera
+{
 public:
-
     // Constructors.
-    Camera() = default;  // does nothing.
+    Camera() = default; // does nothing.
 
     // Copy constuctor and assignment operator.
-    Camera(const Camera &camera)           = default;
+    Camera(const Camera &camera) = default;
     Camera &operator=(const Camera &other) = default;
 
     // Desctructor.
@@ -28,4 +28,4 @@ public:
     virtual Vector3D get_direction(const Point3D &p) const = 0;
 };
 
-#endif  // CAMERA_HPP
+#endif // CAMERA_HPP

@@ -1,14 +1,17 @@
 #include <iostream>
 
-void printLine() {
-        for (int i = 0; i < 10; i++) std::cout << "*";
+void printLine()
+{
+        for (int i = 0; i < 10; i++)
+                std::cout << "*";
         std::cout << std::endl;
 }
 
 // most of the time the funciton is decleared in header files
 void printLine1(char);
 
-struct Distance {
+struct Distance
+{
         int feet, inches;
 };
 
@@ -30,7 +33,7 @@ void div(int x, int y, int &quotient, int &remainder)
 if you think the function should not return anything at all, the return type should be void.
 */
 {
-        quotient  = x / y;
+        quotient = x / y;
         remainder = x - quotient * y;
 }
 
@@ -65,8 +68,10 @@ void sayHello()
 */
 
 // function recurssion
-int factorial(int n) {
-        if (n == 1) return 1;
+int factorial(int n)
+{
+        if (n == 1)
+                return 1;
         return n * factorial(n - 1);
 }
 
@@ -95,7 +100,8 @@ void printMeasuremnt(Distance d) { std::cout << "The measurment is: " << d.feet 
 
 void printMeasuremnt(int inches) { std::cout << "The measurment is: " << inches << std::endl; }
 
-void printMeasuremnt(Distance d, char feetSymbol, char inchesSymbol) {
+void printMeasuremnt(Distance d, char feetSymbol, char inchesSymbol)
+{
         std::cout << "The measurment is: " << d.feet << feetSymbol << d.inches << inchesSymbol << std::endl;
 }
 
@@ -110,7 +116,8 @@ Function overloading can be done when function have default values as well.
 
 void greetings(std::string str = "Hello") { std::cout << str << std::endl; }
 
-int main() {
+int main()
+{
         printLine();
         /*
         complier will givea n error when function is defined afetr main(). to over come this error we defined the
@@ -119,14 +126,17 @@ int main() {
         printLine1('r');
 
         Distance d = {5, 7};
-        std::cout << std::endl << distanceInInches(d) << std::endl << std::endl;
+        std::cout << std::endl
+                  << distanceInInches(d) << std::endl
+                  << std::endl;
 
         int quotient, remainder;
 
         div(17, 5, quotient, remainder);
 
         std::cout << "The qoutient of 17/5 is: " << quotient << std::endl;
-        std::cout << "The remiander of 17/5 is: " << remainder << std::endl << std::endl;
+        std::cout << "The remiander of 17/5 is: " << remainder << std::endl
+                  << std::endl;
 
         /*
         every time the function sayHello() is the called the control jumps to its memory location where function is
@@ -153,7 +163,9 @@ int main() {
         return 0;
 }
 
-void printLine1(char ch) {
-        for (int i = 0; i < 10; i++) std::cout << ch;
+void printLine1(char ch)
+{
+        for (int i = 0; i < 10; i++)
+                std::cout << ch;
         std::cout << std::endl;
 }

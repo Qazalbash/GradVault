@@ -1,12 +1,11 @@
 #include <iostream>
 
-class Counter {
-    private:
-
+class Counter
+{
+private:
         int count;
 
-    public:
-
+public:
         Counter() : count(0) {}
         Counter(int c) : count(c) {}
 
@@ -15,8 +14,10 @@ class Counter {
         // prefix form
         void operator++() { count++; }
 
-        void operator--() {
-                if (count > 0) count--;
+        void operator--()
+        {
+                if (count > 0)
+                        count--;
         }
 
         // postfix form
@@ -26,8 +27,10 @@ class Counter {
                 count++;
         }
 
-        void operator--(int) {
-                if (count > 0) count--;
+        void operator--(int)
+        {
+                if (count > 0)
+                        count--;
         }
 
         // binary operators
@@ -38,8 +41,8 @@ class Counter {
 
         void operator+=(Counter c) { count += c.count; }
 
-        friend void          testFunction(Counter);
-        friend void          operator-=(Counter, int);
+        friend void testFunction(Counter);
+        friend void operator-=(Counter, int);
         friend std::ostream &operator<<(std::ostream &, Counter);
         friend std::istream &operator>>(std::istream &, Counter);
 };
@@ -58,14 +61,16 @@ std::ostream class, we have to pass it by refernce otherwise compiler won't comp
         return out;
 }
 
-std::istream &operator>>(std::istream &in, Counter C) {
+std::istream &operator>>(std::istream &in, Counter C)
+{
         int x;
         std::cin >> x;
         C.count = x;
         return in;
 }
 
-int main() {
+int main()
+{
         Counter c;
 
         c.show();

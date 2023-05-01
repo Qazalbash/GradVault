@@ -4,17 +4,19 @@
 ennum is a user defined type for limited range of values, where values can be called from their names.
 */
 
-enum {
-        MONDAY,     // value of MONDAY is 0
-        TUESDAY,    // value of TUESDAY is 1
-        WEDNESDAY,  // value of WEDNESDAY is 2
-        THURSDAY,   // value of THURSDAY is 3
-        FRIDAY,     // value of FRIDAY is 4
-        SATURDAY,   // value of SATURDAY is 5
-        SUNDAY,     // value of SUNDAY is 6
+enum
+{
+        MONDAY,    // value of MONDAY is 0
+        TUESDAY,   // value of TUESDAY is 1
+        WEDNESDAY, // value of WEDNESDAY is 2
+        THURSDAY,  // value of THURSDAY is 3
+        FRIDAY,    // value of FRIDAY is 4
+        SATURDAY,  // value of SATURDAY is 5
+        SUNDAY,    // value of SUNDAY is 6
 };
 
-int main() {
+int main()
+{
         // giving each day of the week a number
         std::cout << 0 << " : Monday\n"
                   << 1 << " : Tuesday\n"
@@ -44,7 +46,8 @@ int main() {
 
         // very same situation can be delat with enum data type
 
-        std::cout << std::endl << "enum situation\n\n";
+        std::cout << std::endl
+                  << "enum situation\n\n";
 
         std::cout << MONDAY << " : Monday\n"
                   << TUESDAY << " : Tuesday\n"

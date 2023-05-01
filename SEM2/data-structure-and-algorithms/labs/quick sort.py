@@ -7,6 +7,7 @@ def partition(A, start, end):
     A[end], A[pindex] = A[pindex], A[end]
     return pindex
 
+
 def quickSort(A, start, end):
     if start >= end:
         return

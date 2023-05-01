@@ -2,9 +2,11 @@ def enQueue(lst, data):
     lst.append(data)
     return lst
 
+
 def push(lst, item):
     lst.append(item)
     return lst
+
 
 def pop(lst):
     try:
@@ -13,11 +15,13 @@ def pop(lst):
     except:
         return False
 
+
 def top(lst):
     try:
         return lst[-1]
     except:
         return False
+
 
 def mirror(q):
     rStack = []
@@ -27,5 +31,6 @@ def mirror(q):
         q = enQueue(q, top(rStack))
         rStack = pop(rStack)
     return q
+
 
 print(mirror(queue))

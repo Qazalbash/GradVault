@@ -20,9 +20,8 @@ class ArrayList(MyList):
         return (r, g, b)
 
     def __setitem__(self, i: int, value) -> None:
-        assert (
-            0 <= i < len(self)
-        ), f"Setting invalid list index {i} in list of size {len(self)}"
+        assert (0 <= i < len(self)
+               ), f"Setting invalid list index {i} in list of size {len(self)}"
         self.rgb[3 * i] = value[0]
         self.rgb[3 * i + 1] = value[1]
         self.rgb[3 * i + 2] = value[2]

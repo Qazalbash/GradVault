@@ -55,15 +55,16 @@ extern int main(int argc, const char *argv[])
     double x0, y0, x1, y1;
     double xOrigin, yOrigin;
     double Angle, xShift, yShift;
-    long   Width, Height;
-    long   SplineDegree;
-    long   x, y;
-    int    Masking;
-    int    Error;
+    long Width, Height;
+    long SplineDegree;
+    long x, y;
+    int Masking;
+    int Error;
 
     /* access data samples */
     Error = ReadByteImageRawData(&ImageRasterArray, &Width, &Height);
-    if (Error) {
+    if (Error)
+    {
         printf("Failure to import image data\n");
         return (1);
     }
@@ -73,7 +74,8 @@ extern int main(int argc, const char *argv[])
 
     /* allocate output image */
     OutputImage = (float *)malloc((size_t)(Width * Height * (long)sizeof(float)));
-    if (OutputImage == (float *)NULL) {
+    if (OutputImage == (float *)NULL)
+    {
         free(ImageRasterArray);
         printf("Allocation of output image failed\n");
         return (1);
@@ -82,7 +84,8 @@ extern int main(int argc, const char *argv[])
     /* convert between a representation based on image samples */
     /* and a representation based on image B-spline coefficients */
     Error = SamplesToCoefficients(ImageRasterArray, Width, Height, SplineDegree);
-    if (Error) {
+    if (Error)
+    {
         free(OutputImage);
         free(ImageRasterArray);
         printf("Change of basis failed\n");
@@ -91,30 +94,38 @@ extern int main(int argc, const char *argv[])
 
     /* prepare the geometry */
     Angle *= PI / 180.0;
-    a11    = cos(Angle);
-    a12    = -sin(Angle);
-    a21    = sin(Angle);
-    a22    = cos(Angle);
-    x0     = a11 * (xShift + xOrigin) + a12 * (yShift + yOrigin);
-    y0     = a21 * (xShift + xOrigin) + a22 * (yShift + yOrigin);
+    a11 = cos(Angle);
+    a12 = -sin(Angle);
+    a21 = sin(Angle);
+    a22 = cos(Angle);
+    x0 = a11 * (xShift + xOrigin) + a12 * (yShift + yOrigin);
+    y0 = a21 * (xShift + xOrigin) + a22 * (yShift + yOrigin);
     xShift = xOrigin - x0;
     yShift = yOrigin - y0;
 
     /* visit all pixels of the output image and assign their value */
     p = OutputImage;
-    for (y = 0L; y < Height; y++) {
+    for (y = 0L; y < Height; y++)
+    {
         x0 = a12 * (double)y + xShift;
         y0 = a22 * (double)y + yShift;
-        for (x = 0L; x < Width; x++) {
+        for (x = 0L; x < Width; x++)
+        {
             x1 = x0 + a11 * (double)x;
             y1 = y0 + a21 * (double)x;
-            if (Masking) {
-                if ((x1 <= -0.5) || (((double)Width - 0.5) <= x1) || (y1 <= -0.5) || (((double)Height - 0.5) <= y1)) {
+            if (Masking)
+            {
+                if ((x1 <= -0.5) || (((double)Width - 0.5) <= x1) || (y1 <= -0.5) || (((double)Height - 0.5) <= y1))
+                {
                     *p++ = 0.0F;
-                } else {
+                }
+                else
+                {
                     *p++ = (float)InterpolatedValue(ImageRasterArray, Width, Height, x1, y1, SplineDegree);
                 }
-            } else {
+            }
+            else
+            {
                 *p++ = (float)InterpolatedValue(ImageRasterArray, Width, Height, x1, y1, SplineDegree);
             }
         }
@@ -122,7 +133,8 @@ extern int main(int argc, const char *argv[])
 
     /* save output */
     Error = WriteByteImageRawData(OutputImage, Width, Height);
-    if (Error) {
+    if (Error)
+    {
         free(OutputImage);
         free(ImageRasterArray);
         printf("Failure to export image data\n");

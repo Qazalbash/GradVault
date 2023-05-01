@@ -7,4 +7,5 @@ def matrix_transpose(A):
             C[row][col] = A[col][row]
     return C
 
+
 print(matrix_transpose(A))

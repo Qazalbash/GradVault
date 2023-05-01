@@ -18,23 +18,22 @@
 class Material;
 class World;
 
-class ShadeInfo {
+class ShadeInfo
+{
 public:
-
-    bool hit;  // did the ray hit an object?
+    bool hit; // did the ray hit an object?
     Material
-           *material_ptr;  // pointer to the material of the nearest hit object.
-    Point3D hit_point;     // coordinates of intersection.
-    Vector3D     normal;   // normal at hit point.
-    Ray          ray;      // the ray that hit.
-    int          depth;    // recursion depth.
-    float        t;        // ray parameter at hit point.
-    const World *w;        // pointer to the world.
+        *material_ptr; // pointer to the material of the nearest hit object.
+    Point3D hit_point; // coordinates of intersection.
+    Vector3D normal;   // normal at hit point.
+    Ray ray;           // the ray that hit.
+    int depth;         // recursion depth.
+    float t;           // ray parameter at hit point.
+    const World *w;    // pointer to the world.
 
 public:
-
     // Constructor.
-    ShadeInfo(const World &wr);  // set the world.
+    ShadeInfo(const World &wr); // set the world.
 
     // Copy constructor.
     ShadeInfo(const ShadeInfo &sr) = default;
@@ -43,4 +42,4 @@ public:
     ~ShadeInfo() = default;
 };
 
-#endif  // SHADEINFO_HPP
+#endif // SHADEINFO_HPP

@@ -75,9 +75,7 @@ def test_array_suppression():
             continue
         sp = case.suppress
         source = urlopen(case.source)
-        remove_channel(MyImage.open(source),
-                       red=sp[0],
-                       green=sp[1],
+        remove_channel(MyImage.open(source), red=sp[0], green=sp[1],
                        blue=sp[2]).save(OUTPUT_IMAGE)
         suppressed = urlopen(case.suppressed)
         assert Image.open(OUTPUT_IMAGE) == Image.open(suppressed), (

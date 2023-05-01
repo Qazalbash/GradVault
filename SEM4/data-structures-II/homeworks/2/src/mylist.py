@@ -52,9 +52,8 @@ class MyList:
         none
         """
         # Ensure bounds.
-        assert (
-            0 <= i < len(self)
-        ), f"Setting invalid list index {i} in list of size {len(self)}"
+        assert (0 <= i < len(self)
+               ), f"Setting invalid list index {i} in list of size {len(self)}"
         self.lst[i] = value
 
     def __iter__(self) -> "MyList":

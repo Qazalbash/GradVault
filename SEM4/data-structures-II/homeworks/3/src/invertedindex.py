@@ -4,6 +4,7 @@ from doc import *
 
 
 class InvertedIndex:
+
     def __init__(self) -> None:
 
         self._index_dict: dict = {}
@@ -37,9 +38,8 @@ class InvertedIndex:
                 continue
 
             for doc_id, tf in self._index_dict[word].items():
-                rank[doc_id] = rank.get(doc_id, 0) + tf * log10(
-                    self._corpus_size / doc_freq
-                )
+                rank[doc_id] = rank.get(
+                    doc_id, 0) + tf * log10(self._corpus_size / doc_freq)
 
         k = (k - len(rank)) * (k < len(rank)) + len(rank)
         rank = [(tf_idfs, id) for id, tf_idfs in rank.items()]

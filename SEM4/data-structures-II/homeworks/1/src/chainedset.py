@@ -22,9 +22,8 @@ class ChainedSet(MySet):
 
     def __hash__(self, element: object) -> int:
 
-        return (
-            (hash(element) * self._scale + self._shift) % self._prime % len(self._set)
-        )
+        return ((hash(element) * self._scale + self._shift) % self._prime %
+                len(self._set))
 
     def __getitem__(self, element: object) -> object:
 

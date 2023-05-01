@@ -1,27 +1,31 @@
 #include <iostream>
 
-class Complex {
+class Complex
+{
 private:
-
     double real, imag;
 
 public:
-
-    void show() {
+    void show()
+    {
         std::cout << this->real;
-        if (this->imag >= 0) std::cout << "+";
+        if (this->imag >= 0)
+            std::cout << "+";
         std::cout << this->imag << "i" << std::endl;
     }
 
-    Complex add(const Complex& z) {
+    Complex add(const Complex &z)
+    {
         return Complex{this->real + z.real, this->imag + z.imag};
     }
 
-    Complex subtract(Complex z) {
+    Complex subtract(Complex z)
+    {
         return Complex{this->real - z.real, this->imag - z.imag};
     }
 
-    Complex multiply(Complex z) {
+    Complex multiply(Complex z)
+    {
         return Complex{this->real * z.real - this->imag * z.imag,
                        this->real * z.imag + this->imag * z.real};
     }
@@ -37,7 +41,8 @@ public:
     Complex(double r, double i) : real(r), imag(i) {}
 };
 
-int main() {
+int main()
+{
     double real, imag;
     std::cin >> real >> imag;
     Complex c1 = {real, imag};

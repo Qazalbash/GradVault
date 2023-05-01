@@ -28,22 +28,23 @@ copy at compile time.
 #include <iostream>
 
 // Box Class
-class box {
-    private:
-
+class box
+{
+private:
         int length, breadth, height;
 
-    public:
-
+public:
         // Function that sets the dimensions
-        void set_dimensions(int length1, int breadth1, int height1) {
-                length  = length1;
+        void set_dimensions(int length1, int breadth1, int height1)
+        {
+                length = length1;
                 breadth = breadth1;
-                height  = height1;
+                height = height1;
         }
 
         // Function to display the dimensions of the Box object
-        void show_data() {
+        void show_data()
+        {
                 std::cout << "Length = " << length << std::endl
                           << " Breadth = " << breadth << std::endl
                           << " Height = " << height << std::endl;
@@ -51,7 +52,8 @@ class box {
 };
 
 // Driver Code
-int main() {
+int main()
+{
         // Object of class Box
         box B1, B3;
 

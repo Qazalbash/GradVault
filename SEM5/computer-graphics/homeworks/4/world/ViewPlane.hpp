@@ -13,30 +13,30 @@
 #include "../utilities/Point3D.hpp"
 #include "../utilities/Vector3D.hpp"
 
-class ViewPlane {
+class ViewPlane
+{
 public:
-
-    Point3D  top_left;      // top left corner of the view plane.
-    Point3D  bottom_right;  // bottom right corner of the view plane.
-    Vector3D normal;        // normal to the plane.
-    int      hres;          // horizontal resolution
-    int      vres;          // vertical resolution
+    Point3D top_left;     // top left corner of the view plane.
+    Point3D bottom_right; // bottom right corner of the view plane.
+    Vector3D normal;      // normal to the plane.
+    int hres;             // horizontal resolution
+    int vres;             // vertical resolution
 
     // Constructors.
-    ViewPlane();  // 640 x 480 view plane at (-320, 240)
+    ViewPlane(); // 640 x 480 view plane at (-320, 240)
 
     // Copy constructor and assignment operator.
-    ViewPlane(const ViewPlane &other)          = default;
+    ViewPlane(const ViewPlane &other) = default;
     ViewPlane &operator=(const ViewPlane &rhs) = default;
 
     // Get/set resolution.
-    int  get_hres() const;
+    int get_hres() const;
     void set_hres(int);
-    int  get_vres() const;
+    int get_vres() const;
     void set_vres(int);
 
     // Destructor.
     ~ViewPlane() = default;
 };
 
-#endif  // VIEWPLANE_HPP
+#endif // VIEWPLANE_HPP

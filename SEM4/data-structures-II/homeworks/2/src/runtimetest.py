@@ -24,12 +24,9 @@ def test():
 
     for p in range(2):
         T = {
-            "remove_channel": {fileName: 0
-                               for fileName in files.keys()},
-            "rotations": {fileName: 0
-                          for fileName in files.keys()},
-            "apply_mask": {maskName: {}
-                           for maskName in masks.keys()}
+            "remove_channel": {fileName: 0 for fileName in files.keys()},
+            "rotations": {fileName: 0 for fileName in files.keys()},
+            "apply_mask": {maskName: {} for maskName in masks.keys()}
         }
         for file, file_path in files.items():
             img = MyImage.open(file_path, p)

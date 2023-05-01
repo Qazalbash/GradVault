@@ -19,7 +19,8 @@ class ChainedDict(MyDict):
 
     def __hash__(self, key: object) -> int:
 
-        return (hash(key) * self._scale + self._shift) % self._prime % len(self._table)
+        return (hash(key) * self._scale + self._shift) % self._prime % len(
+            self._table)
 
     def __getitem__(self, key: object, default: object = None) -> object:
 

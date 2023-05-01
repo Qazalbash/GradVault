@@ -5,7 +5,8 @@ def sort_rectangles(rectangle_records, record_title):
         while j >= 0 and key[record_title] < rectangle_records[j][record_title]:
             rectangle_records[j + 1] = rectangle_records[j]
             j -= 1
-        rectangle_records[j+1] = key
+        rectangle_records[j + 1] = key
     return rectangle_records
+
 
 print(sort_rectangles(rectangle_records, record_title))

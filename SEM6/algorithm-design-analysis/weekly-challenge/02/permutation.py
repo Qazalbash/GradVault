@@ -17,8 +17,8 @@ def permute(m: int, s: int, a: list[int]):
     - 1 <= s <= 10000
     - 1 <= a_i <= 100
     '''
-    if not (1 <= m <= 100 and 1 <= s <= 10000 and all(1 <= i <= 100
-                                                      for i in a)):
+    if not (1 <= m <= 100 and 1 <= s <= 10000 and
+            all(1 <= i <= 100 for i in a)):
         return "NO"
     # Sum of known numbers
     S = sum(a)

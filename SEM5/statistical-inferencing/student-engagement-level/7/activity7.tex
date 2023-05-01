@@ -1,8 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Define Article %%%%%
 \documentclass{article}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Using Packages %%%%%
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -45,11 +45,11 @@
 }
 
 \lstset{style=mystyle}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
 \geometry{a4paper}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,13 +59,13 @@
 \definecolor{shallowGreen}{RGB}{235,255,255}
 \definecolor{deepBlue}{RGB}{61,124,222}
 \definecolor{shallowBlue}{RGB}{235,249,255}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
 \newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
 \newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
 \theoremstyle{mytheoremstyle}
@@ -74,29 +74,29 @@
 \newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
 \theoremstyle{myproblemstyle}
 \newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Plotting Settings 
 \usepgfplotslibrary{colorbrewer}
 \pgfplotsset{width=8cm,compat=1.9}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title & Author %%%
 \title{Activity 7}
 \author{Muhammad Meesum Ali Qazalbash (mq06861)}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-	\maketitle
-	
-	\lstinputlisting[language=Python, caption=Code for computing and plotting OCS and PCA lines]{test.py}
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.8\textwidth]{WhatsApp Image 2022-11-09 at 11.30.53 PM.jpeg}
-		\caption{Plot of data points, OCS, and PCA lines}
-		\label{fig:plot}
-	\end{figure}
-	
-	We observe that both the methods, PCA and OLS fit the given data to approximately equal lines. However, we consider the line obtained from PCA as more accurate as it is used to approximate \(\theta\), contrary to OLS which estimates \(\tan{\theta}\) instead.
-	
+\maketitle
+
+\lstinputlisting[language=Python, caption=Code for computing and plotting OCS and PCA lines]{test.py}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{WhatsApp Image 2022-11-09 at 11.30.53 PM.jpeg}
+	\caption{Plot of data points, OCS, and PCA lines}
+	\label{fig:plot}
+\end{figure}
+
+We observe that both the methods, PCA and OLS fit the given data to approximately equal lines. However, we consider the line obtained from PCA as more accurate as it is used to approximate \(\theta\), contrary to OLS which estimates \(\tan{\theta}\) instead.
+
 \end{document}

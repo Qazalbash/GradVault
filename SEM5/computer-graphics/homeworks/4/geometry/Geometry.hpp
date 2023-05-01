@@ -20,18 +20,17 @@ class Material;
 class Ray;
 class ShadeInfo;
 
-class Geometry {
+class Geometry
+{
 protected:
-
-    Material *material_ptr;  // this object's material.
+    Material *material_ptr; // this object's material.
 
 public:
-
     // Constructors.
-    Geometry();  // sets material_ptr to NULL.
+    Geometry(); // sets material_ptr to NULL.
 
     // Copy constructor and assignment operator.
-    Geometry(const Geometry &object)         = default;
+    Geometry(const Geometry &object) = default;
     Geometry &operator=(const Geometry &rhs) = default;
 
     // Destructor.
@@ -42,7 +41,7 @@ public:
 
     // Get/set material.
     Material *get_material() const;
-    void      set_material(Material *mPtr);
+    void set_material(Material *mPtr);
 
     // Ray intersection. Set t and sinfo as per intersection with this object.
     virtual bool hit(const Ray &ray, float &t, ShadeInfo &sinfo) const = 0;
@@ -51,4 +50,4 @@ public:
     virtual BBox getBBox() const = 0;
 };
 
-#endif  // GEOMETRY_HPP
+#endif // GEOMETRY_HPP

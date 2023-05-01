@@ -23,21 +23,20 @@ class Camera;
 class Ray;
 class ViewPlane;
 
-class Sampler {
+class Sampler
+{
 protected:
-
-    Camera    *camera_ptr;     // the camera that decides the projectors.
-    ViewPlane *viewplane_ptr;  // the view plane through which rays are shot.
+    Camera *camera_ptr;       // the camera that decides the projectors.
+    ViewPlane *viewplane_ptr; // the view plane through which rays are shot.
 
 public:
-
     // Constructors.
-    Sampler();                                 // initializes members to NULL.
-    Sampler(Camera *c_ptr, ViewPlane *v_ptr);  // set members.
-    ~Sampler();                                // destructor.
+    Sampler();                                // initializes members to NULL.
+    Sampler(Camera *c_ptr, ViewPlane *v_ptr); // set members.
+    ~Sampler();                               // destructor.
 
     // Copy constuctor and assignment operator.
-    Sampler(const Sampler &camera)           = default;
+    Sampler(const Sampler &camera) = default;
     Sampler &operator=(const Sampler &other) = default;
 
     // Get rays corresponding to a pixel in the view plane. px and py are
@@ -48,4 +47,4 @@ public:
     // 0;
 };
 
-#endif  // SAMPLER_HPP
+#endif // SAMPLER_HPP

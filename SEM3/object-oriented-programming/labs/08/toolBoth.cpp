@@ -1,45 +1,51 @@
 #include <iostream>
 
-class TollBooth {
-    int    totalCars;
+class TollBooth
+{
+    int totalCars;
     double toll;
 
 public:
-
     TollBooth() : totalCars(0), toll(0) {}
-    void payingCar() {
+    void payingCar()
+    {
         ++totalCars;
         toll += 50;
     }
 
     void nopayCar() { totalCars++; }
 
-    void display() const {
+    void display() const
+    {
         std::cout << "Total cars passed: " << totalCars << std::endl
                   << "Total toll collected: Rs. " << toll << std::endl;
     }
 };
 
-class LyariTollBoth : public TollBooth {
+class LyariTollBoth : public TollBooth
+{
     double fine;
 
 public:
-
-    void trackFine() {
+    void trackFine()
+    {
         TollBooth::nopayCar();
         fine += 500;
     }
 
-    void display() {
+    void display()
+    {
         TollBooth::display();
         std::cout << "Total fine collected: Rs. " << fine << std::endl;
     }
 };
 
-int main() {
-    char          command;
+int main()
+{
+    char command;
     LyariTollBoth conductorAtBooth;
-    while (command != 'q') {
+    while (command != 'q')
+    {
         std::cin >> command;
         if (command == 'p')
             conductorAtBooth.payingCar();

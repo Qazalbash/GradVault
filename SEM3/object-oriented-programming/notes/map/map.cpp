@@ -9,14 +9,15 @@ map contain a pair type elements, pair contians a key an associated value to it.
 map sorts the data on the basis of keys.
 */
 
-int main() {
+int main()
+{
         std::map<int, std::string> m;
 
-        m[0] = "Zero";  // to insert value against some key
+        m[0] = "Zero"; // to insert value against some key
         m[1] = "One";
         m[2] = "Two";
 
-        m.insert({3, "Three"});  // function to insert pair. The value must be in order
+        m.insert({3, "Three"}); // function to insert pair. The value must be in order
 
         /*
         find() is an itterator. we can also search any key value pair by [] access specifier. The problem is this when a

@@ -15,17 +15,20 @@
  * @param h
  * @param theta
  */
-void rotate_nearest_neighbour(const uint8_t *const src, uint8_t *dst, const long w, const long h, const double theta) {
-    const double c  = cos(theta);
-    const double s  = sin(theta);
+void rotate_nearest_neighbour(const uint8_t *const src, uint8_t *dst, const long w, const long h, const double theta)
+{
+    const double c = cos(theta);
+    const double s = sin(theta);
     const double cx = (w - 1) / 2.0;
     const double cy = (h - 1) / 2.0;
-    double       dx, dy;
-    long         Rxf, Ryf, x, y;
-    for (y = 0; y < h; y++) {
-        for (x = 0; x < w; x++) {
-            dx  = x - cx;
-            dy  = y - cy;
+    double dx, dy;
+    long Rxf, Ryf, x, y;
+    for (y = 0; y < h; y++)
+    {
+        for (x = 0; x < w; x++)
+        {
+            dx = x - cx;
+            dy = y - cy;
             Rxf = (long)floor(dx * c - dy * s + cx + 0.5);
             Ryf = (long)floor(dx * s + dy * c + cy + 0.5);
 
@@ -43,29 +46,35 @@ void rotate_nearest_neighbour(const uint8_t *const src, uint8_t *dst, const long
  * @param h
  * @param theta
  */
-void rotate_bilinear(const uint8_t *const src, uint8_t *dst, const long w, const long h, const double theta) {
-    const double c  = cos(theta);
-    const double s  = sin(theta);
+void rotate_bilinear(const uint8_t *const src, uint8_t *dst, const long w, const long h, const double theta)
+{
+    const double c = cos(theta);
+    const double s = sin(theta);
     const double cx = (w - 1) / 2.0;
     const double cy = (h - 1) / 2.0;
-    double       dx, dy, Rx, Ry, dRx, dRy;
-    long         Rxf, Ryf, y, x;
-    for (y = 0; y < h; y++) {
-        for (x = 0; x < w; x++) {
-            dx  = x - cx;
-            dy  = y - cy;
-            Rx  = dx * c - dy * s + cx;
-            Ry  = dx * s + dy * c + cy;
+    double dx, dy, Rx, Ry, dRx, dRy;
+    long Rxf, Ryf, y, x;
+    for (y = 0; y < h; y++)
+    {
+        for (x = 0; x < w; x++)
+        {
+            dx = x - cx;
+            dy = y - cy;
+            Rx = dx * c - dy * s + cx;
+            Ry = dx * s + dy * c + cy;
             Rxf = (long)floor(Rx + 0.5);
             Ryf = (long)floor(Ry + 0.5);
 
             dRx = Rx - Rxf;
             dRy = Ry - Ryf;
 
-            if (0 <= Rxf && Rxf + 1 < w && 0 <= Ryf && Ryf + 1 < h) {
+            if (0 <= Rxf && Rxf + 1 < w && 0 <= Ryf && Ryf + 1 < h)
+            {
                 dst[y * w + x] = (1 - dRx) * (1 - dRy) * src[Ryf * w + Rxf] + dRx * (1 - dRy) * src[Ryf * w + Rxf + 1] +
                                  (1 - dRx) * dRy * src[(Ryf + 1) * w + Rxf] + dRx * dRy * src[(Ryf + 1) * w + Rxf + 1];
-            } else {
+            }
+            else
+            {
                 dst[y * w + x] = 0;
             }
         }
@@ -79,7 +88,8 @@ void rotate_bilinear(const uint8_t *const src, uint8_t *dst, const long w, const
  * @param x
  * @return double
  */
-double interpolate(const double *const c, const double x) {
+double interpolate(const double *const c, const double x)
+{
     return c[1] + 0.5 * x *
                       (c[2] - c[0] +
                        x * (2.0 * c[0] - 5.0 * c[1] + 4.0 * c[2] - c[3] + x * (3.0 * (c[1] - c[2]) + c[3] - c[0])));
@@ -93,9 +103,11 @@ double interpolate(const double *const c, const double x) {
  * @param v
  * @return double
  */
-double bicubic_interpolate(const double p[4][4], const double u, const double v) {
+double bicubic_interpolate(const double p[4][4], const double u, const double v)
+{
     double px[4], py[4];
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++)
+    {
         px[i] = interpolate(p[i], u);
         py[i] = interpolate(&p[0][i], v);
     }
@@ -111,32 +123,38 @@ double bicubic_interpolate(const double p[4][4], const double u, const double v)
  * @param h
  * @param theta
  */
-void rotate_bicubic(const uint8_t *const src, uint8_t *dst, const long w, const long h, const double theta) {
-    const double c  = cos(theta);
-    const double s  = sin(theta);
+void rotate_bicubic(const uint8_t *const src, uint8_t *dst, const long w, const long h, const double theta)
+{
+    const double c = cos(theta);
+    const double s = sin(theta);
     const double cx = (w - 1) / 2.0;
     const double cy = (h - 1) / 2.0;
 
     double dx, dy, Rx, Ry, dRx, dRy, interpolated_value;
-    long   Rxf, Ryf, y, x;
+    long Rxf, Ryf, y, x;
 
     double p[4][4];
 
-    for (y = 0; y < h; y++) {
-        for (x = 0; x < w; x++) {
+    for (y = 0; y < h; y++)
+    {
+        for (x = 0; x < w; x++)
+        {
             dx = x - cx;
             dy = y - cy;
             Rx = dx * c - dy * s + cx;
             Ry = dx * s + dy * c + cy;
-            if (0 <= Rx && Rx + 1 < w && 0 <= Ry && Ry + 1 < h) {
+            if (0 <= Rx && Rx + 1 < w && 0 <= Ry && Ry + 1 < h)
+            {
                 Rxf = (int)floor(Rx + 0.5);
                 Ryf = (int)floor(Ry + 0.5);
 
                 dRx = Rx - Rxf;
                 dRy = Ry - Ryf;
 
-                for (uint8_t m = 0; m < 4; m++) {
-                    for (uint8_t n = 0; n < 4; n++) {
+                for (uint8_t m = 0; m < 4; m++)
+                {
+                    for (uint8_t n = 0; n < 4; n++)
+                    {
                         int xidx = Rxf + n - 1;
                         int yidx = Ryf + m - 1;
 
@@ -148,7 +166,8 @@ void rotate_bicubic(const uint8_t *const src, uint8_t *dst, const long w, const 
 
                 dst[y * w + x] =
                     interpolated_value > 255.0 || interpolated_value < 0.0 ? 0 : (uint8_t)round(interpolated_value);
-            } else
+            }
+            else
                 dst[y * w + x] = 0;
         }
     }
@@ -162,13 +181,16 @@ void rotate_bicubic(const uint8_t *const src, uint8_t *dst, const long w, const 
  * @param w
  * @param h
  */
-void read_image(char *filename, uint8_t *img, const long w, const long h) {
+void read_image(char *filename, uint8_t *img, const long w, const long h)
+{
     FILE *fp = fopen(filename, "rb");
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         fprintf(stderr, "cannot open %s for reading\n", filename);
         exit(1);
     }
-    for (long i = 0UL; i < w * h; i++) {
+    for (long i = 0UL; i < w * h; i++)
+    {
         unsigned char c;
         fread(&c, sizeof(unsigned char), 1, fp);
         img[i] = (double)c;
@@ -184,13 +206,16 @@ void read_image(char *filename, uint8_t *img, const long w, const long h) {
  * @param w
  * @param h
  */
-void write_image(char *filename, uint8_t *img, const long w, const long h) {
+void write_image(char *filename, uint8_t *img, const long w, const long h)
+{
     FILE *fp = fopen(filename, "wb");
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         fprintf(stderr, "cannot open %s for writing\n", filename);
         exit(1);
     }
-    for (long i = 0UL; i < w * h; i++) {
+    for (long i = 0UL; i < w * h; i++)
+    {
         unsigned char c = (unsigned char)img[i];
         fwrite(&c, sizeof(unsigned char), 1, fp);
     }
@@ -208,20 +233,22 @@ void write_image(char *filename, uint8_t *img, const long w, const long h) {
  * @param theta
  */
 void rotate_interpolate_image(const uint8_t *const src, uint8_t *dst, const uint8_t method, const long width,
-                              const long height, const double theta) {
-    switch (method) {
-        case 0:
-            rotate_nearest_neighbour(src, dst, width, height, theta);
-            break;
-        case 1:
-            rotate_bilinear(src, dst, width, height, theta);
-            break;
-        case 2:
-            rotate_bicubic(src, dst, width, height, theta);
-            break;
-        default:
-            fprintf(stderr, "unknown method: %d\n", method);
-            exit(1);
+                              const long height, const double theta)
+{
+    switch (method)
+    {
+    case 0:
+        rotate_nearest_neighbour(src, dst, width, height, theta);
+        break;
+    case 1:
+        rotate_bilinear(src, dst, width, height, theta);
+        break;
+    case 2:
+        rotate_bicubic(src, dst, width, height, theta);
+        break;
+    default:
+        fprintf(stderr, "unknown method: %d\n", method);
+        exit(1);
     }
 }
 
@@ -232,25 +259,28 @@ void rotate_interpolate_image(const uint8_t *const src, uint8_t *dst, const uint
  * @param argv
  * @return int
  */
-int main(int argc, char *argv[]) {
-    if (argc != 7) {
+int main(int argc, char *argv[])
+{
+    if (argc != 7)
+    {
         fprintf(stderr, "usage: %s <input> <output> <width> <height> <method> <theta>\n", argv[0]);
         exit(1);
     }
 
-    const int     w      = atoi(argv[3]);
-    const int     h      = atoi(argv[4]);
+    const int w = atoi(argv[3]);
+    const int h = atoi(argv[4]);
     const uint8_t method = atoi(argv[5]);
-    const double  theta  = atof(argv[6]) * PI / 180.0;
-    uint8_t      *src    = (uint8_t *)malloc(sizeof(uint8_t) * w * h);
-    uint8_t      *dst    = (uint8_t *)malloc(sizeof(uint8_t) * w * h);
-    uint8_t      *tmp;
+    const double theta = atof(argv[6]) * PI / 180.0;
+    uint8_t *src = (uint8_t *)malloc(sizeof(uint8_t) * w * h);
+    uint8_t *dst = (uint8_t *)malloc(sizeof(uint8_t) * w * h);
+    uint8_t *tmp;
 
     read_image(argv[1], src, w, h);
 
     clock_t start = clock(), end;
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++)
+    {
         rotate_interpolate_image(src, dst, method, w, h, theta);
         tmp = src;
         src = dst;

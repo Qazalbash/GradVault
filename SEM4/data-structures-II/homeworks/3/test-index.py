@@ -14,6 +14,7 @@ casefilename = "query-cases.txt"
 
 
 class Case:
+
     def __init__(self, query: str, k: int, result: [str]):
         self.query, self.k, self.result = query, k, result
 

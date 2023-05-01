@@ -1,17 +1,18 @@
 #include <iostream>
 
 template <class T, class U>
-void show(T argument1, U argument2) {
+void show(T argument1, U argument2)
+{
         std::cout << "argument1 = " << argument1 << ", argument2 = " << argument2 << std::endl;
 }
 
 template <class T>
-class Stack {
-        T   stack[100];
+class Stack
+{
+        T stack[100];
         int index;
 
-    public:
-
+public:
         void push(T element) { stack[index++] = element; }
 
         T pop() { return stack[--index]; }
@@ -19,7 +20,8 @@ class Stack {
         Stack() : index(0) {}
 };
 
-int main() {
+int main()
+{
         show("MEESUM", 28);
 
         return 0;

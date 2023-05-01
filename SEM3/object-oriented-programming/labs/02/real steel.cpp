@@ -1,7 +1,8 @@
 #include <iostream>
 
 int steel_grade(const int hardness, const float carbon_content,
-                const int tensile_strength) {
+                const int tensile_strength)
+{
     int H = hardness > 50;
     int C = carbon_content < 0.7f;
     int T = tensile_strength > 5600;
@@ -22,8 +23,9 @@ int steel_grade(const int hardness, const float carbon_content,
     return 0;
 }
 
-int main() {
-    int   hardness, tensile_strength;
+int main()
+{
+    int hardness, tensile_strength;
     float carbon_content;
     std::cin >> hardness >> carbon_content >> tensile_strength;
     std::cout << steel_grade(hardness, carbon_content, tensile_strength);

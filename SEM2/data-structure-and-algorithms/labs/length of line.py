@@ -11,10 +11,12 @@ def b_search(lst, item):
         elif item > lst[guess]:
             low = guess + 1
 
+
 def length_of_line(points_list, length):
     return b_search([
-        round((( i[0][0] - i[1][0] ) ** 2 + ( i[0][1] - i[1][1] ) ** 2 ) ** 0.5, 2)
+        round(((i[0][0] - i[1][0])**2 + (i[0][1] - i[1][1])**2)**0.5, 2)
         for i in points_list
     ], length)
-    
+
+
 print(length_of_line(points_list, length))

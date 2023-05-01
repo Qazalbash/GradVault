@@ -11,7 +11,8 @@ def readFile(filename):
 
 def getWordsFromLineList(listOfLines):
     return [
-        word.lower() for word in (" ".join(listOfLines)).split(" ")
+        word.lower()
+        for word in (" ".join(listOfLines)).split(" ")
         if word.isalnum()
     ]
 
@@ -193,8 +194,8 @@ layout = go.Layout(
     title=
     f"Quick Sort VS Merge Sort, file2.txt, ascending = {ascending}, column = {column}",
     plot_bgcolor="rgb(230,230,230)",
-    showlegend=True,
-)
+    showlegend=True)
+
 trace1 = go.Scatter(x=size,
                     y=timeLst1,
                     mode="lines+markers",
@@ -207,10 +208,7 @@ trace3 = go.Scatter(x=size,
                     y=timeLst3,
                     mode="lines+markers",
                     name="quick sort (pivot = high)")
-trace4 = go.Scatter(x=size,
-                    y=timeLst4,
-                    mode="lines+markers",
-                    name="merge sort")
+trace4 = go.Scatter(x=size, y=timeLst4, mode="lines+markers", name="merge sort")
 
 fig = go.Figure(data=[trace1, trace2, trace3, trace4], layout=layout)
 pyo.plot(

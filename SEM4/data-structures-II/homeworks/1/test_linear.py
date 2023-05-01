@@ -10,6 +10,7 @@ casefile = "https://waqarsaleem.github.io/cs201/hw2/gol-cases.txt"
 
 
 class Case:
+
     def __init__(
         self,
         start: [(int, int)],
@@ -34,10 +35,10 @@ def fetch_testcases(path: str) -> [Case]:
     test_count = int(next(line))
     for _ in range(test_count):
         start = list(map(int, next(line).strip().split()))
-        start = [tuple(start[i : i + 2]) for i in range(0, len(start), 2)]
+        start = [tuple(start[i:i + 2]) for i in range(0, len(start), 2)]
         steps = int(next(line))
         stop = list(map(int, next(line).strip().split()))
-        stop = [tuple(stop[i : i + 2]) for i in range(0, len(stop), 2)]
+        stop = [tuple(stop[i:i + 2]) for i in range(0, len(stop), 2)]
         testcases.append(Case(start, stop, steps))
     return testcases
 
@@ -51,7 +52,6 @@ def test_linear(case):
     life = Life(config.start, chain=False)
     print(case)
     Game.run(life, config)
-    assert sorted(case.stop) == sorted(life.state()), (
-        f"reference: {sorted(case.stop)} does not match "
-        f"generated: {sorted(life.state())}"
-    )
+    assert sorted(case.stop) == sorted(
+        life.state()), (f"reference: {sorted(case.stop)} does not match "
+                        f"generated: {sorted(life.state())}")

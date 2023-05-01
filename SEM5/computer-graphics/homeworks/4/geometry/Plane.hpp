@@ -12,18 +12,17 @@
 #include "../utilities/Vector3D.hpp"
 #include "Geometry.hpp"
 
-class Plane : public Geometry {
+class Plane : public Geometry
+{
 protected:
-
-    Point3D  a;  // point on the plane.
-    Vector3D n;  // normal to the plane, store as unit vector.
+    Point3D a;  // point on the plane.
+    Vector3D n; // normal to the plane, store as unit vector.
 
 public:
-
     // Constructors.
-    Plane();  // set plane to xz-plane.
-    Plane(const Point3D  &pt,
-          const Vector3D &n);  // set point and normal, then normalize.
+    Plane(); // set plane to xz-plane.
+    Plane(const Point3D &pt,
+          const Vector3D &n); // set point and normal, then normalize.
 
     // Copy constructor and assignment operator.
     Plane(const Plane &object);
@@ -42,4 +41,4 @@ public:
     virtual BBox getBBox() const override;
 };
 
-#endif  // PLANE_HPP
+#endif // PLANE_HPP

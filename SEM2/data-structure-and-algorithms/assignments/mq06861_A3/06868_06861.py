@@ -24,24 +24,24 @@ Samar traveled to Saudi Arabia, Indonesia, Iran."
 
 def create_data_structure(string_input):
     lst1 = [
-        i.replace(",", "")
-        .replace("is", "")
-        .replace("connected", "")
-        .replace("to", "")
-        .replace("traveled", "")
-        .split(" ")
+        i.replace(",", "").replace("is", "").replace("connected", "").replace(
+            "to", "").replace("traveled", "").split(" ")
         for i in string_input.split(".")
     ]
-    lst = [
-        ["Saudi Arabia" if k == "Saudi" else k for k in j if k != "" and k != "Arabia"]
-        for j in lst1
+    lst = [[
+        "Saudi Arabia" if k == "Saudi" else k
+        for k in j
+        if k != "" and k != "Arabia"
     ]
+           for j in lst1]
     network = []
     for i in range(0, len(lst), 2):
         try:
-            network.append(
-                {"name": lst[i][0], "people": lst[i][1:], "countries": lst[i + 1][1:]}
-            )
+            network.append({
+                "name": lst[i][0],
+                "people": lst[i][1:],
+                "countries": lst[i + 1][1:]
+            })
         except IndexError:
             network.append({"name": "", "people": "", "countries": ""})
     return network
@@ -87,8 +87,7 @@ def get_secondary_connections(network, user):
     connections_of_connections = []
     for connection in connections:
         connections_of_connections += [
-            i
-            for i in get_connections(network, connection)
+            i for i in get_connections(network, connection)
             if i not in connections_of_connections
         ]
     return connections_of_connections
@@ -118,8 +117,7 @@ def helper2(network, user_A, user_B, discovered, path):
 
 def find_path_to_patient(network, user_A, user_B):
     discovered = {
-        i: False
-        for i in [
+        i: False for i in [
             "Usama",
             "Saeed",
             "Marium",
@@ -156,8 +154,7 @@ def helper(network, user_A, user_B, visited, path):
 def find_all_possible_paths_to_user(network, user_A, user_B):
     path = []
     visited = {
-        i: False
-        for i in [
+        i: False for i in [
             "Usama",
             "Saeed",
             "Marium",

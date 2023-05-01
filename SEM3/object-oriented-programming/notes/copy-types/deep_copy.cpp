@@ -11,38 +11,40 @@ other constructors, as well.
 #include <iostream>
 
 // Box Class
-class box {
-    private:
-
-        int  length;
+class box
+{
+private:
+        int length;
         int *breadth;
-        int  height;
+        int height;
 
-    public:
-
+public:
         // Constructor
         box() { breadth = new int; }
 
         // Function to set the dimensions of the Box
-        void set_dimension(int len, int brea, int heig) {
-                length   = len;
+        void set_dimension(int len, int brea, int heig)
+        {
+                length = len;
                 *breadth = brea;
-                height   = heig;
+                height = heig;
         }
 
         // Function to show the dimensions of the Box
-        void show_data() {
+        void show_data()
+        {
                 std::cout << "Length = " << length << std::endl
                           << " Breadth = " << *breadth << std::endl
                           << " Height = " << height << std::endl;
         }
 
         // Parameterized Constructors for implementing deep copy
-        box(box &sample) {
-                length   = sample.length;
-                breadth  = new int;
+        box(box &sample)
+        {
+                length = sample.length;
+                breadth = new int;
                 *breadth = *(sample.breadth);
-                height   = sample.height;
+                height = sample.height;
         }
 
         // Destructors
@@ -50,7 +52,8 @@ class box {
 };
 
 // Driver Code
-int main() {
+int main()
+{
         // Object of class first
         box first;
 

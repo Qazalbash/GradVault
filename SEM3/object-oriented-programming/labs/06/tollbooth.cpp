@@ -1,32 +1,35 @@
 #include <iostream>
 
-class tollbooth {
+class tollbooth
+{
 private:
-
     int totalCar, totalMoney;
 
 public:
-
     tollbooth() : totalCar(0), totalMoney(0) {}
 
-    void payingCar() {
+    void payingCar()
+    {
         ++totalCar;
         totalMoney += 50;
     }
 
     void noPayCar() { ++totalCar; }
 
-    void display() {
+    void display()
+    {
         std::cout << "Total cars passed: " << totalCar << std::endl;
         std::cout << "Total toll collected: Rs. " << totalMoney << std::endl;
     }
 };
 
-int main() {
+int main()
+{
     tollbooth booth;
-    char      carType;
+    char carType;
 
-    while (carType != 'q') {
+    while (carType != 'q')
+    {
         std::cin >> carType;
 
         if (carType == 'p')

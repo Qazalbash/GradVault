@@ -1,28 +1,35 @@
 #include <cstring>
 #include <iostream>
 
-int cstr_len(char *cstr) {
+int cstr_len(char *cstr)
+{
     int count = 0;
-    for (int i = 0; i < strlen(cstr); i++) count++;
+    for (int i = 0; i < strlen(cstr); i++)
+        count++;
     return count;
 }
 
-void append_cstring(char *dest, char *scr1, char *scr2) {
+void append_cstring(char *dest, char *scr1, char *scr2)
+{
     int length = cstr_len(scr1);
-    for (int j = 0; j < length; j++) dest[j] = scr1[j];
+    for (int j = 0; j < length; j++)
+        dest[j] = scr1[j];
 
     dest[length] = ' ';
-    for (int j = 0; j < cstr_len(scr2); j++) dest[length + j + 1] = scr2[j];
+    for (int j = 0; j < cstr_len(scr2); j++)
+        dest[length + j + 1] = scr2[j];
 }
 
-void toggle_case(char *cstr) {
+void toggle_case(char *cstr)
+{
     for (int k = 0; k < cstr_len(cstr); k++)
         cstr[k] =
             (int)cstr[k] + 32 * (((int)cstr[k] > 64 && (int)cstr[k] < 91) -
                                  ((int)cstr[k] > 96 && (int)cstr[k] < 123));
 }
 
-int main() {
+int main()
+{
     char *scr1 = new char[100];
     char *scr2 = new char[200];
     char *dest = new char[200];

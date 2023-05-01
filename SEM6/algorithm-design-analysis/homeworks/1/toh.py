@@ -1,5 +1,5 @@
 def Tower_of_Habib(state):
-    mid = len(state)//2
+    mid = len(state) // 2
     if len(state) > 1:
         out = Tower_of_Habib(state[:mid])
     else:
@@ -8,4 +8,3 @@ def Tower_of_Habib(state):
         else:
             return False
     return out
-        

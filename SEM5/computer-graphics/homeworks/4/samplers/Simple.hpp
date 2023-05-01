@@ -11,16 +11,15 @@
 
 #include "Sampler.hpp"
 
-class Simple : public Sampler {
+class Simple : public Sampler
+{
 protected:
-
     // add members to cache values to avoid recomputation in get_rays().
 
 public:
-
     // Constructors.
-    Simple() = default;                       // initializes members to NULL.
-    Simple(Camera *c_ptr, ViewPlane *v_ptr);  // set members.
+    Simple() = default;                      // initializes members to NULL.
+    Simple(Camera *c_ptr, ViewPlane *v_ptr); // set members.
 
     // Copy constuctor and assignment operator.
     Simple(const Simple &camera);
@@ -31,4 +30,4 @@ public:
     // std::vector<std::vector<Ray>> get_rays_1(int px, int py) const override;
 };
 
-#endif  // SIMPLE_HPP
+#endif // SIMPLE_HPP

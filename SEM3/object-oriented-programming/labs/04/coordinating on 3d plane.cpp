@@ -1,10 +1,12 @@
 #include <iostream>
 
-struct point {
+struct point
+{
     int x, y, z;
 };
 
-point add(const point& p1, const point& p2, const int& direction) {
+point add(const point &p1, const point &p2, const int &direction)
+{
     point p3;
     p3.x = p1.x + direction * p2.x;
     p3.y = p1.y + direction * p2.y;
@@ -12,7 +14,8 @@ point add(const point& p1, const point& p2, const int& direction) {
     return p3;
 }
 
-point prod(const point& p1, const point& p2) {
+point prod(const point &p1, const point &p2)
+{
     point p3;
     p3.x = p1.x * p2.x;
     p3.y = p1.y * p2.y;
@@ -20,12 +23,14 @@ point prod(const point& p1, const point& p2) {
     return p3;
 }
 
-void display(const std::string& corpus, const point& p) {
+void display(const std::string &corpus, const point &p)
+{
     std::cout << corpus;
     std::cout << "(" << p.x << ", " << p.y << ", " << p.z << ")" << std::endl;
 }
 
-int main() {
+int main()
+{
     point p1, p2;
 
     std::cin >> p1.x >> p1.y >> p1.z;

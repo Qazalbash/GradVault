@@ -95,8 +95,11 @@ class Life:
         none
         """
         # Compute neighbors of current live cells.
-        deltas = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
-        neighbors = [(x + dx, y + dy) for x, y in self._alive for dx, dy in deltas]
+        deltas = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1),
+                  (1, 1)]
+        neighbors = [
+            (x + dx, y + dy) for x, y in self._alive for dx, dy in deltas
+        ]
         # Collect the number of times each coordinate appears as a
         # neighbor. That provides a count of the number of live neighbors of
         # these cells.

@@ -17,6 +17,7 @@ def merge(A, L, R):
         j += 1
         k += 1
 
+
 def mergeSort(A):
     n = len(A)
     if n > 1:

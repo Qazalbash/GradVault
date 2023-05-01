@@ -1,39 +1,44 @@
 #include <iostream>
 
-class Complex {
+class Complex
+{
 private:
-
     double real, imag;
 
 public:
-
-    Complex operator+(const Complex &z) {
+    Complex operator+(const Complex &z)
+    {
         Complex z2 = {this->real + z.real, this->imag + z.imag};
         return z2;
     }
 
-    Complex operator-(const Complex &z) {
+    Complex operator-(const Complex &z)
+    {
         Complex z2 = {this->real - z.real, this->imag - z.imag};
         return z2;
     }
 
-    Complex operator*(const Complex &z) {
+    Complex operator*(const Complex &z)
+    {
         Complex z2 = {this->real * z.real - this->imag * z.imag,
                       this->real * z.imag + this->imag * z.real};
         return z2;
     }
 
-    Complex operator+(const double &z) {
+    Complex operator+(const double &z)
+    {
         Complex z2 = {this->real + z, this->imag};
         return z2;
     }
 
-    Complex operator-(const double &z) {
+    Complex operator-(const double &z)
+    {
         Complex z2 = {this->real - z, this->imag};
         return z2;
     }
 
-    Complex operator*(const double &z) {
+    Complex operator*(const double &z)
+    {
         Complex z2 = {this->real * z, this->imag * z};
         return z2;
     }
@@ -46,23 +51,27 @@ public:
     friend std::ostream &operator<<(std::ostream &, const Complex &);
 };
 
-std::istream &operator>>(std::istream &in, Complex &c) {
+std::istream &operator>>(std::istream &in, Complex &c)
+{
     in >> c.real;
     in >> c.imag;
     return in;
 }
 
-std::ostream &operator<<(std::ostream &out, const Complex &c) {
+std::ostream &operator<<(std::ostream &out, const Complex &c)
+{
     out << c.real;
-    if (c.imag >= 0) out << "+";
+    if (c.imag >= 0)
+        out << "+";
     out << c.imag << "i";
     return out;
 }
 
-int main() {
+int main()
+{
     Complex c1, c2;
 
-    std::cin >> c1;  // extraction operator is overloaded
+    std::cin >> c1; // extraction operator is overloaded
     std::cin >> c2;
 
     double d1;
@@ -70,7 +79,7 @@ int main() {
 
     Complex result;
     // showing the numbers:
-    std::cout << "c1: " << c1 << std::endl;  // insertion operator is overloaded
+    std::cout << "c1: " << c1 << std::endl; // insertion operator is overloaded
     std::cout << "c2: " << c2 << std::endl;
     std::cout << "d1: " << d1 << std::endl;
 

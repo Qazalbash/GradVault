@@ -15,8 +15,10 @@
  * @param msg
  * @return cudaError_t
  */
-inline cudaError_t checkCudaErr(cudaError_t err, const char *msg) {
-        if (err != cudaSuccess) {
+inline cudaError_t checkCudaErr(cudaError_t err, const char *msg)
+{
+        if (err != cudaSuccess)
+        {
                 fprintf(stderr, "CUDA Runtime error at %s: %s\n", msg, cudaGetErrorString(err));
         }
         return err;
@@ -28,7 +30,8 @@ inline cudaError_t checkCudaErr(cudaError_t err, const char *msg) {
  * @param state
  * @param seed
  */
-__global__ void init_rand(curandState *state, unsigned long seed) {
+__global__ void init_rand(curandState *state, unsigned long seed)
+{
         int id = threadIdx.x + blockIdx.x * blockDim.x;
         curand_init(seed, id, 0, &state[id]);
 }
@@ -39,18 +42,20 @@ __global__ void init_rand(curandState *state, unsigned long seed) {
  * @param state
  * @param rand
  */
-__global__ void generate_rand(curandState *state, float *rand) {
-        int id   = threadIdx.x + blockIdx.x * blockDim.x;
+__global__ void generate_rand(curandState *state, float *rand)
+{
+        int id = threadIdx.x + blockIdx.x * blockDim.x;
         rand[id] = curand_uniform(&state[id]);
 }
 
-int main() {
+int main()
+{
         float *rande, *d_rand, cpu_time_used, gpu_time_used, memcpy_time_used;
-        int    size        = N * sizeof(float),        // CPU random number array size
-                state_size = N * sizeof(curandState);  // GPU random number array size
-        curandState *state, *d_state;                  // GPU random number generator state array
-        clock_t      start, end;                       // CPU timers
-        cudaEvent_t  start_gpu, stop_gpu;              // GPU timers
+        int size = N * sizeof(float),             // CPU random number array size
+            state_size = N * sizeof(curandState); // GPU random number array size
+        curandState *state, *d_state;             // GPU random number generator state array
+        clock_t start, end;                       // CPU timers
+        cudaEvent_t start_gpu, stop_gpu;          // GPU timers
 
         rande = (float *)malloc(size);
         state = (curandState *)malloc(state_size);
@@ -59,8 +64,9 @@ int main() {
         checkCudaErr(cudaMalloc((void **)&d_state, state_size), "cudaMalloc");
 
         start = clock();
-        for (int i = 0; i < N; i++) rande[i] = (float)rand() / (float)RAND_MAX;
-        end           = clock();
+        for (int i = 0; i < N; i++)
+                rande[i] = (float)rand() / (float)RAND_MAX;
+        end = clock();
         cpu_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
         printf("CPU time used:    %10f seconds to generate random numbers on CPU \n", cpu_time_used);
 
@@ -81,7 +87,7 @@ int main() {
         start = clock();
 
         checkCudaErr(cudaMemcpy(rande, d_rand, size, cudaMemcpyDeviceToHost), "cudaMemcpy");
-        end              = clock();
+        end = clock();
         memcpy_time_used = ((float)(end - start)) / CLOCKS_PER_SEC;
         printf("MEMCPY time used: %10f seconds to copy random numbers from GPU to "
                "CPU\n",

@@ -10,6 +10,7 @@ from life import *
 
 
 class Game:
+
     def run(life, config) -> None:
         """Runs the game as per config.
 
@@ -47,7 +48,11 @@ class Game:
                     # Add cell to canvas.
                     x1, y1 = x * config.cell_size, y * config.cell_size
                     x2, y2 = x1 + config.cell_size, y1 + config.cell_size
-                    canvas.create_rectangle(x1, y1, x2, y2, fill=config.cell_color)
+                    canvas.create_rectangle(x1,
+                                            y1,
+                                            x2,
+                                            y2,
+                                            fill=config.cell_color)
                 # Render cells, pause for next iteration.
                 tk.update()
                 time.sleep(0.1 / config.speed)

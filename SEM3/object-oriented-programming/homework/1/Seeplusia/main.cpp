@@ -9,7 +9,7 @@
 #include "mover.hpp"
 
 // Screen dimension constants
-const int SCREEN_WIDTH  = 800;
+const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
 // Starts up SDL and creates window
@@ -37,17 +37,22 @@ SDL_Texture *assets = NULL;
 
 // Mix_Music *bgMusic = NULL;
 
-bool init() {
+bool init()
+{
     // Initialization flag
     bool success = true;
 
     // Initialize SDL
-    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0)
+    {
         printf("SDL could not initialize! SDL Error: %s\n", SDL_GetError());
         success = false;
-    } else {
+    }
+    else
+    {
         // Set texture filtering to linear
-        if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")) {
+        if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1"))
+        {
             printf("Warning: Linear texture filtering not enabled!");
         }
 
@@ -55,25 +60,32 @@ bool init() {
         gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED,
                                    SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
                                    SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-        if (gWindow == NULL) {
+        if (gWindow == NULL)
+        {
             printf("Window could not be created! SDL Error: %s\n",
                    SDL_GetError());
             success = false;
-        } else {
+        }
+        else
+        {
             // Create renderer for window
             gRenderer =
                 SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
-            if (gRenderer == NULL) {
+            if (gRenderer == NULL)
+            {
                 printf("Renderer could not be created! SDL Error: %s\n",
                        SDL_GetError());
                 success = false;
-            } else {
+            }
+            else
+            {
                 // Initialize renderer color
                 SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
                 // Initialize PNG loading
                 int imgFlags = IMG_INIT_PNG;
-                if (!(IMG_Init(imgFlags) & imgFlags)) {
+                if (!(IMG_Init(imgFlags) & imgFlags))
+                {
                     printf(
                         "SDL_image could not initialize! SDL_image Error: %s\n",
                         IMG_GetError());
@@ -91,12 +103,14 @@ bool init() {
     return success;
 }
 
-bool loadMedia() {
+bool loadMedia()
+{
     // Loading success flag
     bool success = true;
 
     assets = loadTexture("assests.png");
-    if (assets == NULL) {
+    if (assets == NULL)
+    {
         printf("Unable to run due to error: %s\n", SDL_GetError());
         success = false;
     }
@@ -109,7 +123,8 @@ bool loadMedia() {
     return success;
 }
 
-void close() {
+void close()
+{
     // Free loaded images
     SDL_DestroyTexture(assets);
     assets = NULL;
@@ -117,7 +132,7 @@ void close() {
     // Destroy window
     SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);
-    gWindow   = NULL;
+    gWindow = NULL;
     gRenderer = NULL;
     // Mix_FreeMusic(bgMusic);
     // bgMusic = NULL;
@@ -127,19 +142,24 @@ void close() {
     SDL_Quit();
 }
 
-SDL_Texture *loadTexture(std::string path) {
+SDL_Texture *loadTexture(std::string path)
+{
     // The final texture
     SDL_Texture *newTexture = NULL;
 
     // Load image at specified path
     SDL_Surface *loadedSurface = IMG_Load(path.c_str());
-    if (loadedSurface == NULL) {
+    if (loadedSurface == NULL)
+    {
         printf("Unable to load image %s! SDL_image Error: %s\n", path.c_str(),
                IMG_GetError());
-    } else {
+    }
+    else
+    {
         // Create texture from surface pixels
         newTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
-        if (newTexture == NULL) {
+        if (newTexture == NULL)
+        {
             printf("Unable to create texture from %s! SDL Error: %s\n",
                    path.c_str(), SDL_GetError());
         }
@@ -151,17 +171,24 @@ SDL_Texture *loadTexture(std::string path) {
     return newTexture;
 }
 
-int main(int argc, char *args[]) {
+int main(int argc, char *args[])
+{
     SDL_RenderClear(gRenderer);
 
     // Start up SDL and create window
-    if (!init()) {
+    if (!init())
+    {
         printf("Failed to initialize!\n");
-    } else {
+    }
+    else
+    {
         // Load media
-        if (!loadMedia()) {
+        if (!loadMedia())
+        {
             printf("Failed to load media!\n");
-        } else {
+        }
+        else
+        {
             // Main loop flag
             bool quit = false;
 
@@ -170,11 +197,14 @@ int main(int argc, char *args[]) {
 
             update(gRenderer, assets);
             // While application is running
-            while (!quit) {
+            while (!quit)
+            {
                 // Handle events on queue
-                while (SDL_PollEvent(&e) != 0) {
+                while (SDL_PollEvent(&e) != 0)
+                {
                     // User requests quit
-                    if (e.type == SDL_QUIT) {
+                    if (e.type == SDL_QUIT)
+                    {
                         quit = true;
                     }
                     if (e.type == SDL_KEYDOWN)

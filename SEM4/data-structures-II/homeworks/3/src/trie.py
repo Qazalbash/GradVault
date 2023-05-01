@@ -4,11 +4,13 @@ ENDWORD: str = "^"
 
 
 class Node(object):
+
     def __init__(self) -> None:
         self.children: dict = {}
 
 
 class Trie:
+
     def __init__(self) -> None:
 
         self._root: Node = Node()
@@ -71,9 +73,7 @@ class Trie:
 
             else:
                 prefix_matching.extend(
-                    Trie.match(
-                        node.children[postfix_char], prefix, trace + postfix_char
-                    )
-                )
+                    Trie.match(node.children[postfix_char], prefix,
+                               trace + postfix_char))
 
         return prefix_matching

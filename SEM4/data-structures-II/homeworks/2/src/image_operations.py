@@ -101,8 +101,8 @@ def apply_mask(src: MyImage, maskfile: str, average: bool = True) -> MyImage:
                     if 0 <= srcRow + kernelRow < row and 0 <= srcCol + kernelCol < col:
                         pixel = mean_pixel(
                             src.get(srcRow + kernelRow, srcCol + kernelCol))
-                        kPixel = kernel[(paddingKernel + kernelRow) *
-                                        kernelSize + paddingKernel + kernelCol]
+                        kPixel = kernel[(paddingKernel + kernelRow) * kernelSize
+                                        + paddingKernel + kernelCol]
 
                         sum += pixel * kPixel
                         sumOfKernel += kPixel

@@ -2,53 +2,63 @@
 #include <map>
 #include <string>
 
-std::string sentence_without_punctuation(std::string s) {
+std::string sentence_without_punctuation(std::string s)
+{
     std::string copy;
-    int         flag;
+    int flag;
 
-    const char punctuation_list[15] = {'.', '?', '!', ',', ';', ':',  '-', '[',
+    const char punctuation_list[15] = {'.', '?', '!', ',', ';', ':', '-', '[',
                                        ']', '{', '}', '(', ')', '\'', '\"'};
 
-    for (char wordInString : s) {
+    for (char wordInString : s)
+    {
         flag = 0;
-        for (char punctuation : punctuation_list) {
-            if (wordInString == punctuation) {
+        for (char punctuation : punctuation_list)
+        {
+            if (wordInString == punctuation)
+            {
                 flag = 1;
                 break;
             }
         }
-        if (flag == 0) copy += wordInString;
+        if (flag == 0)
+            copy += wordInString;
     }
 
     return copy;
 }
 
-int count_vowels(std::string s) {
-    int        count;
+int count_vowels(std::string s)
+{
+    int count;
     const char vowels_list[] = {'a', 'A', 'e', 'E', 'i',
                                 'I', 'o', 'O', 'u', 'U'};
 
     for (char wordInString : s)
         for (char vowel : vowels_list)
-            if (wordInString == vowel) ++count;
+            if (wordInString == vowel)
+                ++count;
 
     return count;
 }
 
-int main() {
+int main()
+{
     std::map<std::string, std::string> map_phrases;
-    std::map<std::string, int>         map_vowels;
-    int                                n;
+    std::map<std::string, int> map_vowels;
+    int n;
     std::cin >> n;
 
     if (n < 2)
         std::cout << "Need at least 2 phrases! Better luck next time!"
                   << std::endl;
-    else {
-        int         vowels;
+    else
+    {
+        int vowels;
         std::string initialSentence, sentenceWithoutPunctuation;
 
-        for (int i = 0; i < n + 1; i++) {
+        for (int i = 0; i < n + 1; i++)
+        {
             getline(std::cin, initialSentence);
 
             sentenceWithoutPunctuation =
@@ -67,8 +77,10 @@ int main() {
                   << std::endl;
 
         for (auto mapPhraseArrow = map_phrases.begin();
-             mapPhraseArrow != map_phrases.end(); mapPhraseArrow++) {
-            if (mapPhraseArrow->first != "") {
+             mapPhraseArrow != map_phrases.end(); mapPhraseArrow++)
+        {
+            if (mapPhraseArrow->first != "")
+            {
                 std::cout << "Original sentence: " << mapPhraseArrow->first
                           << std::endl
                           << "Without punctuation: " << mapPhraseArrow->second
@@ -77,7 +89,8 @@ int main() {
             }
         }
 
-        std::cout << "Displaying std::map of vowels:" << std::endl << std::endl;
+        std::cout << "Displaying std::map of vowels:" << std::endl
+                  << std::endl;
 
         for (std::map<std::string, int>::iterator mapVowelArrow =
                  map_vowels.begin();

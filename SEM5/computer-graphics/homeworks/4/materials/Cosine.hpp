@@ -15,18 +15,17 @@
 #include "../utilities/ShadeInfo.hpp"
 #include "Material.hpp"
 
-class Cosine : public Material {
+class Cosine : public Material
+{
 protected:
-
-    RGBColor color;  // the color of the material.
+    RGBColor color; // the color of the material.
 
 public:
-
     // Constructors.
-    Cosine();                           // set color to (0, 0, 0).
-    Cosine(float c);                    // set color to (c, c, c).
-    Cosine(float r, float g, float b);  // set color to (r, g, b).
-    Cosine(const RGBColor &c);          // set color to c.
+    Cosine();                          // set color to (0, 0, 0).
+    Cosine(float c);                   // set color to (c, c, c).
+    Cosine(float r, float g, float b); // set color to (r, g, b).
+    Cosine(const RGBColor &c);         // set color to c.
 
     // Copy constuctor and assignment operator.
     Cosine(const Cosine &other);
@@ -39,4 +38,4 @@ public:
     virtual RGBColor shade(const ShadeInfo &sinfo) const override;
 };
 
-#endif  // COSINE_HPP
+#endif // COSINE_HPP

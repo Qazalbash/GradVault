@@ -11,17 +11,16 @@
 #include "../utilities/Point3D.hpp"
 #include "Geometry.hpp"
 
-class Sphere : public Geometry {
+class Sphere : public Geometry
+{
 protected:
-
-    Point3D c;  // center.
-    float   r;  // radius.
+    Point3D c; // center.
+    float r;   // radius.
 
 public:
-
     // Constructors.
-    Sphere();  // sphere at origin with radius 0.
-    Sphere(const Point3D &center, float radius);  // set center and radius,
+    Sphere();                                    // sphere at origin with radius 0.
+    Sphere(const Point3D &center, float radius); // set center and radius,
 
     // Copy constructor and assignment operator.
     Sphere(const Sphere &object);
@@ -40,4 +39,4 @@ public:
     virtual BBox getBBox() const override;
 };
 
-#endif  // SPHERE_HPP
+#endif // SPHERE_HPP

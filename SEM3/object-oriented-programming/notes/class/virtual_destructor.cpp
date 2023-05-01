@@ -1,25 +1,27 @@
 #include <iostream>
 
-class A {
-    public:
-
+class A
+{
+public:
         virtual ~A() { std::cout << "Destructing A" << std::endl; }
 };
 
-class B : public A {
+class B : public A
+{
         int *dumyPointer;
 
-    public:
-
+public:
         B() { dumyPointer = new int[10]; }
 
-        ~B() {
+        ~B()
+        {
                 std::cout << "Destructing B" << std::endl;
                 delete dumyPointer;
         }
 };
 
-int main() {
+int main()
+{
         A *pointerOfA;
         pointerOfA = new B();
         delete pointerOfA;
