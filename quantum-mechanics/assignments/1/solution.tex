@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage{geometry, graphicx, amssymb, amsmath, amsthm, empheq, mdframed, booktabs, lipsum, graphicx, color, psfrag, pgfplots, bm}
+
+\geometry{a4paper}
+
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[]
+
+\title{Assignment 1}
+\author{Muhammad Meesum Ali Qazalbash}
+
+
+\begin{document}
+\maketitle
+
+\begin{problem}[Distance between two adjacent maxima]
+If \(\Delta y\) is the distance between two consecutive maxima, then they are given by
+\begin{align*}
+	\Delta y & = y_1 - y_2                                                \\
+	         & = \frac{(m+1)\lambda D}{d} - \frac{m\lambda D}{d}          \\
+	         & = \frac{\lambda D}{d}                                      \\
+	         & = \frac{546 \text{ nm}\times 55\text{ cm}}{0.12\text{ mm}} \\
+	         & = 2.50250 \text{ mm}
+\end{align*}
+
+\end{problem}
+
+\begin{problem}[Angular seperation]
+The angular seperation in double slit experiment is given by,
+\[d\sin{\theta}=m\lambda\]
+For small \(\theta\) we can approximate \(\sin{\theta}\approx\theta\), so we get the following equation,
+\[d\theta=m\lambda\]
+For 10\% more \(\theta\) we get,
+\begin{align*}
+	         & d\theta'=m\lambda'        \\
+	\implies & d(1.1\theta)=m\lambda'    \\
+	\implies & 1.1d\theta=m\lambda'      \\
+	\implies & 1.1m\lambda=m\lambda'     \\
+	\implies & 1.1\lambda=\lambda'       \\
+	\implies & \lambda'= 647.9\text{ nm}
+\end{align*}
+
+\end{problem}
+
+\newpage
+
+\begin{problem}[Intensity]
+\begin{enumerate}
+	\item The electric field produce by these electromagnetic waves would be,
+	      \begin{align*}
+		      \mathbf{E} & = \mathbf{E}_1+\mathbf{E}_2+\mathbf{E}_3                                                                                                                                     \\
+		                 & = \left(E_0\sin{\left(\omega t\right)}+E_0\sin{\left(\omega t+\phi\right)}+E_0\sin{\left(\omega t+2\phi\right)}\right)\hat{\mathbf{n}}                                       \\
+		                 & = E_0\left(\sin{\left(\omega t\right)}+\sin{\left(\omega t+\phi\right)}+\sin{\left(\omega t+2\phi\right)}\right)\hat{\mathbf{n}}                                             \\
+		                 & = E_0\left(\sin{\left(\omega t+\phi\right)}+\sin{\left(\omega t\right)}+\sin{\left(\omega t+2\phi\right)}\right)\hat{\mathbf{n}}                                             \\
+		                 & = E_0\left(\sin{\left(\omega t+\phi\right)}+2\cos{\left(\frac{\omega t-\omega t-2\phi}{2}\right)}\sin{\left(\frac{\omega t+\omega t+2\phi}{2}\right)}\right)\hat{\mathbf{n}} \\
+		                 & = E_0\left(\sin{\left(\omega t+\phi\right)}+2\cos{\left(\phi\right)}\sin{\left(\omega t+2\phi\right)}\right)\hat{\mathbf{n}}                                                 \\
+		                 & = E_0\left(1+2\cos{\left(\phi\right)}\right)\sin{\left(\omega t+\phi\right)}\hat{\mathbf{n}}
+	      \end{align*}
+
+	      The magnitude square of the electric field is,
+	      \[|\mathbf{E}|^2=E^2=E^2_0\left(1+2\cos{\left(\phi\right)}\right)^2\sin^2{\left(\omega t+\phi\right)}\]
+	      Then the intesity would be.
+	      \begin{align*}
+		      I & = \left<E^2\right>                                                                                                            \\
+		        & = E^2_0\left(1+2\cos{\left(\frac{2\pi d\sin{\theta}}{\lambda}\right)}\right)^2\left<\sin^2{\left(\omega t+\phi\right)}\right> \\
+		        & = E^2_0\left(1+2\cos{\left(\frac{2\pi d\sin{\theta}}{\lambda}\right)}\right)^2
+	      \end{align*}
+	      \(I\) will be maximum when \(\phi=1\), so we get, \(I_0 = 9E^2_0\)
+	      \[I = \frac{I_0}{9}\left(1+2\cos{\left(\frac{2\pi d\sin{\theta}}{\lambda}\right)}\right)^2\]
+	\item The intensity is given by,
+	      \[I = \frac{I_0}{9}\left(1+2\cos{\left(\phi\right)}\right)^2\]
+	      Taking derivative of the intensity with respect to \(\phi\),
+	      \begin{align*}
+		      \frac{dI}{d\phi}                 & = \frac{d}{d\phi}\left(\frac{I_0}{9}\left(1+2\cos{\left(\phi\right)}\right)^2\right) \\
+		      \frac{dI}{d\phi}                 & = -\frac{4I_0}{9}(1+2\cos{\left(\phi\right)})\sin{\left(\phi\right)}                 \\
+		      \implies \frac{dI}{d\phi}        & = 0                                                                                  \\
+		      \implies \sin{\left(\phi\right)} & = 0 \implies \phi_n = n\pi                                                           \\
+		      \cos{\left(\phi\right)}          & = -\frac{1}{2} \implies \phi_n=\frac{2}{3}\pi+2n\pi                                  \\
+	      \end{align*}
+	      From second derivative test,
+	      \begin{align*}
+		      \frac{d^2I}{d\phi^2} & = \frac{d}{d\phi}\left(-\frac{4I_0}{9}(1+2\cos{\left(\phi\right)})\sin{\left(\phi\right)}\right) \\
+		      \frac{d^2I}{d\phi^2} & = -\frac{4I_0}{9}\left(\cos{(\phi)}+2\cos{(2\phi)}\right)
+	      \end{align*}
+	      For \(\phi=\frac{2}{3}\pi+2n\pi\), we get,
+	      \[\frac{d^2I}{d\phi^2} = -\frac{4I_0}{9}\left(\cos{\left(\frac{2}{3}\pi+2n\pi\right)}+2\cos{\left(2\left(\frac{2}{3}\pi+2n\pi\right)\right)}\right)\]
+	      \[\frac{d^2I}{d\phi^2} = -\frac{4I_0}{9}\left(-\frac{1}{2}+2\left(-\frac{1}{2}\right)\right)\]
+	      \[\frac{d^2I}{d\phi^2} = \frac{2I_0}{3}>0\]
+	      Hence, \(\phi=\frac{2}{3}\pi+2n\pi\) is a minimum point. For \(\phi=\pi n\), we get,
+	      \[\frac{d^2I}{d\phi^2} = -\frac{4I_0}{9}\left(\cos{\left(\pi n\right)}+2\cos{\left(2\pi n\right)}\right)\]
+	      \[\frac{d^2I}{d\phi^2} = -\frac{4I_0}{9}\left((-1)^n+2\left(1\right)\right)\]
+	      \[\frac{d^2I}{d\phi^2} = -\frac{4I_0}{9}\left((-1)^n+2\right)<0\]
+	      Hence, \(\phi=\pi n\) is a maximum point. Primary maxima occurs at \(n=2k\) and secondary maxima occurs at \(n=2k+1\). Therefore the ratio of the intensity of the primary maxima to the secondary maxima is,
+	      \[\frac{I_{\text{primary}}}{I_{\text{secondary}}} = \frac{\frac{I_0}{9}\left(1+2\cos{\left(2k\pi\right)}\right)^2}{\frac{I_0}{9}\left(1+2\cos{\left(\pi\left(2k+1\right)\right)}\right)^2}\]
+	      \[\frac{I_{\text{primary}}}{I_{\text{secondary}}} = \frac{\left(1+2\right)^2}{\left(1-2\right)^2}\]
+	      \[\frac{I_{\text{primary}}}{I_{\text{secondary}}} = 9\]
+\end{enumerate}
+
+\end{problem}
+
+\end{document}

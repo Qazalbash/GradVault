@@ -1,0 +1,106 @@
+ Define Article %%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{SEL Activity 1}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\section{Activity 1a}
+We know that \(X\backsim \operatorname{Ber}(p)\), and the expected/mean value of \(X\) will be \(\mu=p\). Variance is defined as,
+
+\begin{equation}
+	\begin{split}
+		\operatorname{Var}[X]&:=\operatorname{E}[(X-\mu)^2]\\
+		\operatorname{Var}[X]&:=\sum_{x\in X}(x-\mu)^2\operatorname{Pr}[X=x]\\
+		\operatorname{Var}[X]&:=\sum_{x\in X}(x-p)^2\operatorname{Pr}[X=x]\\
+		\operatorname{Var}[X]&:=(0-p)^2\operatorname{Pr}[X=0]+(1-p)^2\operatorname{Pr}[X=1]\\
+		\operatorname{Var}[X]&:=p^2(1-p)+(1-p)^2p\\
+		\operatorname{Var}[X]&:=p(1-p)\blacksquare\\
+	\end{split}
+\end{equation}
+
+\section{Activity 1b}
+
+A random experiment has been caried out as independent trail of Bernoulli Random Variable with same probability \(p\). The estimation for \(\hat{p}\) is given by,
+
+\[\hat{p}=\frac{X_1+X_2+\cdots+X_n}{n}\]
+
+The variance of \(\hat{p}\) will be,
+
+\begin{equation}
+	\begin{split}
+		\operatorname{Var}[\hat{p}]&=\operatorname{Var}\left[\frac{X_1+X_2+\cdots+X_n}{n}\right]\\
+		\operatorname{Var}[\hat{p}]&=\frac{1}{n^2}\operatorname{Var}\left[X_1+X_2+\cdots+X_n\right]
+	\end{split}
+\end{equation}
+Variance of sum of independent random variable is equals to the sum of variance of those random variable.
+
+\[\operatorname{Var}[\hat{p}]=\frac{1}{n^2}\operatorname{Var}[X_1]+\frac{1}{n^2}\operatorname{Var}[X_2]+\cdots+\frac{1}{n^2}\operatorname{Var}[X_n]\]
+
+Variance of all \(X_i\) will be same.
+
+\begin{equation}
+	\begin{split}
+		\operatorname{Var}[\hat{p}]&=\frac{1}{n^2}\operatorname{Var}[X_1]+\frac{1}{n^2}\operatorname{Var}[X_1]+\cdots+\frac{1}{n^2}\operatorname{Var}[X_1]\\
+		\operatorname{Var}[\hat{p}]&=\frac{n}{n^2}\operatorname{Var}[X_1]\\
+		\operatorname{Var}[\hat{p}]&=\frac{1}{n}\operatorname{Var}[X_1]\\
+		\operatorname{Var}[\hat{p}]&=\frac{p(1-p)}{n}\blacksquare
+	\end{split}
+\end{equation}
+\end{document}

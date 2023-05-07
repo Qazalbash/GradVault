@@ -1,0 +1,136 @@
+ Define Article %%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{SEL Activity 2}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+We have two random variables defined as, \(X\backsim\mathcal{U}[0,T]\) and \(Y|X\backsim \mathcal{U}[X,X+\epsilon]\), where \(\epsilon\) is defined as infinestimely small positive number. The pdf of \(X\) and \(Y|X\) will be,
+
+\begin{equation*}
+	\begin{split}
+		f_X(x)&=\begin{cases}
+			\displaystyle\frac{1}{T} & 0\le x\le T \\
+			0                        & \text{else}
+		\end{cases}\\
+		f_{Y|X}(y|x)&=\begin{cases}
+			\displaystyle\frac{1}{\epsilon} & x\le y\le x+\epsilon \\
+			0                               & \text{else}
+		\end{cases}
+	\end{split}
+\end{equation*}
+
+The joint pdf of \(X\) and \(Y\) will be,
+
+\begin{equation*}
+	\begin{split}
+		f_{X,Y}(x,y)=\begin{cases}
+			\displaystyle\frac{1}{\epsilon T} & 0\le y-\epsilon\le x\le y\le T \\
+			0                                 & \text{else}
+		\end{cases}
+	\end{split}
+\end{equation*}
+
+The marginal pdf of \(Y\) will be,
+
+\begin{equation}
+	\begin{split}
+		f_Y(y)&=\begin{cases}
+			\displaystyle\int_{0}^{y}\frac{dx}{\epsilon T}          & 0\le y\le \epsilon   \\
+			\displaystyle\int_{y-\epsilon}^{y}\frac{dx}{\epsilon T} & \epsilon\le y\le T   \\
+			\displaystyle\int_{y-\epsilon}^{T}\frac{dx}{\epsilon T} & T\le y\le T+\epsilon \\
+			0                                                       & \text{else}
+		\end{cases}\\
+		f_Y(y)&=\begin{cases}
+			\displaystyle\frac{y}{\epsilon T}            & 0\le y\le \epsilon   \\
+			\displaystyle\frac{1}{T}                     & \epsilon\le y\le T   \\
+			\displaystyle\frac{T-y+\epsilon}{\epsilon T} & T\le y\le T+\epsilon \\
+			0                                            & \text{else}
+		\end{cases}
+	\end{split}
+\end{equation}
+
+The conditional pdf of \(X\) given \(Y\) will be,
+
+\[f_{X|Y}(x|y)=\frac{f_{X,Y}(x,y)}{f_{Y}(y)}\]
+
+\begin{equation*}
+	f_{X|Y}(x|y)=\begin{cases}
+		\displaystyle\frac{1}{y}            & 0\le x\le y          \\
+		\displaystyle\frac{1}{\epsilon}     & y-\epsilon\le x\le y \\
+		\displaystyle\frac{1}{T-y+\epsilon} & y-\epsilon\le x\le T \\
+		0                                   & \text{else}
+	\end{cases}
+\end{equation*}
+
+The estimation of \(X\) given \(Y\) will be,
+
+\begin{equation}
+	\begin{split}
+		\hat{X}=\operatorname{E}[X|Y]&=\int_{-\infty}^{\infty}xf_{X|Y}(x|y)dx\\
+		\hat{X}&=\int_{0}^{y}\frac{x}{y}dx+\int_{y-\epsilon}^{y}\frac{x}{\epsilon}dx+\int_{y-\epsilon}^{T}\frac{x}{T+\epsilon-y}dx\\
+		\hat{X}&=\frac{1}{y}\int_{0}^{y}xdx+\frac{1}{\epsilon}\int_{y-\epsilon}^{y}xdx+\frac{1}{T+\epsilon-y}\int_{y-\epsilon}^{T}xdx\\
+		\hat{X}&=\frac{x^2}{2y}\bigg|_{0}^{y}+\frac{x^2}{2\epsilon}\bigg|_{y-\epsilon}^{y}+\frac{x^2}{2(T+\epsilon-y)}\bigg|_{y-\epsilon}^{T}\\
+		\hat{X}&=\frac{y^2-0^2}{2y}+\frac{y^2-(y-\epsilon)^2}{2\epsilon}+\frac{T^2-(y-\epsilon)^2}{2(T+\epsilon-y)}\\
+		\hat{X}&=\frac{y}{2}+\frac{2y-\epsilon}{2}+\frac{(T-y+\epsilon)(T+y-\epsilon)}{2(T+\epsilon-y)}\\
+		\hat{X}&=2y-\epsilon+\frac{T}{2}\\
+	\end{split}
+\end{equation}
+
+\end{document}

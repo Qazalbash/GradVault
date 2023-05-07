@@ -1,5 +1,0 @@
-/*
-the complier polymorphism or weak polymorphism is also known as function overloading.
-
-the dynamic polymorphism or runtime polymorphism is also known as function overridding.
-*/

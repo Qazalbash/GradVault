@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Circles</title>
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            attribute vec3 vPosition;
+            attribute vec4 cPosition;
+            varying vec4 color;
+
+            void main(){
+            	gl_Position = vec4(vPosition, 1.0);
+                color = cPosition;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-vertex">
+            precision highp float;
+            varying vec4 color;
+
+            void main()
+            {
+            	gl_FragColor = color;
+            }
+        </script>
+        <script type="text/javascript" src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+        <script type="text/javascript" src="initShadersES6.js"></script>
+        <script src="http://interactivecomputergraphics.com/8E/Code%20update/Common/MVES6.js"></script>
+        <script type="text/javascript" src="map.js"></script>
+    </head>
+    <style>
+        div {
+            align-content: center;
+            text-align: center;
+            color: rgb(255, 16 , 240);
+            font-family: consolas;
+        }
+        body{
+            font-family: consolas;
+            background-color: black;
+        }
+    </style>
+    <body>
+        <div> <input id="myfl" name="myfl" type="file" /> </div>
+        <div><canvas id="gl-canvas" width="512" height="512">
+            Your browser does not support the WebGL.
+        </canvas></div>
+        <div>
+            <button type="button" id="rx" name="rx" onclick="rot_x()">Rotate about x-axis</button>
+            <button type="button" id="ry" name="ry" onclick="rot_y()">Rotate about y-axis</button>
+            <button type="button" id="rz" name="rz" onclick="rot_z()">Rotate about z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="tx" name="tx" onclick="trn_x()">Translate Right along x-axis</button>
+            <button type="button" id="tx" name="tx" onclick="trn_y()">Translate Up along y-axis</button>
+            <button type="button" id="tx" name="tx" onclick="trn_z()">Translate Forward along z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="tbx" name="tbx" onclick="trnb_x()">Translate Left along x-axis</button>
+            <button type="button" id="tbx" name="tbx" onclick="trnb_y()">Translate Down along y-axis</button>
+            <button type="button" id="tbx" name="tbx" onclick="trnb_z()">Translate Backward along z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="sx" name="sx" onclick="scl_x()">Scale up on x-axis</button>
+            <button type="button" id="sy" name="sy" onclick="scl_y()">Scale up on y-axis</button>
+            <button type="button" id="sz" name="sz" onclick="scl_z()">Scale up on z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="sxd" name="sxd" onclick="scld_x()">Scale down on x-axis</button>
+            <button type="button" id="syd" name="syd" onclick="scld_y()">Scale down on y-axis</button>
+            <button type="button" id="szd" name="szd" onclick="scld_z()">Scale down on z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="rfx" name="rfx" onclick="rfl_x()">Reflect about x-axis</button>
+            <button type="button" id="rfy" name="rfy" onclick="rfl_y()">Reflect about y-axis</button>
+            <button type="button" id="rfz" name="rfz" onclick="rfl_z()">Reflect about z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="shpx" name="shpx" onclick="shp_x()">Apply Positive Shear along x-axis</button>
+            <button type="button" id="shpy" name="shpy" onclick="shp_y()">Apply Positive Shear along y-axis</button>
+            <button type="button" id="shpz" name="shpz" onclick="shp_z()">Apply Positive Shear along z-axis</button>
+        </div>
+        <div>
+            <button type="button" id="shnx" name="shnx" onclick="shn_x()">Apply Negative Shear along x-axis</button>
+            <button type="button" id="shny" name="shny" onclick="shn_y()">Apply Negative Shear along y-axis</button>
+            <button type="button" id="shnz" name="shnz" onclick="shn_z()">Apply Negative Shear along z-axis</button>
+        </div>
+        <div><button type="button" id="reset" name="reset" onclick="reset()">Reset</button></div>
+
+        
+
+        <script type="text/javascript" src="mesh.js"></script>
+    </body>
+</html>

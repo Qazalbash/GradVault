@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<instance>
+    <info>
+        <dataset>Augerat 1995 — Set A</dataset>
+        <name>A-n32-k05</name>
+    </info>
+    <network>
+        <nodes>
+            <node id="1" type="0">
+                <cx>82.0</cx>
+                <cy>76.0</cy>
+            </node>
+            <node id="2" type="1">
+                <cx>96.0</cx>
+                <cy>44.0</cy>
+            </node>
+            <node id="3" type="1">
+                <cx>50.0</cx>
+                <cy>5.0</cy>
+            </node>
+            <node id="4" type="1">
+                <cx>49.0</cx>
+                <cy>8.0</cy>
+            </node>
+            <node id="5" type="1">
+                <cx>13.0</cx>
+                <cy>7.0</cy>
+            </node>
+            <node id="6" type="1">
+                <cx>29.0</cx>
+                <cy>89.0</cy>
+            </node>
+            <node id="7" type="1">
+                <cx>58.0</cx>
+                <cy>30.0</cy>
+            </node>
+            <node id="8" type="1">
+                <cx>84.0</cx>
+                <cy>39.0</cy>
+            </node>
+            <node id="9" type="1">
+                <cx>14.0</cx>
+                <cy>24.0</cy>
+            </node>
+            <node id="10" type="1">
+                <cx>2.0</cx>
+                <cy>39.0</cy>
+            </node>
+            <node id="11" type="1">
+                <cx>3.0</cx>
+                <cy>82.0</cy>
+            </node>
+            <node id="12" type="1">
+                <cx>5.0</cx>
+                <cy>10.0</cy>
+            </node>
+            <node id="13" type="1">
+                <cx>98.0</cx>
+                <cy>52.0</cy>
+            </node>
+            <node id="14" type="1">
+                <cx>84.0</cx>
+                <cy>25.0</cy>
+            </node>
+            <node id="15" type="1">
+                <cx>61.0</cx>
+                <cy>59.0</cy>
+            </node>
+            <node id="16" type="1">
+                <cx>1.0</cx>
+                <cy>65.0</cy>
+            </node>
+            <node id="17" type="1">
+                <cx>88.0</cx>
+                <cy>51.0</cy>
+            </node>
+            <node id="18" type="1">
+                <cx>91.0</cx>
+                <cy>2.0</cy>
+            </node>
+            <node id="19" type="1">
+                <cx>19.0</cx>
+                <cy>32.0</cy>
+            </node>
+            <node id="20" type="1">
+                <cx>93.0</cx>
+                <cy>3.0</cy>
+            </node>
+            <node id="21" type="1">
+                <cx>50.0</cx>
+                <cy>93.0</cy>
+            </node>
+            <node id="22" type="1">
+                <cx>98.0</cx>
+                <cy>14.0</cy>
+            </node>
+            <node id="23" type="1">
+                <cx>5.0</cx>
+                <cy>42.0</cy>
+            </node>
+            <node id="24" type="1">
+                <cx>42.0</cx>
+                <cy>9.0</cy>
+            </node>
+            <node id="25" type="1">
+                <cx>61.0</cx>
+                <cy>62.0</cy>
+            </node>
+            <node id="26" type="1">
+                <cx>9.0</cx>
+                <cy>97.0</cy>
+            </node>
+            <node id="27" type="1">
+                <cx>80.0</cx>
+                <cy>55.0</cy>
+            </node>
+            <node id="28" type="1">
+                <cx>57.0</cx>
+                <cy>69.0</cy>
+            </node>
+            <node id="29" type="1">
+                <cx>23.0</cx>
+                <cy>15.0</cy>
+            </node>
+            <node id="30" type="1">
+                <cx>20.0</cx>
+                <cy>70.0</cy>
+            </node>
+            <node id="31" type="1">
+                <cx>85.0</cx>
+                <cy>60.0</cy>
+            </node>
+            <node id="32" type="1">
+                <cx>98.0</cx>
+                <cy>5.0</cy>
+            </node>
+        </nodes>
+        <euclidean/>
+        <decimals>0</decimals>
+    </network>
+    <fleet>
+        <vehicle_profile type="0">
+            <departure_node>1</departure_node>
+            <arrival_node>1</arrival_node>
+            <capacity>100.0</capacity>
+        </vehicle_profile>
+    </fleet>
+    <requests>
+        <request id="1" node="2">
+            <quantity>19.0</quantity>
+        </request>
+        <request id="2" node="3">
+            <quantity>21.0</quantity>
+        </request>
+        <request id="3" node="4">
+            <quantity>6.0</quantity>
+        </request>
+        <request id="4" node="5">
+            <quantity>19.0</quantity>
+        </request>
+        <request id="5" node="6">
+            <quantity>7.0</quantity>
+        </request>
+        <request id="6" node="7">
+            <quantity>12.0</quantity>
+        </request>
+        <request id="7" node="8">
+            <quantity>16.0</quantity>
+        </request>
+        <request id="8" node="9">
+            <quantity>6.0</quantity>
+        </request>
+        <request id="9" node="10">
+            <quantity>16.0</quantity>
+        </request>
+        <request id="10" node="11">
+            <quantity>8.0</quantity>
+        </request>
+        <request id="11" node="12">
+            <quantity>14.0</quantity>
+        </request>
+        <request id="12" node="13">
+            <quantity>21.0</quantity>
+        </request>
+        <request id="13" node="14">
+            <quantity>16.0</quantity>
+        </request>
+        <request id="14" node="15">
+            <quantity>3.0</quantity>
+        </request>
+        <request id="15" node="16">
+            <quantity>22.0</quantity>
+        </request>
+        <request id="16" node="17">
+            <quantity>18.0</quantity>
+        </request>
+        <request id="17" node="18">
+            <quantity>19.0</quantity>
+        </request>
+        <request id="18" node="19">
+            <quantity>1.0</quantity>
+        </request>
+        <request id="19" node="20">
+            <quantity>24.0</quantity>
+        </request>
+        <request id="20" node="21">
+            <quantity>8.0</quantity>
+        </request>
+        <request id="21" node="22">
+            <quantity>12.0</quantity>
+        </request>
+        <request id="22" node="23">
+            <quantity>4.0</quantity>
+        </request>
+        <request id="23" node="24">
+            <quantity>8.0</quantity>
+        </request>
+        <request id="24" node="25">
+            <quantity>24.0</quantity>
+        </request>
+        <request id="25" node="26">
+            <quantity>24.0</quantity>
+        </request>
+        <request id="26" node="27">
+            <quantity>2.0</quantity>
+        </request>
+        <request id="27" node="28">
+            <quantity>20.0</quantity>
+        </request>
+        <request id="28" node="29">
+            <quantity>15.0</quantity>
+        </request>
+        <request id="29" node="30">
+            <quantity>2.0</quantity>
+        </request>
+        <request id="30" node="31">
+            <quantity>14.0</quantity>
+        </request>
+        <request id="31" node="32">
+            <quantity>9.0</quantity>
+        </request>
+    </requests>
+</instance>

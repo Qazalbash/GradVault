@@ -1,0 +1,352 @@
+\documentclass[answers]{exam}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{enumitem}
+%% Sets page size and margins
+\usepackage[a4paper,margin=2cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{hyperref}
+\tikzset{
+  % define the bar graph element
+  bar/.pic={
+    \fill (-.1,0) rectangle (.1,#1) (0,#1) node[above,scale=1/2]{$#1$};
+  }
+}
+\usetikzlibrary{matrix}
+
+\setlength\FrameSep{4pt}
+\title{Probability \& Statistics\\ Assignment 3}
+\author{Muhammad Meesum Ali Qazalbash,  06861}
+\date{\today{}}
+\begin{document}
+\maketitle
+
+\noindent \hrulefill
+
+\begin{questions}
+    \question[20]{
+        \textbf{Plane Departure:} The time until the next flight departs from an airport follows a
+        distribution with $f(x)=\frac{1}{20}$ where $ 25 \leq x \leq 45$
+        \begin{enumerate}[(a)]
+            \item Find $E[X]$.
+            \item Standard Deviation of $X$.
+            \item Find the probability that the time is at most 30 minutes.
+            \item Find the probability that the time is between 30 and 40 minutes.
+        \end{enumerate}
+    }
+
+    \begin{framed}
+        $X$ is a continuous random variable
+        \begin{enumerate}[(a)]
+            \item \[E[X]=\int_{-\infty}^{\infty}xf_{X}(x)dx=\int_{25}^{45}\frac{x}{20}dx=\frac{1}{40}(45^2-25^2)=35\]
+            \item \[\sigma^2=E[(X-35)^2]=\int_{-\infty}^{\infty}(x-35)^2f_{X}(x)dx=\int_{25}^{45}\frac{(x-35)^2}{20}dx=\frac{100}{3}\]
+                  \[\implies \sigma = \frac{10}{\sqrt{3}}\]
+            \item \[P(25\le X\le 30)=\int_{25}^{30}f_{X}(x)dx=\int_{25}^{30}\frac{1}{20}dx=\frac{1}{4}\]
+            \item \[P(30\le X\le 40)=\int_{30}^{40}\frac{1}{20}dx=\frac{1}{2}\]
+        \end{enumerate}
+    \end{framed}
+
+    \break
+    \question[20]{
+        A random variable X has probability density
+        \begin{equation*}
+            f_X(x) = \begin{cases}
+                cx^2 e^{-\lambda x} & x \geq 0         \\
+                0                   & \mbox{Otherwise}
+            \end{cases}
+        \end{equation*}
+
+        \begin{enumerate}[(a)]
+            \item Find the value of constant c.
+            \item Find the cumulative distribution function of X
+            \item The probability $P(0 \leq X \leq \frac{1}{\lambda})$.
+        \end{enumerate}
+
+    }
+
+    \begin{framed}
+        \begin{enumerate}[(a)]
+            \item $c$ can be find thorough normalizing the $f_{X}(x)$,
+                  \begin{equation*}
+                      \begin{split}
+                          \int_{-\infty}^{\infty}f_{X}(x)dx & = 1\\
+                          \implies\int_{0}^{\infty}cx^2 e^{-\lambda x}dx & = 1\\
+                          \implies \frac{c}{\lambda^3}\int_{0}^{\infty}(\lambda x)^2 e^{-\lambda x}d(\lambda x) & = 1\\
+                          \implies \frac{c}{\lambda^3}\Gamma(3) & = 1\\
+                          \implies c & = \frac{\lambda^3}{\Gamma(3)}\\
+                          \implies c & = \frac{\lambda^3}{2}\\
+                      \end{split}
+                  \end{equation*}
+
+            \item The cumulative distribution function of $X$ is,
+                  \begin{equation*}
+                      \begin{split}
+                          F_{X}(x)&:=P(X\le x)\\
+                          & = \int_{-\infty}^{x}f_{X}(t)dt\\
+                          & = \int_{0}^{x}\frac{\lambda^3}{2}t^2 e^{-\lambda t}dt\\
+                          & = \int\frac{\lambda^3}{2}t^2 e^{-\lambda t}dt\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^3}{2}\int t^2 e^{-\lambda t}dt\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^3}{2}\left(t^2\int e^{-\lambda t}dt-\int \left\{\frac{d}{dt}(t^2)\int e^{-\lambda t}dt\right\}dt\right)\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^3}{2}\left(-t^2 \frac{e^{-\lambda t}}{\lambda}+\int 2t\frac{e^{-\lambda t}}{\lambda}dt\right)\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^2}{2}\left(-t^2e^{-\lambda t}+2\int te^{-\lambda t}\right)\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^2}{2}\left(-t^2e^{-\lambda t}+2t\int e^{-\lambda t}dt-2\int \left\{\frac{d}{dt}(t)\int e^{-\lambda t}dt\right\}dt\right)\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^2}{2}\left(-t^2e^{-\lambda t}-2t\frac{e^{-\lambda t}}{\lambda}+2\int \frac{e^{-\lambda t}}{\lambda} dt\right)\bigg|_{0}^{x}\\
+                          & = \frac{\lambda^2}{2}\left(-t^2e^{-\lambda t}-2t\frac{e^{-\lambda t}}{\lambda}-2\frac{e^{-\lambda t}}{\lambda^2}\right)\bigg|_{0}^{x}\\
+                          & = \frac{e^{-\lambda t}}{2}\left(-t^2\lambda^2-2t\lambda-2\right)\bigg|_{0}^{x}\\
+                          & = \frac{e^{-\lambda x}}{2}\left(-x^2\lambda^2-2x\lambda-2\right)-\frac{e^{-\lambda (0)}}{2}\left(-(0)^2\lambda^2-2(0)\lambda-2\right)\\
+                          F_{X}(x) & = 1-\frac{e^{-\lambda x}}{2}\left(x^2\lambda^2+2x\lambda+2\right)
+                      \end{split}
+                  \end{equation*}
+            \item The probability $P(0 \leq X \leq \frac{1}{\lambda})$ is,
+                  \begin{equation*}
+                      \begin{split}
+                          P\left(0\le X\le \frac{1}{\lambda}\right) & = \int_{0}^{\frac{1}{\lambda}}\frac{\lambda^3}{2}x^2 e^{-\lambda x}dx\\
+                          & = -\frac{e^{-\lambda x}}{2}\left(x^2\lambda^2+2x\lambda+2\right)\bigg|_{0}^{\frac{1}{\lambda}}\\
+                          & = -\frac{e^{-\lambda \frac{1}{\lambda}}}{2}\left(\frac{1}{\lambda^2}\lambda^2+2\frac{1}{\lambda}\lambda+2\right)+\frac{e^{-\lambda (0)}}{2}\left((0)^2\lambda^2+2(0)\lambda+2\right)\\
+                          & = -\frac{e^{-1}}{2}\left(1+2+2\right)+1\\
+                          P\left(0\le X\le \frac{1}{\lambda}\right) & = 1-\frac{5}{2e}
+                      \end{split}
+                  \end{equation*}
+        \end{enumerate}
+    \end{framed}
+
+    \question[10]{
+        A continuous random variable $X$ can have values between $x = 2$ and $x = 5$ and has the
+        probability density function $f_X(x) = k(1+x)$. Find $P(X < 4)$.
+    }
+
+    \begin{framed}
+        We will find $k$ by normalizing the pdf,
+        \begin{equation*}
+            \begin{split}
+                \int_{-\infty}^{\infty}f_{X}(x)dx & = 1\\
+                \int_{2}^{5}k(1+x)dx & = 1\\
+                k\int_{2}^{5}(1+x)dx & = 1\\
+                k\frac{27}{2} & = 1\\
+                k & = \frac{2}{27}
+            \end{split}
+        \end{equation*}
+        The probability of $P(X<4)$ is,
+        \begin{equation*}
+            \begin{split}
+                P(X<4) & = P(X\le 4)\\
+                & = \int_{-\infty}^{4}f_{X}(x)dx\\
+                & = \int_{2}^{4}\frac{2+2x}{27}dx\\
+                P(X<4) & = \frac{16}{27}
+            \end{split}
+        \end{equation*}
+    \end{framed}
+
+    \break
+    \question[10]{
+    A scientist discovered that the cumulative distribution function of the lifetime of a
+    satellite(in years) is given by $F_X(x)= 1-e^{-\frac{x}{5}}\; where \;x \geq 0$ \\
+    What is the expected lifetime of the Satellite?
+    }
+
+    \begin{framed}
+        The relation between cumulative density function and probability density function is,
+        \begin{equation*}
+            \begin{split}
+                f_{X}(x) & = \frac{dF_{X}}{dx}(x)\\
+                \therefore f_{X}(x) & = \frac{d}{dx}(1-e^{-\frac{x}{5}})\\
+                f_{X}(x) & = \frac{1}{5}e^{-\frac{x}{5}}
+            \end{split}
+        \end{equation*}
+        The expected value of the satellite's life time will be,
+        \begin{equation*}
+            \begin{split}
+                E[X] & = \int_{-\infty}^{\infty}xf_{X}(x)dx\\
+                & = \int_{0}^{\infty}\frac{x}{5}e^{-\frac{x}{5}}dx\\
+                & = \frac{1}{5}\int_{0}^{\infty}xe^{-\frac{x}{5}}dx\\
+                & = \frac{1}{5}\frac{\Gamma(2)}{\left(\frac{1}{5}\right)^2}\qquad\qquad \because\int_{0}^{\infty}t^be^{-at}dt=\frac{\Gamma(b+1)}{a^{b+1}}\\
+                & = \frac{1}{\frac{1}{5}}\\
+                E[X] & = 5
+            \end{split}
+        \end{equation*}
+    \end{framed}
+
+    \question[10]{
+        Assume you came up with a function that you think could represent a probability density function.
+        Therefore, you defined the potential probability density function for X as
+        $f_X(x) = \frac{1}{1+x^2} $,  where $(0 \leq X \leq \infty)$. You are not sure whether it is a
+        valid pdf. So you added a constant c which will make the pdf $f_X(x) = \frac{c}{1+x^2}$ a valid
+        pdf.\\
+        (Hints: $ \frac{d}{dx}(tan^{-1}x) = \frac{1}{1+x^2}$ and $tan \frac{\pi}{2} = \infty$)
+
+        \begin{enumerate}[(a)]
+            \item Find the value of c which makes the given pdf a valid pdf.
+            \item Find E[X].
+        \end{enumerate}
+    }
+
+    \begin{framed}
+        \begin{enumerate}[(a)]
+            \item We will normalize our potential pdf in order to find $c$,
+                  \begin{equation*}
+                      \begin{split}
+                          \int_{-\infty}^{\infty}f_{X}(x)dx & = 1\\
+                          \int_{0}^{\infty}\frac{c}{1+x^2}dx & = 1\\
+                          c\int_{0}^{\infty}\frac{1}{1+x^2}dx & = 1\\
+                          c\arctan(x)\bigg|_{0}^{\infty} & = 1\\
+                          c\arctan(\infty)-c\arctan(0) & = 1\\
+                          \frac{c\pi}{2} & = 1\\
+                          c & = \frac{2}{\pi}
+                      \end{split}
+                  \end{equation*}
+            \item The expected value is,
+                  \begin{equation*}
+                      \begin{split}
+                          E[X] & = \int_{-\infty}^{\infty}xf_{X}(x)dx\\
+                          & = \int_{0}^{\infty}\frac{2x}{\pi(1+x^2)}dx\\
+                          & = \frac{1}{\pi}\int_{0}^{\infty}\frac{1}{1+x^2}d(1+x^2)\\
+                          & = \frac{1}{\pi}\lim_{k\rightarrow\infty}\int_{0}^{k}\frac{1}{1+x^2}d(1+x^2)\\
+                          & = \frac{1}{\pi}\lim_{k\rightarrow\infty}\ln(1+x^2)\bigg|_{0}^{k}\\
+                          & = \frac{1}{\pi}\lim_{k\rightarrow\infty}\ln(1+k^2)-\frac{1}{\pi}\ln(1+0^2)\\
+                          & = \frac{1}{\pi}\lim_{k\rightarrow\infty}\ln(1+k^2)\\
+                          E[X] & = \infty
+                      \end{split}
+                  \end{equation*}
+        \end{enumerate}
+    \end{framed}
+
+
+    \question[10]{
+        Let we have a continuous random variable X with probability density function:
+        \begin{equation*}
+            f_X(x) = \begin{cases}
+                a + bx^2 & when\; 0\leq x \leq 1 \\
+                0        & \mbox{Otherwise}
+            \end{cases}
+        \end{equation*}
+
+
+        \begin{enumerate}[(a)]
+            \item If $E[X] = \frac{3}{5}$. Find the values of a and b.
+        \end{enumerate}
+    }
+    \begin{framed}
+        First we will normalize the pdf.
+        \begin{equation}\label{norm}
+            \begin{split}
+                \int_{-\infty}^{\infty}f_{X}(x)dx & = 1\\
+                \int_{0}^{1}(a+bx^2)dx & = 1\\
+                a+\frac{b}{3} & = 1\\
+            \end{split}
+        \end{equation}
+        Now we will use the expected value,
+        \begin{equation}\label{expec}
+            \begin{split}
+                E[X] & = \int_{-\infty}^{\infty}xf_{X}(x)dx\\
+                \frac{3}{5} & = \int_{0}^{1}x(a+bx^2)dx\\
+                \frac{3}{5} & = \int_{0}^{1}(ax+bx^3)dx\\
+                \frac{3}{5} & = \frac{a}{2}+\frac{b}{4}\\
+            \end{split}
+        \end{equation}
+        We will solve the equations. By \ref{norm} and \ref{expec},
+        \[(1)\implies a=1-\frac{b}{3}\]
+        \[\implies \frac{3}{5}=\frac{1-\frac{b}{2}}{2}+\frac{b}{4}\implies b=\frac{6}{5}\]
+        \[(2)\implies a=1-\frac{\frac{6}{5}}{3}=\frac{3}{5}\]
+        The values of $a$ and $b$ are,
+        \[a=\frac{3}{5}\qquad b=\frac{6}{5}\]
+    \end{framed}
+
+
+
+    \question[10]{ Let X be a normal random variable with parameters  $\mu = 10$ and
+        $\sigma^2 = 36$.\\Compute $P(4 < X < 16)$.
+    }
+    \begin{framed}
+        \textbf{Method 1}\newline
+        We have a normal distribution $\mathcal{N} (\mu=10,\sigma^2=36)$. Lets assume
+        another random variable $Y$ such that its expected value is $0$ and the
+        variance is $1$.
+        \[Y=\frac{X-10}{6}\]
+        $Y$ is an standard normal random variable. The probability will be of random
+        variable $X$ will be,
+        \begin{equation*}
+            \begin{split}
+                P\left(4\le X\le 16\right) & = P(4-10\le X-10\le 16-10)\\
+                & = P\left(-6\le X-10\le 6\right)\\
+                & = P\left(-\frac{6}{6}\le \frac{X-10}{6}\le \frac{6}{6}\right)\\
+                & = P\left(-1\le \frac{X-10}{6}\le 1\right)\\
+                & = 2P\left(0\le \frac{X-10}{6}\le 1\right)\\
+                & = 2P\left(\left(0\le \frac{X-10}{6}\right)\cap\left(1\le \frac{X-10}{6}\right)\right)\\
+                & = 2F_{\frac{X-10}{6}}(1)-2F_{\frac{X-10}{6}}(0)\\
+                & = 2(0.3413)-2(0.0000)\\
+                P\left(4\le X\le 16\right) & = 0.6826
+            \end{split}
+        \end{equation*}
+        \newline\textbf{Method 2}\newline
+        The pdf of the normal random variable is,
+        \[f_{X}(x)=\frac{1}{6\sqrt{2\pi}}\exp\left(-\frac{(x-10)^2}{72}\right)\]
+        The probability of $X$ between 4 and 16 is,
+        \begin{equation*}
+            \begin{split}
+                P(4 < X < 16) & = P(4 \le X \le 16)\\
+                & = \int_{4}^{16}f_{X}(x)dx\\
+                & = \int_{4}^{16}\frac{1}{6\sqrt{2\pi}}\exp\left(-\frac{(x-10)^2}{72}\right)dx\\
+                & = \frac{1}{6\sqrt{2\pi}}\int_{4}^{16}\exp\left(-\frac{(x-10)^2}{72}\right)dx\\
+                & = \frac{1}{6\sqrt{2\pi}}\int_{4}^{16}\exp\left(-\frac{(x-10)^2}{72}\right)d(x-10)\\
+            \end{split}
+        \end{equation*}
+        Let $t=\frac{x-10}{\sqrt{72}}\implies \sqrt{72}dt=dx$ and $x\in[4,16]\implies t\in[-\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}]$.
+        \[P(4<X<16)=\frac{1}{6\sqrt{2\pi}}\int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}}e^{-t^2}\sqrt{72}dt\]
+        \[P(4<X<16)=\frac{2}{\sqrt{\pi}}\int_{0}^{\frac{1}{\sqrt{2}}}e^{-t^2}dt\]
+        $\operatorname{erf}(z)$ is Error-function that is defined as,
+        \[\operatorname {erf} z={\frac {2}{\sqrt {\pi }}}\int _{0}^{z}e^{-t^{2}}dt\]
+        Therefore,
+        \[P(4<X<16)=\operatorname{erf}\left(\frac{1}{\sqrt{2}}\right)\]
+    \end{framed}
+
+    \break
+    \question[10]{
+        On an airport, planes are landing occasionally. Let X denote the time
+        (in seconds) until the next plane lands. Assume that X is exponential, with
+        expected value of 2.8 seconds.
+        \begin{itemize}
+            \item Find $P(X > 1.6)$.
+        \end{itemize}
+    }
+
+    \begin{framed}
+        The expected value of exponential random variable is,
+        \[E[X]=\frac{1}{\lambda}\]
+        \[2.8=\frac{1}{\lambda}\]
+        \[\lambda=\frac{5}{14}\]
+        The pdf of will be,
+        \[f_{X}(x)=\lambda e^{-\lambda x}=\frac{5}{14} e^{-\frac{5}{14} x}\]
+        For $P(X > 1.6)$,
+        \begin{equation*}
+            \begin{split}
+                P(X > 1.6) & = P(X \ge 1.6)\\
+                & = \int_{1.6}^{\infty}\frac{5}{14} e^{-\frac{5}{14} x}dx\\
+                & = \frac{5}{14} \int_{1.6}^{\infty}e^{-\frac{5}{14} x}dx\\
+                & = \frac{5}{14}\frac{e^{-\frac{5}{14} x}}{-\frac{5}{14}}\bigg|_{1.6}^{\infty}\\
+                & = -e^{-\frac{5}{14} x}\bigg|_{1.6}^{\infty}\\
+                & = -e^{-\frac{5}{14} (\infty)}+e^{-\frac{5}{14} (1.6)}\\
+                P(X > 1.6) & = e^{-\frac{4}{7}}
+            \end{split}
+        \end{equation*}
+    \end{framed}
+
+
+\end{questions}
+
+
+\noindent \hrulefill
+
+
+
+\end{document}

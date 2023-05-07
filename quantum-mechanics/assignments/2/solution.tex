@@ -1,0 +1,122 @@
+ Define Article %%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{Assignment 2}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\begin{problem}
+A star such as our Sun will eventually evolve to a “red giant” star and then to a “white dwarf”
+star. A typical white dwarf is approximately the size of Earth, and its surface temperature is about
+\(2.5 \times 10^4\)K . A typical red giant has a surface temperature of \(3.0 \times 10^3\)K and a radius 100,000 times larger than that of a white dwarf. What is the average radiated power per unit area and the total power radiated by each of these types of stars ? How do they compare ?
+\end{problem}
+\textit{ Sol. } According to Stefan's law, the total power radiated by a black body is given by,
+\[P  = \sigma AT^4\]
+Where \(\sigma\) is the Stefan-Boltzman constant and is equal to \(5.67 \times 10^{-8} Wm^{-2}K^{-4}\).
+The average power per unit area radiated by a black body then is,
+\[\bar{P} = \sigma T^4\]
+The average power per unit area radiated by a red giant is,
+\[\bar{P_{r}} = 4.59\times 10^6 \text{ W}\]
+The total power radiated by a red giant is,
+\begin{align*}
+	P_{r} & = \left(5.67 \times 10^{-8}\right) \cdot \left(4\pi \left(10^5 \times 6.3781\times10^6\right)^2\right) \cdot \left(3\times 10^{3}\right)^4 \\
+	      & = 2.35\times 10^{31} \text{ W}
+\end{align*}
+The average power per unit area radiated by a white-dwarf is,
+\[\bar{P_{w}} = 2.21\times 10^{10} \text{ W}\]
+The total power radiated by a white-dwarf is,
+\begin{align*}
+	P_{w} & = \left(5.67 \times 10^{-8}\right) \cdot \left(4\pi \left(6.3781\times10^6\right)^2\right) \cdot \left(2.5\times 10^{4}\right)^4 \\
+	      & =1.13 \times 10^{25} \text{ }W
+\end{align*}
+The white dwarf radiates more average power per unit area than the red giant due to its higher surface temperature, but when surface area is included, the overall power emitted by a red giant is significantly more than a white dwarf due to its large surface area. The explanation for this might be because the fusion process in the core of the red giant ended when it turned into a white dwarf following the formation of a planetary nebula surrounding it (as is likely for the sun) and lost most of its energy (in the form of gas and plasma).
+
+\begin{problem}
+An iron poker is being heated. As its temperature rises, the poker begins to glow—first dull red, then bright red, then orange, and then yellow. Use either the blackbody radiation curve or Wien's law to explain these changes in the color of the glow.
+\end{problem}
+\textit{ Sol. } According to Wien's law, the peak wavelength of the blackbody radiation curve is inversely proportional to the temperature of the body. As the temperature of the iron poker increases, the peak wavelength of the blackbody radiation curve decreases, which results in the poker glowing in different colors. The poker first glows dull red, then bright red, then orange, and then yellow as the temperature increases.
+
+\begin{problem}
+Suppose that two stars, \(\alpha\) and \(\beta\), radiate exactly the same total power. If the radius of star \(\alpha\) is three times that of star \(\beta\), what is the ratio of the surface temperatures of these stars? Which one is hotter?
+\end{problem}
+\textit{ Sol. } If the power radiated by the stars is exactly the same then according to the Stefan's law the expression for the power radiated can be equated\footnote{assuming a perfectly spherical body for the star} to get the ratio between the surface temperatures.
+\begin{align*}
+	     & \sigma \cdot 4\pi \cdot R_{\alpha}^2 \cdot T_{\alpha}^4  = \sigma \cdot 4\pi \cdot R_{\beta}^2 \cdot T_{\beta}^4 \\
+	\iff & \frac{T_{\alpha}^4}{T_{\beta}^4}                    = \frac{R_{\beta}^2}{R_{\alpha}^2}                           \\
+	\iff & \frac{T_{\alpha}^4}{T_{\beta}^4}                    = \frac{R_{\beta}^2}{9R_{\beta}^2}                           \\
+	\iff & \frac{T_{\alpha}^4}{T_{\beta}^4}                    = \frac{1}{9}                                                \\
+	\iff & \frac{T_{\alpha}}{T_{\beta}}                        = \frac{1}{\sqrt{3}}                                         \\
+	\iff & \sqrt{3}T_{\alpha}                                  = T_{\beta}                                                  \\
+	\iff & T_{\alpha}                                          < T_{\beta}
+\end{align*}
+As derived above the surface temperature of star \(\beta\) is \(\sqrt{3}\) times the surface temperature of star \(\alpha\), implying that it is hotter.
+
+\begin{problem}
+A 1.0-kg mass oscillates at the end of a spring with a spring constant of 1000 N/m. The amplitude of these oscillations is 0.10 m. Use the concept of quantization to find the energy spacing for this classical oscillator. Is the energy quantization significant for macroscopic systems, such as this oscillator?
+\end{problem}
+\textit{ Sol. } The energy of a classical oscillator is given by,
+\[E = \frac{1}{2}kx^2\]
+Where \(k\) is the spring constant and \(x\) is the displacement of the mass from its equilibrium position. The energy spacing for this classical oscillator is given by,
+\[\Delta E = \frac{1}{2}k\Delta x^2\]
+Where \(\Delta x\) is the change in the displacement of the mass from its equilibrium position. The energy spacing for this classical oscillator is given by,
+\[\Delta E = \frac{1}{2} \cdot 1000 \cdot 0.01^2 = 0.5 \text{ J}\]
+The energy spacing for this classical oscillator is very small compared to the energy of the oscillator, which is \(1/2 \cdot 1000 \cdot 0.1^2 = 5 \text{ J}\). Hence, the energy quantization is not significant for macroscopic systems.
+
+
+\end{document}

@@ -1,0 +1,108 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{titling}
+
+\graphicspath{{images/}}
+
+\printanswers
+
+\title{Weekly Challenge 09: Graph Connectivity\\CS 412 Algorithms: Design and Analysis}
+\author{team-name}  % <==== replace with your team name for grading
+\date{Habib University | Spring 2023}
+
+\runningheader{CS 412: Algorithms}{WC09: Graph Connectivity}{\theauthor}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+
+	\titledquestion{Main Campus}
+
+	\begin{center}
+		\includegraphics[width=.7\textwidth]{campus}\\
+		\small \href{https://www.google.com/maps/place/Habib+University+Education+City%E2%80%AD/@25.0000165,67.4035345,776m/data=!3m2!1e3!4b1!4m6!3m5!1s0x394cb5ab8da5ad77:0xd1101c614558c064!8m2!3d25.0000165!4d67.4035345!16s%2Fg%2F11hfg1fyvd?hl=en-PK}{Google Maps result} for ``Habib University Education City''.    
+	\end{center}
+
+	Awed by your algorithmic prowess, HU has engaged you in a survey of its land for approaching development of the main campus. You have identified various sites and routes on the satellite imagery, and have deployed survey drones. Due to terrain, weather, and vegetation conditions, routes are not automatically bi-directional. You can remotely program the drones to travel from one site to another if a route exists between them.
+
+	A drone can be launched from a site in order to make a tour. It can only travel along existing routes and must return to its starting site. It mat visit a site more than once if required. Launching a drone incurs a cost which depends on the starting site alone. You have an ample number of drones at your service in order to survey all the identified sites.
+
+	Given the network of sites and routes, and the launch cost at each site, you want to determine:
+	\begin{enumerate}
+		\item the minimum number of drones required for the survey
+		\item the minimum cost of conducting a tour
+		\item the maximum number of unique sites that can be surveyed by a single drone
+	\end{enumerate}
+
+	\subsection*{Input \& Constraints}
+	The first line contains an integer, $n$, the number of sites. ( $1\leq n\leq 3\cdot 10^5$)\\
+	The next line contains $n$ space-separated integers where the $i$-th integer is the cost $c_i$, of launching a drone from the $i$-th site.($1\leq c_i\leq 10^9$) \\
+	The next line contains an integer, $m$.($0\leq m\leq 3\cdot 10^5$) \\
+	Each of the next $m$ lines contains two integers, $u$ and $v$, indicating a route from $u$ to $v$. ($0\leq u,v<n,\; u\neq v$)\\
+	There is at most one route between two sites in the same direction.
+
+	\subsection*{Output}
+	Compute and return 3 integers corresponding to the quantities mentioned above, and in the same order.
+
+	\subsection*{Sample}
+
+	\begin{minipage}[t]{.3\textwidth}
+		\begin{tabular}[t]{|l|l|}
+			\hline
+			Sample Input & Output \\
+			\hline
+			3            & 2 3 2  \\
+			1 2 3        &        \\
+			3            &        \\
+			0 1          &        \\
+			1 2          &        \\
+			2 1          &        \\
+			\hline
+			5            & 2 8 4  \\
+			2 8 0 6 0    &        \\
+			6            &        \\
+			0 3          &        \\
+			0 2          &        \\
+			1 3          &        \\
+			2 3          &        \\
+			3 4          &        \\
+			4 0          &        \\
+			\hline
+		\end{tabular}
+	\end{minipage}
+	\begin{minipage}[t]{.65\textwidth}
+		\vspace{10pt}
+		\underline{Explanation of Sample 1}\\
+		One drone is launched from the site that costs 1 and another from the site that costs 2. The latter drone also visits the site which has cost 3.
+	\end{minipage}
+
+	\subsection*{Tasks}
+	\begin{enumerate}
+		\item Implement the function, \texttt{survey\_campus}, in the accompanying file, \texttt{test\_survey.py}. Pay attention to the parameter and return types.
+		\item Run \texttt{pytest test\_survey.py} locally in order to identify and debug any errors.
+		\item Adhere to good attribution practices: make sure to cite any sources or references, \href{https://hulms.instructure.com/courses/2616/discussion_topics/29240}{especially if using AI}.
+	\end{enumerate}
+
+	\subsection*{Credits}
+	This problem is adapted from \href{https://giki.edu.pk/icpc/}{ICPC Asia Topi 2022-2023 Onsite Contest}.
+
+\end{questions}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

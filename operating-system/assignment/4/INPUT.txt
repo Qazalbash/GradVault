@@ -1,0 +1,10 @@
+2 1 Outgoing
+2 3 Incoming
+1 1 Incoming
+0 2 Outgoing
+3 3 Outgoing
+0 2 Outgoing
+3 1 Incoming
+2 3 Incoming
+1 1 Incoming
+0 2 Outgoing

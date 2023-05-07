@@ -1,0 +1,90 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{titling}
+
+\graphicspath{{images/}}
+
+\printanswers
+
+\title{Weekly Challenge 14: Optimal Commutation\\CS 412 Algorithms: Design and Analysis}
+\author{q1-team-2}  % <==== replace with your team name for grading
+\date{Habib University | Spring 2023}
+
+\runningheader{CS 412: Algorithms}{WC14: Optimal Commutation}{\theauthor}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+
+  \titledquestion{Governmental Offices}
+
+  It was all fun and games until you realize a governmental certificate of yours misspells your name on it. Thinking how hard can it be to apply for a change of spelling, you walk to the relevant office only to realize that now you need to re-submit all your family's bio-data. You run errands to collect the data and it turns out someone in your family has got their spelling wrong too in some governmental document, which is fatal and needs to be corrected before yours! After some more fiddling around with the documents, the sequence of governmental sites that you must now visit has become known to you.
+
+  There are $\textbf{N}$ sites in total while the sequence has $\textbf{Q}$ occurrences of them which may be repetitive. Moreover, there are $\textbf{P}$ pairs of sites $\textbf{u\textsubscript{i}, v\textsubscript{i}}$ which are directly reachable, corresponding to each of which is a commuting cost $\textbf{C\textsubscript{i}}$ where \textbf{1} $\leq$ \textbf{i} $\leq$ \textbf{P}. Not every site is directly reachable from every other site and neither is the cost necessarily the same for commuting two-ways for a pair.
+
+  Your problem is to determine the optimal cost to pay a visit to all sites as they occur in sequence. While reaching to the next site in sequence, your journey may cover any number of intermediate sites.
+
+  \subsection*{Input \& Constraints}
+  The first line contains two space-separated integers, $\textbf{N}$,  the number of sites and $\textbf{P}$, the number of pairs directly connected. ( $1\leq $ $\textbf{N}$ $\leq 50$ and  $1\leq $ $\textbf{P}$ $\leq $ $1000$)\\
+  Each of the next $\textbf{P}$ lines contain 3 space-separated integers which for \textbf{i}-th line are $\textbf{u\textsubscript{i}, v\textsubscript{i}}$  and $\textbf{c\textsubscript{i}}$.($1\leq $ \textbf{u\textsubscript{i}} $\leq \textbf{N}$; $1\leq $ \textbf{v\textsubscript{i}} $\leq \textbf{N}$ and $1\leq $ \textbf{c\textsubscript{i}} $\leq 100$) \\
+  The next line contains an integer, \textbf{Q}.($1\leq$ \textbf{Q} $\leq 1000$) \\
+  The next line contains \textbf{Q} space-separated integers \textbf{i}-th of which denotes the site \textbf{s}\textsubscript{i} occurring at the corresponding place in the sequence.\\
+
+  \subsection*{Output}
+  Compute the optimal cost to visit all sites in sequence.
+
+  \subsection*{Sample}
+
+  \begin{minipage}[t]{.3\textwidth}
+    \begin{tabular}[t]{|l|l|}
+      \hline
+      Sample Input & Output \\
+      \hline
+
+      3            & 31     \\
+      6                     \\
+      1 2 10                \\
+      1 3 31                \\
+      2 3 5                 \\
+      2 1 24                \\
+      3 2 7                 \\
+      3 1 4                 \\
+      4                     \\
+      1 3 2 1               \\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}[t]{.65\textwidth}
+    \vspace{10pt}
+    \underline{Explanation}\\
+    The optimal way to visit sites in the sequence $1,3,2,1$ is to commute in the order $1,2,3,2,3,1$ which costs 31.
+  \end{minipage}
+
+  \subsection*{Tasks}
+  \begin{enumerate}
+    \item Implement the function, \texttt{commutation_cost}, in the accompanying file, \texttt{test\_commute.py}. Pay attention to the parameter and return types.
+    \item Run \texttt{pytest test\_commute.py.py} locally in order to identify and debug any errors.
+    \item Adhere to good attribution practices: make sure to cite any sources or references, \href{https://hulms.instructure.com/courses/2616/discussion_topics/29240}{especially if using AI}.
+  \end{enumerate}
+
+
+\end{questions}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

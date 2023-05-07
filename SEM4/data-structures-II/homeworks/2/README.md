@@ -1,1 +1,0 @@
-# Convey-Game-of-Life

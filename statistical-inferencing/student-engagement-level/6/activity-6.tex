@@ -1,0 +1,118 @@
+ Define Article %%%%%
+\documentclass{exam}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{Activity 6}
+\author{Muhammad Meesum Ali Qazalbash}
+\printanswers
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\begin{questions}
+	\question Use teh following data to construct a 99\% confidence interval for \(\mu\).
+	\begin{align*}
+		\begin{array}{|c|c|c|c|c|}
+			\hline
+			16.4 & 17.1 & 17.0 & 15.6 & 16.2 \\\hline
+			14.8 & 16.0 & 15.6 & 17.3 & 17.4 \\\hline
+			15.6 & 15.7 & 17.2 & 16.6 & 16.0 \\\hline
+			15.3 & 15.4 & 16.0 & 15.8 & 17.2 \\\hline
+			14.6 & 15.5 & 14.9 & 16.7 & 16.3 \\\hline
+		\end{array}
+	\end{align*}
+	Assume \(X\) is normally distributed. What is the point estimation of \(\mu\)?
+	\begin{solution}
+		\begin{align*}
+			\hat{\mu}        & = \frac{1}{25} \sum_{i=1}^{25} X_i = \frac{1}{25} \left( 16.4 + 17.1 + \cdots + 16.7 + 16.3 \right) = \boxed{16.088}                     \\
+			\hat{\sigma^{2}} & = \frac{1}{25} \sum_{i=1}^{25} (X_i - \hat{\mu})^2 = \frac{1}{25} \left( (16.4 - 16.088)^2 + \cdots  + (16.3 - 16.088)^2 \right) = 0.640
+		\end{align*}
+		For 99\% confidence interval \(\alpha=0.001\). The confidence interval for \(\mu\) is given by,
+		\[
+			\mu=\hat{\mu} \pm z_{\alpha/2} \sqrt{\frac{\hat{\sigma^{2}}}{n}} = 16.088 \pm 3.2905 \sqrt{\frac{0.640}{25}} = 16.088 \pm 0.52648
+		\]
+		\[\boxed{15.5615\le \mu\le 16.6145}\]
+
+
+	\end{solution}
+
+	\newpage
+
+	\question A manufacturing plant produces steel rods. During one production run of 20,000 such rods, the specifications called for rods that were 46 centimeters in length and 3.8 centimeters in width. Fifteen of these rods comprising a random sample were measured for length; the resulting measurements are shown here. Use these data to estimate the population variance of length for the rods. Assume rod length is normally distributed in the population. Construct a 99\% confidence interval. Discuss the ramifications of the results.
+	\begin{align*}
+		\begin{array}{|c|c|c|c|c|}
+			\hline
+			44 & 47 & 43 & 46 & 46 \\\hline
+			45 & 43 & 44 & 47 & 46 \\\hline
+			48 & 48 & 43 & 44 & 45 \\\hline
+		\end{array}
+	\end{align*}
+	\begin{solution}
+		Sample variance (baised) is,
+		\[\hat{\sigma^{2}}=\frac{44+47+\cdots+44+45}{15}=45.267\]
+		For 99\% confidence interval \(\alpha=0.01\) the interval would be,
+		\begin{align*}
+			\frac{n\hat{\sigma^{2}}}{\chi^{2}_{n-1}(\alpha/2)} & \le \sigma^{2}\le\frac{n\hat{\sigma^{2}}}{\chi^{2}_{n-1}(1-\alpha/2)} \\
+			\frac{679}{\chi^{2}_{14}(0.005)}                   & \le \sigma^{2}\le\frac{679}{\chi^{2}_{14}(0.995)}                     \\
+			\frac{679}{31.319}                                 & \le \sigma^{2}\le\frac{679}{4.075}                                    \\
+			21.680                                             & \le \sigma^{2}\le 166.625                                             \\
+			4.656                                              & \le \sigma \le 12.9
+		\end{align*}
+		The 99\% confidence interval for variance is,
+		\[\boxed{21.680 \le \sigma^{2}\le 166.625}\]
+		The results are that the standart error is between 4.656 and 12.9. This is a very large range and the results are not very reliable.
+	\end{solution}
+\end{questions}
+\end{document}

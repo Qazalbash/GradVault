@@ -1,0 +1,142 @@
+ Define Article %%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4
+}
+
+\lstset{style=mystyle}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{Explaination of Assignment 4}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\section{Number of Cars}
+At anytime there should be no more than {\tt ALLOWED\_CARS}. This condition has been implemented as {\tt cars\_since\_repair >= ALLOWED\_CARS} in while loop in {\tt incoming\_enter} and {\tt outgoing\_enter}, by this car would never enter if there are 3 cars already on the street. Same condition is also in {\tt outgoing\_enter}.
+
+We also had to take care of the cars travelling in the opposite direction. There shouldn't be any two cars travelling in opposite direction at same instance on the stree. This condition has been implemented as {\tt outgoing\_onstreet > 0} in the while loop in {\tt incoming\_enter} and {\tt outgoing\_enter}, so a car would never enter if there is any car travelling opposite to it.
+travelling on opposite direction on the street.
+\begin{lstlisting}[language=C, caption={\tt incoming\_enter} and {\tt outgoing\_enter}]
+void incoming_enter()
+{
+	pthread_mutex_lock(&mutex); // lock the mutex
+	while (cars_on_street >= ALLOWED_CARS ||
+		   cars_since_repair >= USAGE_LIMIT ||
+		   outgoing_onstreet > 0)		  // wait until the street is ready to accept incoming cars
+		pthread_cond_wait(&cond, &mutex); // wait on the condition variable
+	cars_on_street++;					  // increment the number of cars on the street
+	incoming_onstreet++;				  // increment the number of incoming cars on the street
+	pthread_mutex_unlock(&mutex);		  // unlock the mutex
+}
+
+void outgoing_enter()
+{
+	pthread_mutex_lock(&mutex); // lock the mutex
+	while (cars_on_street >= ALLOWED_CARS ||
+		   cars_since_repair >= USAGE_LIMIT ||
+		   incoming_onstreet > 0)		  // wait until the street is ready to accept outgoing cars
+		pthread_cond_wait(&cond, &mutex); // wait on the condition variable
+	cars_on_street++;					  // increment the number of cars on the street
+	outgoing_onstreet++;				  // increment the number of outgoing cars on the street
+	pthread_mutex_unlock(&mutex);		  // unlock the mutex
+}
+    \end{lstlisting}
+\section{Street Requires a Repair}
+After 7 cars has passed, street is required to repair. This condition has been implemented as {\tt cars\_since\_repair != USAGE\_LIMIT} in the while loop in {\tt street\_thread}, so a car would never enter if the street is required to repair. The loop will spin wait unitl the usage limit is reached. After the usage limit is reached, the street is repaired and the number of cars since repair is reset to 0.
+\begin{lstlisting}[language=C, caption={\tt street\_thread}]
+void *street_thread(void *junk)
+{
+    printf("The street is ready to use\n");
+    while (1)
+    {
+        if (cars_since_repair == USAGE_LIMIT)
+        {
+            pthread_mutex_lock(&mutex);	  // lock the mutex
+            cars_since_repair = 0;		  // reset the counter
+            repair_street();			  // call the repair function
+            pthread_cond_signal(&cond);	  // signal the condition variable
+            pthread_mutex_unlock(&mutex); // unlock the mutex
+        }
+    }
+    pthread_exit(NULL); // exit the thread
+}
+    \end{lstlisting}
+\end{document}

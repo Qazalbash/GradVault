@@ -1,0 +1,166 @@
+ Define Article %%%%%
+\documentclass{exam}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{SEL Activity 5}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%
+\printanswers
+\begin{document}
+\maketitle
+
+\begin{questions}
+	\question Prove that \(\displaystyle\operatorname{E}\left[\left(T-\mu_{T}\right)^{2}\right]=\frac{4A^{3}+2A^{2}}{N}\).
+
+	\begin{solution}
+		\begin{equation}\label{proof}
+			\begin{split}
+				\operatorname{E}\left[\left(T-\mu_{T}\right)^{2}\right]&=\operatorname{var}(T)\\
+				&=\operatorname{var}\left(\frac{1}{N}\sum_{i=0}^{N}X^{2}_{i}\right)\\
+				&=\frac{1}{N^2}\operatorname{var}\left(\sum_{i=0}^{N}X^{2}_{i}\right)\\
+				&=\frac{1}{N^2}\sum_{i=0}^{N}\operatorname{var}\left(X^{2}_{i}\right)\\
+				&=\frac{N}{N^2}\operatorname{var}\left(X^{2}\right)\\
+				&=\frac{1}{N}\operatorname{var}\left(X^{2}\right)\\
+			\end{split}
+		\end{equation}
+		Where \(X\sim\mathcal{N}(x;A,A)\), therefore the variance of \(X^2\) would be,
+		\begin{equation*}
+			\begin{split}
+				\operatorname{var}\left(X^{2}\right)&=\operatorname{E}\left[X^{4}\right]-\operatorname{E}\left[X^2\right]^2\\
+				&=\operatorname{E}\left[X^{4}\right]-\left(A^2+A\right)^2\\
+			\end{split}
+		\end{equation*}
+		We can use the moment generating function of Guassian Randome Variable to calculate the 4th moment,
+		\[X\sim \mathcal{N}(\mu,\sigma^{2}) \implies M_{X}(0)=\exp{\left(t\mu+\frac{1}{2}\sigma^2t^2\right)}\]
+		We know that,
+		\[y=e^{f(t)}\Rightarrow y''''=\left(f''''(0)+4f'''(0)f'(0)+3(f''(0))^2+6f''(0)(f'(0))^2+(f'(0))^{4}\right)e^{f(0)}\]
+		Let \(f(t)=\mu t+\frac{1}{2}\sigma^{2}t^{2}\),
+
+		\begin{align*}
+			f^{(0)}(t)=\mu t+\frac{1}{2}\sigma^{2}t^{2} & \implies f^{(0)}(0)= 0          \\
+			f^{(1)}(t)=\mu+\sigma^{2}t                  & \implies f^{(1)}(0)= \mu        \\
+			f^{(2)}(t)=\sigma^{2}                       & \implies f^{(2)}(0)= \sigma^{2} \\
+			f^{(3)}(t)=0                                & \implies f^{(3)}(0)= 0          \\
+			f^{(4)}(t)=0                                & \implies f^{(4)}(0)= 0          \\
+		\end{align*}
+
+		The fourth moment would be,
+
+		\begin{equation*}
+			\begin{split}
+				\mu_4&=M^{(4)}_{X}(0)\\
+				&=\frac{\operatorname{d}^{4}}{\operatorname{d}t^{4}}\left(\exp{\left(t\mu+\frac{1}{2}\sigma^2t^2\right)}\right)\\
+				&=\left(0+4(0)(\mu)+3\left(\sigma^{2}\right)^2+6\sigma^{2}(\mu)^2+(\mu)^{4}\right)e^{0}\\
+				&=3\sigma^{4}+6\sigma^{2}\mu^2+\mu^{4}\\
+				&=3A^{2}+6A^3+A^{4}\\
+			\end{split}
+		\end{equation*}
+		The variance of \(X^2\) would be,
+		\begin{equation*}
+			\begin{split}
+				\operatorname{var}\left(X^{2}\right)&=3A^{2}+6A^3+A^{4}-\left(A^2+A\right)^2\\
+				&=3A^{2}+6A^3+A^{4}-A^{4}-2A^{3}-A^{2}\\
+				&=4A^{3}+2A^{2}\\
+			\end{split}
+		\end{equation*}
+		Putting the above result in \eqref{proof}, we get,
+		\[\operatorname{var}(T)=\operatorname{E}\left[\left(T-\mu_{T}\right)^{2}\right]=\frac{4A^{3}+2A^{2}}{N}\]
+		\center \(\blacksquare\)
+	\end{solution}
+
+	\newpage
+
+	\question Prove the following claims,
+	\begin{enumerate}
+		\item \(g(\mu_{T})=A\)
+		\item \(\displaystyle g'(\mu_{T})=\frac{1}{2}\left(A+\frac{1}{2}\right)^{-1}\)
+		\item \(\displaystyle g''(\mu_{T})=-\frac{1}{4}\left(A+\frac{1}{2}\right)^{-3}\)
+	\end{enumerate}
+
+	\begin{solution}
+		We know that, \(\mu_{T}=A^{2}+A\) and \(\displaystyle g(T)=-\frac{1}{2}+\sqrt{T+\frac{1}{4}}\)
+		\[\therefore g(\mu_{T})=-\frac{1}{2}+\left(A^{2}+A+\frac{1}{4}\right)^{\frac{1}{2}}=-\frac{1}{2}+A+\frac{1}{2}=A\]
+		\[\therefore g'(\mu_{T})=\frac{\operatorname{d}g(T)}{\operatorname{d}T}\bigg|_{T=\mu_{T}}=\frac{1}{2}\left(A^{2}+A+\frac{1}{4}\right)^{-\frac{1}{2}}=\frac{1}{2}\left(A+\frac{1}{2}\right)^{-1}\]
+		\[\therefore g''(\mu_{T})=\frac{\operatorname{d}^{2}g(T)}{\operatorname{d}T^{2}}\bigg|_{T=\mu_{T}}=-\frac{1}{4}\left(A^{2}+A+\frac{1}{4}\right)^{-\frac{3}{2}}=-\frac{1}{4}\left(A+\frac{1}{2}\right)^{-3}\]
+		\center \(\blacksquare\)
+	\end{solution}
+
+	\question Using (1), (2) and \(\displaystyle\operatorname{var}\left(\hat{A}\right)=\sigma^{2}_{\hat{A}}\approx\sigma^{2}_{T}\left[g'\left(\mu_{T}\right)\right]^{2}\) to obtain the expression for \(\operatorname{E}\left[\hat{A}\right]\)
+
+	\begin{solution}
+		\begin{align*}
+			\operatorname{E}\left[\hat{A}\right] & =g(\mu_{T})+\frac{1}{2}g''(\mu_{T})\operatorname{E}\left[(T-\mu_{T})^{2}\right]                            \\
+			                                     & =A+\frac{1}{2}\left(-\frac{1}{4}\left(A+\frac{1}{2}\right)^{-3}\right)\left(\frac{4A^{3}+2A^{2}}{N}\right) \\
+			                                     & =A-\frac{2A^{2}}{(2A^{2}+1)^{2}}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+
+	\question Show that \(\displaystyle\operatorname{var}\left(\hat{A}\right)=\frac{A^2}{N\left(A+\frac{1}{2}\right)}\).
+
+	\begin{solution}
+		\begin{align*}
+			\operatorname{var}\left(\hat{A}\right)=\sigma^{2}_{\hat{A}} & \approx\sigma^{2}_{T}\left[g'\left(\mu_{T}\right)\right]^{2}                              \\
+			                                                            & \approx\frac{4A^{3}+2A^{2}}{N}\left[\frac{1}{2}\left(A+\frac{1}{2}\right)^{-1}\right]^{2} \\
+			                                                            & \approx4A^{2}\frac{A+\frac{1}{2}}{N}\frac{1}{4}\left(A+\frac{1}{2}\right)^{-2}            \\
+			                                                            & \approx\frac{A^2}{N\left(A+\frac{1}{2}\right)}
+		\end{align*}
+		\center \(\blacksquare\)
+	\end{solution}
+\end{questions}
+
+\end{document}

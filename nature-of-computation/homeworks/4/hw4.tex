@@ -1,0 +1,164 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath, amsfonts, amssymb,amsthm}
+\usepackage{forest}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{titling}
+
+\renewcommand{\solutiontitle}{\textit{Proof. }}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2022}{HW 4: Complexity and Reducibility}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\boxedpoints
+\printanswers
+
+\title{Homework 4: Complexity and Reducibility}
+\author{Final-Parser} % <=== replace with your team name
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+    \question[10] Define a \textit{coding} $\kappa$ to be a mapping, $\kappa:\Sigma^*\rightarrow \Sigma^*$ (not necessarily one-to-one). For some string $x = x_1x_2\cdots x_n\in\Sigma^*$, we define $\kappa(x) =\kappa(x_1)\kappa(x_2)\cdots\kappa(x_n)$ and for a language $L\subseteq \Sigma^*$, we define $\kappa(L) = \{\kappa(x): x\in L \}$. Show that the class NP is closed under \textit{codings}. 
+    \begin{solution}
+        For any language $L$ in NP we will show that $\kappa(L)$ is also in NP. We show this by constructing a deterministic polynomial time verifier for $\kappa(L)$. Let $L\in \mbox{NP}$, let $V$ be a polynpomial time verifier for $L$. We construct $K$ a polynomial time verifier for $\kappa(L)$ as follows:
+        
+        $K = $ "On input $\langle w, \langle x,c\rangle\rangle$:
+        \begin{enumerate}
+            \item Compute $\kappa(x)$ from $x$, if $\kappa(x) = w$ then move to next step, else \textit{reject}.
+            \item Simulate $V$ on $\langle x,c\rangle$ if $V$ accepts then \textit{accept}, else \textit{reject}."
+        \end{enumerate}
+        Here for any string $w\in\kappa(L)$ we have $\langle x,c\rangle$ as certificate of $w$, where $c$ is the certificate for $x$ in $L$, so if $w =\kappa(x)$ then we make the string $\langle x,c\rangle$ certificate of $w$ if $c$ is certificate of $x$.\hfill\qed
+    \end{solution}
+    
+    \question[10] Show that 2SAT $\in$  P, where 2SAT $ = \{\phi \mid\phi\text{ is a satisfiable 2cnf-formula}\}$. You must give a high level description of the algorithm, and show that it runs in polynomial time. \\ \textit{Hint}: A disjunctive clause $(x_1 \vee x_2)\text{ is logically equivalent to } \neg x_1 \implies x_2\text{ and } \neg x_2 \implies x_1$.
+    \begin{solution}
+        To show that 2SAT $\in$ P we will first reduce it to PATH problem from page 287 of the book. First we know that any boolean expression
+        \[x \lor y \iff ((\neg x \implies y) \land (\neg y \implies x))\]
+        Now for the a expression in 2CNF is satisfiable if and only if there exists and assignemnt such that all of the cluases are true. This claim can be simply seen by the definition of 2CNF. 
+        
+        As all clauses are connected by conjunctions then if any clause is false the entire expression would be false, now if all the clauses are true then the conjunction would be true therefore the expression is true. If the expression is true then each clause has to be true. 
+        
+        So now the problem becomes of making sure no clause is false. Now a clause will be false if we have a contradiction. First we need to expression our boolean expression $\phi$ in a different form that is for every clause $x \lor y$ we replace it with $(\neg x \implies y) \land (\neg y \implies x)$ we obtain a new expression this way (which is equivalent to the orginal one) lets call it $\beta$.
+        
+        Now we will transform the our boolean expression $\beta$ into a directed graph $G$. (it is important for the rest of the proof to remember that $\phi\iff\beta$)
+        
+        Let $G = (V, E)$ be a graph, such that
+        \[V = \{x\mid x\text{ is a literal in }\beta\}\]
+        \[E = \{(x,y)\mid x \implies y\text{ exists in the expression }\beta\}\]
+        so basically each literal in $\beta$ becomes a vertex in $G$ and for every implication $x \implies y$ in $\beta$ we create an edge in $G$.
+        
+        Now the claim is $\phi$ is satisfiable if and only if there does not exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$ to $x$ where $x$ is any literal in $\beta$.
+        
+        For an implication $a \implies b$ is equivalent to saying if $a$ is true then $b$ must be true.
+        
+        As each edge $(x,y)$ in $G$ represents the implication $x \implies y$ then we have that if there is an edge from vertex $x$ to vertex $y$ in $G$ then if literal $x$ is true then literal $y$ must be true. 
+        
+        A much broader claim is that as implication is transitive (hypothetical syllogism) we can say that if there is a directed path from vertex $x$ to vertex $y$ in $G$ then we have that if $x$ is true $y$ must be true.
+        
+        First we show show that if $\phi$ is satisfiable then there does not exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$. To show this we show its contrapositive that if there is a path from $x$ to $\neg x$ and from $\neg x$ to $x$ in $G$ then $\phi$ is not satifiable. 
+        
+        So now we have a path from $x$ to $\neg x$ and a path from $\neg x$ to $x$ in $G$ that means there is an implication $x \implies \neg x$ and $\neg x \implies x$. So we have that 
+        \[(x \implies \neg x) \land (\neg x \implies x)\iff (\neg x \lor \neg x) \land (x \lor x)\iff \neg x \land x\]
+        which is a contradiction, therefore if we $(x \implies \neg x) \land (\neg x \implies x)$ in our expression then our expression will become a contradiction therefore it wont be satisfiable. So if there is a path from $x$ to $\neg x$ or from $\neg x$ to $x$ in $G$ then $\phi$ is not satifiable. Therefore if $\phi$ is satisfiable then there does not exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$. Now for the converse we have that if there does not exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$ then $\phi$ is satisfiable.
+        
+        Now we know that if there exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$ then $\phi$ is a contradiction, now we argue that if no such path exists we can easily construct a valid assignment of truth values to the literals such that $\phi$ evaluate to true under that assignment.
+        
+        An implication $a \implies b$ is false iff $a$ is true but $b$ is false, $\phi$ is true iff there is no contradiction in $\beta$ and no false implication. 
+        
+        As we have that there is no path from $x$ to $\neg x$ and from $\neg x$ to $x$ in $G$ for all literals $x$ in $\beta$, we have that there is no contradiction in $\beta$.
+        
+        Now we claim that if there are no contradictions of this sort in $\beta$ then there are no false implications in $\beta$. This can be shown by proposing an assignemnt such that for every \href{https://en.wikipedia.org/wiki/Strongly_connected_component}{strongly connected component} $\alpha$ in $G$ we assign $\alpha$ a truth value and then assign every vertex in $\alpha$ the same truth value.
+        
+        As the vertices in $\alpha$ make a path correspoding to some line of implications from $\beta$ if every vertex in $\alpha$ has the same truth value then there is no false implication in $\alpha$. As we do this for every strongly connected component $\alpha$ in $G$ we make sure there is no false implication in $\beta$ under this assignment.
+        
+        It is not important for the sake of this prove to see how we can assign truth values to each $\alpha$ as we are taking a non-contructivist approach, but by assigning some truth value to each $\alpha$ and assigning each vertex $x$ in $\alpha$ the same truth value we make sure that there is not false implication as for each implication $a \implies b$ either both $a$ and $b$ are true or both $a$ and $b$ are false. So we have that if there does not exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$ then $\phi$ is satisfiable. Therefore $\phi$ is satisfiable if and only if there does not exists a path in $G$ from $x$ to $\neg x$ or from $\neg x$ to $x$ where $x$ is any literal in $\beta$.
+        
+        Now we to check if a boolean expression $\phi$ in 2CNF is satisfiable we can just convert it into the form $\beta$ which is then transformed into graph $G = (V,E)$ and then the problem just become that for each $x\in V$ we see if there is a directed path from $x$ to $\neg x$ ($x$ and $\neg x$ corresponds to literals in $\beta$ if we have $\neg x\in V$ then the path its checked from it to $x$).
+        
+        If no such path is found then the expression is satisfiable else it is not satisfiable, THEOREM 7.14 from the book tells that the PATH problem is in P and as 2SAT $\leq_p$ PATH, from THEOREM 7.31 we have that 2SAT is in P. More formally we can make a polynomial time deterministic Turing machine $S$ for 2SAT as follows,
+        
+        $S = $"On input $\phi$ where $\phi$ is a boolean formula in 2CFN form:
+        \begin{enumerate}
+            \item Construct $\beta$ such that for each clause $x \lor y$ in $\phi$ we replace it with \\$(\neg x \implies y) \land (\neg y \implies x)$ in $\beta$.
+            \item Build graph $G = (V,E)$ such that \[V = \{x\mid x\text{ is a literal in }\beta\}\] \[E = \{(x,y)\mid x \implies y\text{ exists in the expression }\beta\}\]
+            \item For each literal $x\in V$ check if there is a directed path from $x$ to $\neg x$ and a directed path from $\neg x$ to $x$ in $G$ with machine $M$ given in THEOREM 7.14 in the book. If a directed path from $x$ to $\neg x$ and a directed path from $\neg x$ to $x$ is found in $G$ \textit{reject}. If all literals are check \textit{accept}."
+        \end{enumerate}
+        Step 1 and step 2 are both in polynomial time and each check on step 3 is also in polynomial time. Therefore $S$ is in polynomial time, therefore 2SAT $\in$ P.\hfill\qed
+    \end{solution}
+    
+    \newpage
+    
+    \question[10] Let $A$ be an NP-complete problem and $B$ be a coNP-complete problem. Show that, ``NP = coNP if and only if $A\leq_\text{P} B$ and $B\leq_\text{P} A$.''
+    \begin{solution}
+        Let $A$ be an NP-complete problem and $B$ be a coNP-complete problem. We first show that if NP = coNP then $A\leq_\text{P} B$ and $B\leq_\text{P} A$.
+        
+        \textbf{coNP-complete:} A decision problem C is co-NP-complete if it is in co-NP and if every problem in co-NP is polynomial-time many-one reducible to it. \href{https://en.wikipedia.org/wiki/Co-NP-complete}{Source: wikipedia}
+        
+        As $A\in$ NP-complete, we have that $A\in$ NP, and If NP = coNP, then $A\in$ coNP. As $B\in$ coNP-complete every problem in coNP is polynomial time reducible to $B$ and as $A\in$ coNP then $A\leq_\text{P} B$.
+        
+        Similiarly as $A\in$ NP-complete then every problem in NP is polynomial time reducible to $A$, and as $B\in$ coNP-complete, then $B\in$ coNP, and if NP = coNP then $B\in NP$, so we have that $B\leq_\text{P} A$.
+        
+        Therefore if NP = coNP then $A\leq_\text{P} B$ and $B\leq_\text{P} A$.
+        
+        Now we show the converse that if $A\leq_\text{P} B$ and  $B\leq_\text{P} A$ then NP = coNP.
+        
+        First we show that for any problem $X$ and $Y$ if $X\in$ NP and $Y\leq_\text{P} X$ then $Y\in$ NP. Let $V_x$ be a polynomial time verifier for $X$, we build $V_y$ a polynomial time verifier for $Y$ such that Let $f_p : \Sigma^* \to \Sigma^*$ be a polynomial time reduction from $Y$ to $X$, then:
+        
+        $V_y = $ "On input $\langle y , \langle x, c\rangle\rangle$:
+        \begin{enumerate}
+            \item Compute $f_p(x)$, then if $y = f_p(x)$ then move to next step, else \textit{reject}.
+            \item Simulate $V_x$ on $\langle x, c\rangle$ then \textit{accept} if $V_x$ accepts, else \textit{reject}."
+        \end{enumerate}
+        The idea is to convert $y\in Y$ to an instance of $X$ and then have $\langle x, c\rangle$ as a certificate for $y$ if $y = f_p(x)$, where $c$ is some certificate for $x\in X$. If $B\leq_\text{P} A$ for some $A\in$ NP, then we have that $B\in$ NP. As $\forall C\in$ coNP, $C\leq_\text{P} B$ and we have that $B\in$ NP then $C\in$ NP. Therefore coNP $\subseteq$ NP, as $\forall C\in$ coNP, $C\in$ NP.
+        
+        For $A\in$ NP, we have $\overline{A}\in$ coNP, and if coNP $\subseteq$ NP then $\overline{A}\in$ NP, so $\overline{\overline{A}}\in$ coNP (from the definition of coNP). $\overline{\overline{A}} = A$ then $A\in$ coNP, therefore NP $\subseteq$ coNP. So coNP = NP. Therefore if $A\leq_\text{P} B$ and $B\leq_\text{P} A$ then NP = coNP. As if NP = coNP then $A\leq_\text{P} B$ and $B\leq_\text{P} A$ and if $A\leq_\text{P} B$ and $B\leq_\text{P} A$ then NP = coNP. We have NP = coNP if and only if $A\leq_\text{P} B$ and $B\leq_\text{P} A$.\hfill\qed
+    \end{solution}
+    
+    \newpage
+    
+    \question[10] Given TAUT $ = \{\phi \mid\phi\text{ is a tautological boolean formula} \}$, show that $\overline{\text{TAUT}}\in$ NP-COMPLETE.
+    \begin{solution}
+
+        \[\overline{\text{TAUT}} = \{\beta \mid\beta\text{ is a boolean formula that is not a tautological}\}\]
+        
+        Which is equivalent to saying
+        
+        \[\overline{\text{TAUT}} = \{\beta \mid \beta\text{ is a boolean formula that has some assignment of 0s and 1s }\]
+        \[\text{to the variables makes the formula evaluate to 0}\}\]
+        We can notice that this is basically the negation of a satisfiable problem where we have that some assignment of 0s and 1s to the variables makes the formula evaluate to 1.
+        
+        We show that $\overline{\text{TAUT}}$ is NP complete by first showing that $\overline{\text{TAUT}}\in NP$ and then showing that SAT is polynomial time reducible to $\overline{\text{TAUT}}$.
+        
+        To show that $\overline{\text{TAUT}}\in$ NP we construct a deterministic polynomial time verifier $T$ for $\overline{\text{TAUT}}$.
+        
+        $T = $ "on input $\langle\beta, a\rangle$ where $\beta$ is a boolean expression and $a$ is the set of assignments of 1s and 0s of Variables such as if $x$ and $y$ are the vaiables of $\beta$ then as is on form $a = \langle x = 1, y = 0\rangle$ (the 0, and 1 are dummy values these can be any assignment of 0s and 1s):
+        \begin{enumerate}
+            \item Evaluate $\beta$ with assignment $a$, if $\beta$ evaluates to 0 then \textit{accept}, else \textit{reject}."
+        \end{enumerate}
+        Next we create a polynomial time reduction from SAT to $\overline{\text{TAUT}}$.
+        
+        The reduction is done as follows, for any $\phi\in\text{SAT}$ we convert $\phi$ into an instance of $\overline{\text{TAUT}}$ by negating the expression that $\phi$ represents.
+        
+        As if $\neg\phi$ evaluates to 0 that means that $\phi$ will evaluate to 1, so $\neg\phi$ has some assignment that evaluate to 0, then that assignment would have $\phi$ evaluate to 1, as $\neg\phi = 0\iff\phi = 1$
+        
+        This converts instances of SAT to instance of $\overline{\text{TAUT}}$. Therefore $\text{SAT} \leq_p \overline{\text{TAUT}}$. From THEOREM 7.37 we have that SAT is NP-complete, as $\overline{\text{TAUT}}\in\text{NP}$ and $\text{SAT} \leq_p \overline{\text{TAUT}}$, then from THEOREM 7.36 we have that $\overline{\text{TAUT}}$ is NP-complete.\hfill\qed
+    \end{solution}
+\end{questions}
+
+\noindent\underline{Credits}: Some of these problems are courtesy of \href{https://www.iba.edu.pk/faculty-profile.php?ftype=&id=shahidhussain}{Dr. Shahid Hussain}.
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

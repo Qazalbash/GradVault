@@ -1,0 +1,103 @@
+ Define Article %%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%
+
+ Using Packages %%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments 
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Plotting Settings 
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%
+
+%% Title & Author %%%
+\title{Week 3 SEL Activity 4}
+\author{Muhammad Meesum Ali Qazalbash}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\section{MGF of Bernoulli RV}
+
+MGF of Discrete RVs is given as,
+\[M_{X}(t)=\sum_{x\in X}e^{tx}p_{X}(x)\]
+For \(X\sim \operatorname{Ber}(;p)\),
+\begin{equation}
+	\begin{split}
+		M_{X}(t)&=e^{t(0)}(1-p)+e^{t(1)}p\\
+		M_{X}(t)&=1-p+pe^{t}\\
+	\end{split}
+\end{equation}
+
+\section{Mean and Variance of Bernoulli RV}
+
+First and second moment of \(X\) would be,
+\[\mu_1=\frac{\partial M_{X}(t)}{\partial t}\bigg|_{t=0}=pe^{t}\bigg|_{t=0}=p\]
+\[\mu_2=\frac{\partial^2 M_{X}(t)}{\partial t^2}\bigg|_{t=0}=\frac{\partial}{\partial t}\left(pe^{t}\right)\bigg|_{t=0}=pe^{t}\bigg|_{t=0}=p\]
+The mean and variance is,
+\[\mu_{X}=\mu_1=p\]
+\[\sigma_{X}^{2}=\mu_2-\mu_1^2=p-p^2=p(1-p)\]
+
+\section{Mean and Variance of Binomial RV}
+
+Let \(Y\sim \operatorname{B}(;p,n)\). \(Y\) can be written as the sum of multiple Bernoulli RV.
+\[Y=\sum_{i=1}^{n}X_i\]
+where \(X_i\sim \operatorname{Ber}(;p)\) for \(1\le i\le n\). According to the theorem mentioned in the question.
+\[M_{Y}(t)=\prod_{i=1}^{n}M_{X_{i}}(t)\]
+We have calculated the MGF of Bernoulli RV.
+\[M_{Y}(t)=\prod_{i=1}^{n}\left(1-p+pe^{t}\right)=\left(1-p+pe^{t}\right)^n\]
+First and second partial differentail would be,
+\[\partial_{t}M_{Y}(t)=npe^{t}\left(1-p+pe^{t}\right)^{n-1}\]
+\[\partial_{t}^{2}M_{Y}(t)=npe^{t}\left(1-p+pe^{t}\right)^{n-1}+n(n-1)p^2e^{2t}\left(1-p+pe^{t}\right)^{n-2}\]
+\[\partial_{t}^{2}M_{Y}(t)=npe^{t}\left(1-p+pe^{t}\right)^{n-2}\left(1-p+npe^{t}\right)\]
+Moments will be,
+\[\mu_1=\partial_{t}M_{Y}(t)\big|_{t=0}=np\]
+\[\mu_2=\partial_{t}^{2}M_{Y}(t)\big|_{t=0}=np(1-p+np)\]
+Mean and Varaince would be,
+\[\mu_{Y}=\mu_{1}=np\]
+\[\sigma_{Y}^2=\mu_2-\mu_1^2=np(1-p+np)-n^2p^2=np(1-p)\]
+\end{document}

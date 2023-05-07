@@ -1,0 +1,44 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titling}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2022}{WC 11: NP-completeness}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\printanswers
+
+\title{Weekly Challenge 11: NP-completeness}
+\author{mq06861} % <=== replace with your student ID, e.g. xy012345
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+  
+\titledquestion{Mapping Reducibility}
+
+  Given that $A \leq_M B$ and $A$ is Turing-recognizable, argue whether $B$ is NP-complete.
+
+  \begin{solution}
+	If $A$ is Turing-recognizable, then $A$ is in NP. Since $A \leq_M B$, $B$ is in NP. Since $B$ is in NP, $B$ is NP-complete.
+  \end{solution}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

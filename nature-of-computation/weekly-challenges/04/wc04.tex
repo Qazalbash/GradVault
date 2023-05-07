@@ -1,0 +1,54 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{titling}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2022}{WC 04: Regular and Context-Free Languages}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\printanswers
+
+\title{Weekly Challenge 04: Regular and Context-Free Languages}
+\author{mq06861} % <=== replace with your student ID, e.g. xy012345
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+\begin{questions}
+
+	\titledquestion{Superset}
+
+	Prove that the class of context-free languages is a superset of the class of regular languages.
+
+	\begin{solution}
+		% Enter your solution here.
+		Let \(\mathcal{R}\) be the class of Regular Languages and \(\mathcal{C}\) be class of Context Free Langauges. We need to show that \[\mathcal{R}\subset\mathcal{C}\] i.e. every regular language is also a context free language. Let \(\mathcal{L}\in\mathcal{R}\) be a regular language. We need to show that \(\mathcal{L}\in\mathcal{C}\). We can construct a context free grammar \(\mathcal{G}\) for \(\mathcal{L}\) as follows:
+
+		\begin{enumerate}
+			\item Let \(\mathcal{V}:=\{\mathcal{S}\}\cup\{\mathcal{A}_i\mid i\in\mathbb{N}\}\) be the set of non-terminals.
+			\item Let \(\mathcal{T}:=\{\varepsilon\}\cup\mathcal{L}\) be the set of terminals.
+			\item Let \(\mathcal{P}:=\{\mathcal{S}\rightarrow \mathcal{A}_i\mathcal{A}_j\mid i,j\in\mathbb{N}\}\cup\{\mathcal{A}_i\rightarrow\sigma\mid\sigma\in\mathcal{L}\land i\in\mathbb{N}\}\) be the set of productions.
+			\item Let \(\mathcal{S}\in\mathcal{V}\) be the starting variable.
+		\end{enumerate}
+
+		We can see that \(\mathcal{G}\) is a context free grammar for \(\mathcal{L}\). Hence, \(\mathcal{L}\in\mathcal{C}\). Therefore, \(\mathcal{R}\subset\mathcal{C}\).\hfill\(\blacksquare\)
+	\end{solution}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

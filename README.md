@@ -6,29 +6,70 @@ GradVault is a digital repository for all my graduation courses, keeping my acad
 
 ```
 GradVault
-├── SEM1
-│   └── programming-fundamentals
-├── SEM2
-│   └── data-structure-and-algorithms
-├── SEM3
-│   └── object-oriented-programming
-├── SEM4
-│   ├── computer-architecture
-│   ├── data-structures-II
-│   └── probability-and-statistics
-├── SEM5
-│   ├── computer-graphics
-│   ├── nature-of-computation
-│   ├── operating-system
-│   ├── real-analysis
-│   └── statistical-inferencing
-├── SEM6
-│   ├── algorithm-design-analysis
-│   ├── computational-intelligence
-│   ├── graphical-processing-unit-accelerated-computing
-│   ├── quantum-mechanics
-│   └── software-engineering
+├── algorithm-design-analysis
+│   ├── homeworks
+│   ├── weekly-challenge
+│   └── README.md
+├── computational-intelligence
+│   ├── assignments
+│   └── README.md
+├── computer-architecture
+│   ├── labs
+│   └── README.md
+├── computer-graphics
+│   ├── homeworks
+│   ├── pacman
+│   ├── render-jam
+│   └── README.md
+├── data-structure-and-algorithms
+│   ├── assignments
+│   ├── labs
+│   ├── practice-problems
+│   ├── quiz
+│   └── README.md
+├── data-structures-II
+│   ├── homeworks
+│   └── README.md
+├── graphical-processing-unit-accelerated-computing
+│   ├── assignments
+│   └── README.md
+├── nature-of-computation
+│   ├── homeworks
+│   ├── weekly-challenges
+│   └── README.md
+├── object-oriented-programming
+│   ├── homework
+│   ├── labs
+│   ├── mid
+│   ├── notes
+│   ├── quiz
+│   └── README.md
+├── operating-system
+│   ├── assignment
+│   └── README.md
+├── probability-and-statistics
+│   ├── assignments
+│   ├── problem-sets
+│   └── README.md
+├── programming-fundamentals
+│   ├── final
+│   ├── labs
+│   └── README.md
+├── quantum-mechanics
+│   ├── assignments
+│   └── README.md
+├── real-analysis
+│   ├── weekly-problems
+│   └── README.md
+├── software-engineering
+│   └── README.md
+├── statistical-inferencing
+│   ├── homework
+│   ├── student-engagement-level
+│   └── README.md
+├── CODE_OF_CONDUCT.md
 ├── janitor.sh
 ├── LICENSE
-└── README.md
+├── README.md
+└── space_to_underscore.sh
 ```
