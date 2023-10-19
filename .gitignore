@@ -1,0 +1,12 @@
+.vscode
+__pycache__
+*.toc
+*.out
+*.aux
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.bcf
+*.blg
