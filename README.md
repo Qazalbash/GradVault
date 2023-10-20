@@ -1,75 +1,20 @@
 # GradVault
 
-GradVault is a digital repository for all my graduation courses, keeping my academic achievements organized and accessible.
+GradVault is a collection of resources that I found helpful during my undergrad. I am sharing this with the hope that it will help others as well.
 
-## Directory Structure
+# Notion pages
 
-```
-GradVault
-├── algorithm-design-analysis
-│   ├── homeworks
-│   ├── weekly-challenge
-│   └── README.md
-├── computational-intelligence
-│   ├── assignments
-│   └── README.md
-├── computer-architecture
-│   ├── labs
-│   └── README.md
-├── computer-graphics
-│   ├── homeworks
-│   ├── pacman
-│   ├── render-jam
-│   └── README.md
-├── data-structure-and-algorithms
-│   ├── assignments
-│   ├── labs
-│   ├── practice-problems
-│   ├── quiz
-│   └── README.md
-├── data-structures-II
-│   ├── homeworks
-│   └── README.md
-├── graphical-processing-unit-accelerated-computing
-│   ├── assignments
-│   └── README.md
-├── nature-of-computation
-│   ├── homeworks
-│   ├── weekly-challenges
-│   └── README.md
-├── object-oriented-programming
-│   ├── homework
-│   ├── labs
-│   ├── mid
-│   ├── notes
-│   ├── quiz
-│   └── README.md
-├── operating-system
-│   ├── assignment
-│   └── README.md
-├── probability-and-statistics
-│   ├── assignments
-│   ├── problem-sets
-│   └── README.md
-├── programming-fundamentals
-│   ├── final
-│   ├── labs
-│   └── README.md
-├── quantum-mechanics
-│   ├── assignments
-│   └── README.md
-├── real-analysis
-│   ├── weekly-problems
-│   └── README.md
-├── software-engineering
-│   └── README.md
-├── statistical-inferencing
-│   ├── homework
-│   ├── student-engagement-level
-│   └── README.md
-├── CODE_OF_CONDUCT.md
-├── janitor.sh
-├── LICENSE
-├── README.md
-└── space_to_underscore.sh
-```
+Here are the links to some notion pages that I found very helpful.
+
+1. [Courses & Skill](https://handsomely-family-9c4.notion.site/4d94e7b1a3ef4380b3bc64b4013a16a0?v=fedcf071ebc2487db3fda48d1810692c&pvs=4)
+2. [Antilibrary](https://handsomely-family-9c4.notion.site/c667c6b8f8054e81b62e267a8eb3b4db?v=0326c50e883647f28f1f3ae4fc2de40f&pvs=4)
+
+You can request to add more pages to this list by creating an issue.
+
+# Socials
+
+- [LinkedIn](https://www.linkedin.com/in/meesumaliqazalbash/)
+- [Email](mailto:meesumqazalbash@gmail.com)
+- [GitHub](www.github.com/Qazalbash)
+- [Leetcode](https://leetcode.com/maq2628/)
+- [StackOverflow](https://stackoverflow.com/users/14699637/grad-f)
