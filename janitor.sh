@@ -1,5 +1,5 @@
 janitor() {
-	for dir in $(find SEM*); do
+	for dir in $(find *); do
 		if [[ -d $dir ]]; then
 			for file in $(ls $dir -a); do
 				# if there is a tex file in the directory, remove the pdf file with same name

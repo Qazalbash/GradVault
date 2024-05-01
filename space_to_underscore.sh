@@ -5,11 +5,12 @@ for file in *; do
 		cd $file
 		for file2 in *; do
 			if [[ -f $file2 ]]; then
-				mv "$file2" "${file2// /_}"
-				echo "$file2"
+				if [[ $file2 == *" "* ]]; then
+					mv "$file2" "${file2// /_}"
+					echo "$file2"
+				fi
 			fi
 		done
-
 		cd ..
 	fi
 done
