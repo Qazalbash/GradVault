@@ -16,5 +16,5 @@ You can request to add more pages to this list by creating an issue.
 - [LinkedIn](https://www.linkedin.com/in/meesumaliqazalbash/)
 - [Email](mailto:meesumqazalbash@gmail.com)
 - [GitHub](www.github.com/Qazalbash)
-- [Leetcode](https://leetcode.com/maq2628/)
+- [Leetcode](https://leetcode.com/u/qazalbash/)
 - [StackOverflow](https://stackoverflow.com/users/14699637/grad-f)
